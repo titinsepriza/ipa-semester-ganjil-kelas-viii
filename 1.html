@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 1 - Sel dan Mikroskop | IPA Kelas VIII Semester 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content h3 {
+            color: #1a5276;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #27ae60;
+        }
+
+        .content h4 {
+            color: #2980b9;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-buttons a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Images */
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .image-container p {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Boxes */
+        .info-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-left: 5px solid #27ae60;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .info-box h4 {
+            color: #1a5276;
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-left: 5px solid #f39c12;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background: #fff9c4;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .nav-buttons a {
+                text-align: center;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="index.html#bab">📚 Daftar Bab</a></li>
+            <li><a href="index.html#penulis">✍️ Penulis</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>BAB 1</h1>
+        <h2>Sel dan Mikroskop</h2>
+        <p>Memahami struktur sel sebagai unit terkecil kehidupan dan cara mengamatinya menggunakan mikroskop</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Navigation Buttons Top -->
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Kembali ke Beranda</a>
+            <a href="2.html">Bab Selanjutnya →</a>
+        </div>
+
+        <!-- A. Pengertian Sel -->
+        <h3>A. Pengertian dan Konsep Dasar Sel</h3>
+        <p>
+            <strong>Sel</strong> adalah unit struktural dan fungsional terkecil dari makhluk hidup. Semua makhluk hidup tersusun atas sel, baik itu organisme uniseluler (bersel satu) seperti bakteri dan amoeba, maupun organisme multiseluler (bersel banyak) seperti tumbuhan, hewan, dan manusia.
+        </p>
+        
+        <div class="info-box">
+            <h4>🔬 Fakta Penting</h4>
+            <p>
+                Tubuh manusia dewasa terdiri dari sekitar <strong>37,2 triliun sel</strong> dengan berbagai jenis dan fungsi yang berbeda-beda. Setiap sel bekerja secara koordinatif untuk menjaga kelangsungan hidup organisme.
+            </p>
+        </div>
+
+        <h4>Sejarah Penemuan Sel</h4>
+        <p>Penemuan sel dimulai pada abad ke-17:</p>
+        <ul>
+            <li><strong>Robert Hooke (1665)</strong> - Mengamati gabus dengan mikroskop sederhana dan melihat ruangan-ruangan kecil yang disebutnya "cell" (sel)</li>
+            <li><strong>Anton van Leeuwenhoek (1674)</strong> - Pertama kali mengamati sel hidup (bakteri dan protozoa)</li>
+            <li><strong>Matthias Schleiden & Theodor Schwann (1838-1839)</strong> - Mengemukakan teori sel bahwa semua makhluk hidup tersusun atas sel</li>
+            <li><strong>Rudolf Virchow (1855)</strong> - Menyatakan "Omnis cellula e cellula" (semua sel berasal dari sel sebelumnya)</li>
+        </ul>
+
+        <!-- B. Struktur Sel -->
+        <h3>B. Struktur dan Bagian-Bagian Sel</h3>
+        <p>
+            Sel memiliki berbagai organel yang masing-masing memiliki fungsi spesifik. Secara umum, sel terdiri dari sel hewan dan sel tumbuhan yang memiliki persamaan dan perbedaan struktur.
+        </p>
+
+        <!-- Image Sel Hewan dan Tumbuhan -->
+        <div class="image-container">
+            <img src="sel-hewan-dan-tumbuhan.png" alt="Perbedaan Sel Hewan dan Sel Tumbuhan">
+            <p><strong>Gambar 1.1:</strong> Perbedaan struktur sel hewan dan sel tumbuhan beserta bagian-bagiannya</p>
+        </div>
+
+        <h4>1. Bagian-Bagian Sel yang Dimiliki Bersama</h4>
+        
+        <h4>a. Membran Sel (Sel Membran)</h4>
+        <p>
+            Membran sel adalah lapisan terluar yang menyelubungi sel (pada sel hewan) atau berada di dalam dinding sel (pada sel tumbuhan). Fungsinya:
+        </p>
+        <ul>
+            <li>Melindungi isi sel</li>
+            <li>Mengatur keluar masuknya zat (selektif permeabel)</li>
+            <li>Sebagai reseptor rangsangan dari luar</li>
+            <li>Tempat berlangsungnya reaksi kimia</li>
+        </ul>
+
+        <h4>b. Sitoplasma</h4>
+        <p>
+            Sitoplasma adalah cairan kental yang mengisi ruang di dalam sel dan berada di antara membran sel dengan nukleus. Fungsinya:
+        </p>
+        <ul>
+            <li>Tempat berlangsungnya metabolisme sel</li>
+            <li>Tempat organel-organel sel berada</li>
+            <li>Medium untuk transportasi zat dalam sel</li>
+        </ul>
+
+        <h4>c. Nukleus (Inti Sel)</h4>
+        <p>
+            Nukleus adalah organel terbesar dalam sel yang berfungsi sebagai pusat kendali sel. Fungsinya:
+        </p>
+        <ul>
+            <li>Menyimpan informasi genetik (DNA)</li>
+            <li>Mengatur aktivitas sel</li>
+            <li>Mengendalikan proses pembelahan sel</li>
+            <li>Tempat sintesis RNA</li>
+        </ul>
+
+        <h4>d. Mitokondria</h4>
+        <p>
+            Mitokondria dikenal sebagai <span class="highlight">"the powerhouse of the cell"</span> (pusat energi sel). Fungsinya:
+        </p>
+        <ul>
+            <li>Tempat berlangsungnya respirasi sel</li>
+            <li>Menghasilkan energi dalam bentuk ATP (Adenosin Trifosfat)</li>
+            <li>Melakukan oksidasi zat makanan</li>
+        </ul>
+
+        <h4>e. Vakuola</h4>
+        <p>
+            Vakuola adalah rongga berisi cairan yang dikelilingi membran. Pada sel tumbuhan, vakuola berukuran besar, sedangkan pada sel hewan kecil atau tidak ada. Fungsinya:
+        </p>
+        <ul>
+            <li>Menyimpan cadangan makanan, air, dan zat sisa</li>
+            <li>Menjaga tekanan turgor sel (pada tumbuhan)</li>
+            <li>Tempat penyimpanan pigmen</li>
+        </ul>
+
+        <h4>2. Bagian Khusus Sel Tumbuhan</h4>
+
+        <h4>a. Dinding Sel</h4>
+        <p>
+            Dinding sel adalah lapisan kaku yang terletak di luar membran sel tumbuhan. Tersusun dari selulosa. Fungsinya:
+        </p>
+        <ul>
+            <li>Memberi bentuk dan kekuatan pada sel</li>
+            <li>Melindungi sel dari kerusakan mekanis</li>
+            <li>Mencegah sel pecah akibat masuknya air berlebihan</li>
+            <li>Sebagai tempat pertukaran zat dengan lingkungan</li>
+        </ul>
+
+        <h4>b. Kloroplas (Plastida)</h4>
+        <p>
+            Kloroplas adalah organel yang mengandung klorofil (zat hijau daun). Fungsinya:
+        </p>
+        <ul>
+            <li>Tempat berlangsungnya fotosintesis</li>
+            <li>Mengubah energi cahaya menjadi energi kimia</li>
+            <li>Menghasilkan glukosa dan oksigen</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>📊 Perbedaan Sel Hewan dan Sel Tumbuhan</h4>
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Ciri</th>
+                    <th>Sel Hewan</th>
+                    <th>Sel Tumbuhan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dinding Sel</td>
+                    <td>Tidak ada</td>
+                    <td>Ada (dari selulosa)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kloroplas</td>
+                    <td>Tidak ada</td>
+                    <td>Ada</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vakuola</td>
+                    <td>Kecil/tidak ada</td>
+                    <td>Besar</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bentuk</td>
+                    <td>Tidak tetap</td>
+                    <td>Tetap (kaku)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Sentriol</td>
+                    <td>Ada</td>
+                    <td>Tidak ada</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- C. Mikroskop -->
+        <h3>C. Mikroskop dan Cara Penggunaannya</h3>
+        <p>
+            <strong>Mikroskop</strong> adalah alat optik yang digunakan untuk mengamati objek yang sangat kecil yang tidak dapat dilihat dengan mata telanjang. Kata mikroskop berasal dari bahasa Latin "micros" (kecil) dan "scopein" (melihat).
+        </p>
+
+        <!-- Image Mikroskop -->
+        <div class="image-container">
+            <img src="mikroskop.png" alt="Bagian-Bagian Mikroskop">
+            <p><strong>Gambar 1.2:</strong> Bagian-bagian mikroskop cahaya dan fungsinya</p>
+        </div>
+
+        <h4>1. Bagian-Bagian Mikroskop dan Fungsinya</h4>
+
+        <h4>a. Bagian Optik</h4>
+        <ul>
+            <li><strong>Lensa Okuler:</strong> Lensa yang dekat dengan mata pengamat. Berfungsi memperbesar bayangan objek. Perbesaran biasanya 10x atau 15x.</li>
+            
+            <li><strong>Lensa Objektif:</strong> Lensa yang dekat dengan objek yang diamati. Tersedia dalam beberapa perbesaran (4x, 10x, 40x, 100x). Berfungsi membentuk bayangan nyata objek.</li>
+            
+            <li><strong>Kondensor:</strong> Berfungsi mengumpulkan dan memfokuskan cahaya dari sumber cahaya ke objek yang diamati.</li>
+            
+            <li><strong>Diafragma:</strong> Berfungsi mengatur banyak sedikitnya cahaya yang masuk ke lensa objektif.</li>
+        </ul>
+
+        <h4>b. Bagian Mekanik</h4>
+        <ul>
+            <li><strong>Tubus Okuler (Tabung Mikroskop):</strong> Menghubungkan lensa okuler dengan lensa objektif.</li>
+            
+            <li><strong>Revolver:</strong> Tempat melekatnya lensa objektif dan dapat diputar untuk mengganti perbesaran lensa objektif.</li>
+            
+            <li><strong>Meja Benda:</strong> Tempat meletakkan preparat (objek) yang akan diamati. Di tengah meja benda terdapat lubang untuk jalannya cahaya.</li>
+            
+            <li><strong>Penjepit (Klip):</strong> Menjepit preparat agar tidak bergeser saat diamati.</li>
+            
+            <li><strong>Makrometer (Pemutar Kasar):</strong> Menggerakkan tabung mikroskop atau meja benda secara cepat untuk mencari fokus bayangan.</li>
+            
+            <li><strong>Mikrometer (Pemutar Halus):</strong> Menggerakkan tabung mikroskop secara perlahan untuk mendapatkan bayangan yang tajam dan jelas.</li>
+            
+            <li><strong>Lengan Mikroskop:</strong> Tempat memegang mikroskop saat memindahkan atau membawa mikroskop.</li>
+            
+            <li><strong>Penyangga (Sendi Inklinasi):</strong> Menghubungkan lengan dengan kaki mikroskop, memungkinkan mikroskop dimiringkan.</li>
+            
+            <li><strong>Kaki Mikroskop:</strong> Menopang dan menstabilkan mikroskop. Bentuknya kokoh agar mikroskop tidak mudah jatuh.</li>
+            
+            <li><strong>Sumber Cahaya:</strong> Dapat berupa cermin (pada mikroskop konvensional) atau lampu (pada mikroskop modern). Berfungsi menyediakan cahaya untuk penerangan objek.</li>
+        </ul>
+
+        <h4>2. Cara Menggunakan Mikroskop</h4>
+        
+        <div class="warning-box">
+            <h4>⚠️ Langkah-Langkah Penggunaan Mikroskop</h4>
+            <ol>
+                <li><strong>Persiapan:</strong>
+                    <ul>
+                        <li>Letakkan mikroskop di tempat yang datar dan stabil</li>
+                        <li>Pastikan sumber cahaya cukup (atur cermin atau nyalakan lampu)</li>
+                        <li>Bersihkan lensa dengan kertas lensa jika kotor</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Memasang Preparat:</strong>
+                    <ul>
+                        <li>Letakkan preparat di atas meja benda</li>
+                        <li>Jepit preparat dengan klip agar tidak bergeser</li>
+                        <li>Pastikan objek berada tepat di atas lubang meja benda</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Mengatur Cahaya:</strong>
+                    <ul>
+                        <li>Atur diafragma untuk mendapatkan intensitas cahaya yang sesuai</li>
+                        <li>Putar kondensor untuk memfokuskan cahaya pada objek</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Mencari Fokus:</strong>
+                    <ul>
+                        <li>Pilih lensa objektif dengan perbesaran terkecil (4x atau 10x)</li>
+                        <li>Lihat dari samping, putar makrometer untuk menurunkan lensa objektif hingga hampir menyentuh preparat</li>
+                        <li>Lihat melalui lensa okuler, putar makrometer perlahan untuk menaikkan lensa hingga terlihat bayangan</li>
+                        <li>Gunakan mikrometer untuk memperjelas bayangan</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Memperbesar Bayangan:</strong>
+                    <ul>
+                        <li>Setelah mendapat bayangan jelas dengan perbesaran kecil, putar revolver ke perbesaran lebih besar</li>
+                        <li>Gunakan mikrometer (bukan makrometer) untuk memfokuskan ulang</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Setelah Selesai:</strong>
+                    <ul>
+                        <li>Kembalikan lensa objektif ke perbesaran terkecil</li>
+                        <li>Angkat preparat dari meja benda</li>
+                        <li>Bersihkan lensa dan bagian mikroskop lainnya</li>
+                        <li>Tutup mikroskop dengan penutupnya</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h4>3. Perhitungan Perbesaran</h4>
+        <p>
+            Perbesaran total mikroskop dihitung dengan rumus:
+        </p>
+        <div class="info-box">
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold;">
+                Perbesaran Total = Perbesaran Lensa Okuler × Perbesaran Lensa Objektif
+            </p>
+        </div>
+        
+        <p><strong>Contoh:</strong></p>
+        <ul>
+            <li>Lensa okuler 10x dan lensa objektif 4x → Perbesaran total = 10 × 4 = <strong>40 kali</strong></li>
+            <li>Lensa okuler 10x dan lensa objektif 40x → Perbesaran total = 10 × 40 = <strong>400 kali</strong></li>
+            <li>Lensa okuler 15x dan lensa objektif 100x → Perbesaran total = 15 × 100 = <strong>1500 kali</strong></li>
+        </ul>
+
+        <h4>4. Jenis-Jenis Mikroskop</h4>
+        <ul>
+            <li><strong>Mikroskop Cahaya:</strong> Menggunakan cahaya sebagai sumber penerangan. Perbesaran maksimal sekitar 1000-1500 kali.</li>
+            
+            <li><strong>Mikroskop Elektron:</strong> Menggunakan berkas elektron. Perbesaran bisa mencapai jutaan kali. Terdiri dari TEM (Transmission Electron Microscope) dan SEM (Scanning Electron Microscope).</li>
+            
+            <li><strong>Mikroskop Stereo:</strong> Untuk mengamati objek 3 dimensi dengan perbesaran rendah (10-40 kali).</li>
+            
+            <li><strong>Mikroskop Fluoresen:</strong> Menggunakan cahaya fluoresen untuk mengamati objek tertentu.</li>
+        </ul>
+
+        <h4>5. Perawatan Mikroskop</h4>
+        <div class="warning-box">
+            <p>Untuk menjaga mikroskop tetap awet dan berfungsi dengan baik:</p>
+            <ul>
+                <li>Simpan di tempat kering dan tidak lembab</li>
+                <li>Bersihkan lensa hanya dengan kertas lensa (jangan gunakan kain atau tisu)</li>
+                <li>Jangan menyentuh lensa dengan jari</li>
+                <li>Bawa mikroskop dengan memegang lengan dan menyangga kaki mikroskop</li>
+                <li>Tutup mikroskop setelah digunakan</li>
+                <li>Lakukan pemeriksaan berkala</li>
+            </ul>
+        </div>
+
+        <!-- D. Pengamatan Sel -->
+        <h3>D. Praktik Pengamatan Sel dengan Mikroskop</h3>
+        
+        <h4>1. Pengamatan Sel Tumbuhan (Sel Bawang Merah)</h4>
+        <p><strong>Alat dan Bahan:</strong></p>
+        <ul>
+            <li>Mikroskop</li>
+            <li>Umbi lapis bawang merah</li>
+            <li>Pisau atau silet</li>
+            <li>Kaca objek dan kaca penutup</li>
+            <li>Pipet tetes</li>
+            <li>Air</li>
+            <li>Larutan iodin (opsional)</li>
+        </ul>
+
+        <p><strong>Langkah Kerja:</strong></p>
+        <ol>
+            <li>Kupas umbi bawang merah dan ambil lapisan tipis dari bagian dalam</li>
+            <li>Letakkan lapisan tipis tersebut di atas kaca objek</li>
+            <li>Tetesi dengan air atau larutan iodin</li>
+            <li>Tutup dengan kaca penutup secara perlahan untuk menghindari gelembung udara</li>
+            <li>Amati dengan mikroskop dimulai dari perbesaran terkecil</li>
+            <li>Gambar hasil pengamatan dan identifikasi bagian-bagian sel (dinding sel, membran sel, sitoplasma, nukleus, vakuola)</li>
+        </ol>
+
+        <h4>2. Pengamatan Sel Hewan (Sel Epitel Pipi)</h4>
+        <p><strong>Alat dan Bahan:</strong></p>
+        <ul>
+            <li>Mikroskop</li>
+            <li>Tusuk gigi tumpul</li>
+            <li>Kaca objek dan kaca penutup</li>
+            <li>Pipet tetes</li>
+            <li>Larutan metilen biru</li>
+        </ul>
+
+        <p><strong>Langkah Kerja:</strong></p>
+        <ol>
+            <li>Gosok perlahan bagian dalam pipi dengan tusuk gigi</li>
+            <li>Oleskan hasil gosokan pada kaca objek</li>
+            <li>Tetesi dengan larutan metilen biru</li>
+            <li>Tutup dengan kaca penutup</li>
+            <li>Amati dengan mikroskop</li>
+            <li>Gambar hasil pengamatan dan identifikasi bagian sel (membran sel, sitoplasma, nukleus)</li>
+        </ol>
+
+        <!-- E. Rangkuman -->
+        <h3>E. Rangkuman</h3>
+        <div class="info-box">
+            <ul>
+                <li>Sel adalah unit struktural dan fungsional terkecil dari makhluk hidup</li>
+                <li>Sel hewan dan sel tumbuhan memiliki persamaan (membran sel, sitoplasma, nukleus, mitokondria, vakuola) dan perbedaan (sel tumbuhan memiliki dinding sel dan kloroplas)</li>
+                <li>Mikroskop adalah alat untuk mengamati objek yang sangat kecil</li>
+                <li>Bagian-bagian mikroskop terdiri dari bagian optik (lensa okuler, lensa objektif, kondensor, diafragma) dan bagian mekanik (tubus, revolver, meja benda, makrometer, mikrometer, lengan, kaki)</li>
+                <li>Perbesaran total = perbesaran lensa okuler × perbesaran lensa objektif</li>
+                <li>Penggunaan mikroskop harus dilakukan dengan hati-hati dan mengikuti prosedur yang benar</li>
+            </ul>
+        </div>
+
+        <!-- F. Latihan Soal -->
+        <h3>F. Latihan Soal</h3>
+        
+        <h4>A. Pilihan Ganda</h4>
+        <ol>
+            <li>Organel sel yang berfungsi sebagai tempat berlangsungnya fotosintesis adalah...
+                <ul>
+                    <li>a. Mitokondria</li>
+                    <li>b. Kloroplas</li>
+                    <li>c. Nukleus</li>
+                    <li>d. Vakuola</li>
+                </ul>
+            </li>
+            
+            <li>Perbedaan utama antara sel hewan dan sel tumbuhan adalah...
+                <ul>
+                    <li>a. Sel hewan memiliki dinding sel, sel tumbuhan tidak</li>
+                    <li>b. Sel tumbuhan memiliki kloroplas, sel hewan tidak</li>
+                    <li>c. Sel hewan memiliki vakuola besar, sel tumbuhan tidak</li>
+                    <li>d. Sel tumbuhan tidak memiliki nukleus</li>
+                </ul>
+            </li>
+            
+            <li>Bagian mikroskop yang berfungsi mengatur banyak sedikitnya cahaya adalah...
+                <ul>
+                    <li>a. Kondensor</li>
+                    <li>b. Revolver</li>
+                    <li>c. Diafragma</li>
+                    <li>d. Makrometer</li>
+                </ul>
+            </li>
+            
+            <li>Jika menggunakan lensa okuler 10x dan lensa objektif 40x, maka perbesaran total yang diperoleh adalah...
+                <ul>
+                    <li>a. 40 kali</li>
+                    <li>b. 100 kali</li>
+                    <li>c. 400 kali</li>
+                    <li>d. 1000 kali</li>
+                </ul>
+            </li>
+            
+            <li>Organel sel yang berfungsi menghasilkan energi adalah...
+                <ul>
+                    <li>a. Ribosom</li>
+                    <li>b. Mitokondria</li>
+                    <li>c. Badan Golgi</li>
+                    <li>d. Retikulum Endoplasma</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h4>B. Essay</h4>
+        <ol>
+            <li>Jelaskan perbedaan antara sel hewan dan sel tumbuhan minimal 3 perbedaan!</li>
+            <li>Sebutkan dan jelaskan fungsi 5 bagian mikroskop!</li>
+            <li>Bagaimana cara menggunakan mikroskop yang benar? Jelaskan langkah-langkahnya!</li>
+            <li>Mengapa sel tumbuhan memiliki bentuk yang tetap sedangkan sel hewan tidak? Jelaskan!</li>
+            <li>Hitunglah perbesaran total jika menggunakan lensa okuler 15x dan lensa objektif 100x!</li>
+        </ol>
+
+        <!-- Navigation Buttons Bottom -->
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Kembali ke Beranda</a>
+            <a href="2.html">Bab Selanjutnya →</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>

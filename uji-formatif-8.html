@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uji Formatif Bab 8 - Usaha dan Energi | IPA Kelas VIII Semester 1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        nav { background: linear-gradient(135deg, #b7950b, #f1c40f); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        nav ul li a:hover { opacity: 0.8; }
+        .header { background: linear-gradient(135deg, #9a7d0a, #b7950b); color: white; padding: 3rem 2rem; text-align: center; }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header h2 { font-size: 1.3rem; font-weight: 300; margin-bottom: 1rem; }
+        .header p { font-size: 1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        .content h3 { color: #9a7d0a; font-size: 1.5rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #f1c40f; }
+        .content h4 { color: #b7950b; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
+        .content p { margin-bottom: 1rem; text-align: justify; }
+        .info-box { background: linear-gradient(135deg, #fef9e7, #fcf3cf); border-left: 5px solid #f1c40f; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
+        .info-box h4 { color: #9a7d0a; margin-top: 0; }
+        .form-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin: 2rem 0; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #9a7d0a; }
+        .form-group input, .form-group select { width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #f1c40f; box-shadow: 0 0 5px rgba(241, 196, 15, 0.3); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .question-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 1.5rem; border-left: 4px solid #f1c40f; }
+        .question-card.correct { border-left-color: #27ae60; background: #e8f5e9; }
+        .question-card.incorrect { border-left-color: #e74c3c; background: #fadbd8; }
+        .question-number { display: inline-block; background: linear-gradient(135deg, #f1c40f, #f39c12); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 0.8rem; }
+        .question-text { font-size: 1.05rem; margin-bottom: 1rem; font-weight: 500; }
+        .options { list-style: none; }
+        .options li { margin-bottom: 0.5rem; }
+        .options label { display: block; padding: 0.7rem 1rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .options label:hover { background: #fef9e7; border-color: #f1c40f; }
+        .options input[type="radio"] { margin-right: 0.5rem; }
+        .options input[type="radio"]:checked + span { font-weight: 600; color: #b7950b; }
+        .essay-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 1.5rem; border-left: 4px solid #9a7d0a; }
+        .essay-card textarea { width: 100%; min-height: 120px; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem; resize: vertical; }
+        .essay-card textarea:focus { outline: none; border-color: #f1c40f; box-shadow: 0 0 5px rgba(241, 196, 15, 0.3); }
+        .btn { display: inline-block; padding: 0.8rem 1.8rem; background: linear-gradient(135deg, #f1c40f, #f39c12); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; border: none; cursor: pointer; font-size: 1rem; transition: transform 0.3s, box-shadow 0.3s; margin: 0.3rem; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-blue { background: linear-gradient(135deg, #2980b9, #3498db); }
+        .btn-gray { background: linear-gradient(135deg, #7f8c8d, #95a5a6); }
+        .button-group { text-align: center; margin: 2rem 0; flex-wrap: wrap; }
+        .result-box { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin: 2rem 0; text-align: center; display: none; }
+        .result-box.show { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-box h3 { color: #f1c40f; border: none; margin-bottom: 1.5rem; }
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .score-item { background: linear-gradient(135deg, #f5f7fa, #e8ecf1); padding: 1.2rem; border-radius: 10px; text-align: center; }
+        .score-item .label { font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }
+        .score-item .value { font-size: 1.8rem; font-weight: bold; color: #1a5276; }
+        .grade { font-size: 3rem; font-weight: bold; margin: 1rem 0; padding: 1rem; border-radius: 10px; display: inline-block; min-width: 120px; }
+        .grade-a { background: #d4efdf; color: #1e8449; }
+        .grade-b { background: #d6eaf8; color: #1a5276; }
+        .grade-c { background: #fcf3cf; color: #b7950b; }
+        .grade-d { background: #fadbd8; color: #922b21; }
+        .feedback { margin-top: 1rem; padding: 0.8rem; border-radius: 5px; font-size: 0.95rem; display: none; }
+        .feedback.show { display: block; }
+        .feedback.correct { background: #d4efdf; color: #1e8449; border-left: 4px solid #27ae60; }
+        .feedback.incorrect { background: #fadbd8; color: #922b21; border-left: 4px solid #e74c3c; }
+        .nav-buttons { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-buttons a { display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #f1c40f, #f39c12); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+        .nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        footer { background: #1a252f; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: #f1c40f; text-decoration: none; }
+        @media (max-width: 768px) { .header h1 { font-size: 1.5rem; } .form-row { grid-template-columns: 1fr; } .nav-buttons { flex-direction: column; } .nav-buttons a { text-align: center; } .score-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="index.html#bab">📚 Daftar Bab</a></li>
+            <li><a href="index.html#penulis">✍️ Penulis</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>📋 UJI FORMATIF BAB 8</h1>
+        <h2>Usaha dan Energi dalam Kehidupan Sehari-hari</h2>
+        <p>Evaluasi pemahaman tentang konsep energi, bentuk-bentuk energi, hukum kekekalan energi, usaha, dan daya</p>
+    </div>
+
+    <div class="content">
+
+        <div class="info-box">
+            <h4>📋 Petunjuk Pengerjaan</h4>
+            <p><strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) | <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)</p>
+            <p><strong>Materi:</strong> Pengertian energi, bentuk-bentuk energi, sumber energi, perubahan energi, hukum kekekalan energi, usaha (W = F × s), energi kinetik & potensial, serta daya (P = W/t).</p>
+            <p><strong>Waktu:</strong> Tidak terbatas | <strong>Total Skor:</strong> 200 poin</p>
+        </div>
+
+        <!-- Form Data Siswa -->
+        <div class="form-section">
+            <h3 style="border: none; margin-top: 0;">📋 Data Siswa</h3>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap <span style="color: red;">*</span></label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nis">NIS (Nomor Induk Siswa) <span style="color: red;">*</span></label>
+                        <input type="text" id="nis" name="nis" required placeholder="Masukkan NIS">
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">📅 Tanggal Ujian</label>
+                        <input type="date" id="tanggal" name="tanggal">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="kelas">Kelas <span style="color: red;">*</span></label>
+                        <select id="kelas" name="kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VIII A">Kelas VIII A</option>
+                            <option value="VIII B">Kelas VIII B</option>
+                            <option value="VIII C">Kelas VIII C</option>
+                            <option value="VIII D">Kelas VIII D</option>
+                            <option value="VIII E">Kelas VIII E</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sekolah">Sekolah</label>
+                        <input type="text" id="sekolah" name="sekolah" value="MTsN 4 Lima Puluh Kota" readonly>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- BAGIAN A: PILIHAN GANDA -->
+        <h3>📋 Bagian A – Pilihan Ganda</h3>
+        <div class="info-box">
+            <p>️ Lengkapi semua 10 soal pilihan ganda! Setiap soal bernilai <strong>10 poin</strong>.</p>
+        </div>
+
+        <div class="question-card" data-question="1" data-answer="b">
+            <span class="question-number">Soal 1</span>
+            <div class="question-text">Satuan untuk energi dan usaha dalam Sistem Internasional (SI) adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="a"><span> a) Newton (N)</span></label></li>
+                <li><label><input type="radio" name="q1" value="b"><span> b) Joule (J)</span></label></li>
+                <li><label><input type="radio" name="q1" value="c"><span> c) Watt (W)</span></label></li>
+                <li><label><input type="radio" name="q1" value="d"><span> d) Pascal (Pa)</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="2" data-answer="a">
+            <span class="question-number">Soal 2</span>
+            <div class="question-text">Energi yang dimiliki oleh suatu benda karena gerakannya disebut energi...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="a"><span> a) Kinetik</span></label></li>
+                <li><label><input type="radio" name="q2" value="b"><span> b) Potensial</span></label></li>
+                <li><label><input type="radio" name="q2" value="c"><span> c) Kimia</span></label></li>
+                <li><label><input type="radio" name="q2" value="d"><span> d) Listrik</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="3" data-answer="c">
+            <span class="question-number">Soal 3</span>
+            <div class="question-text">Seorang siswa mendorong tembok kelas dengan sekuat tenaga selama 5 menit, tetapi tembok tidak bergerak. Dalam tinjauan fisika, siswa tersebut...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="a"><span> a) Melakukan usaha yang sangat besar</span></label></li>
+                <li><label><input type="radio" name="q3" value="b"><span> b) Melakukan usaha yang kecil</span></label></li>
+                <li><label><input type="radio" name="q3" value="c"><span> c) Tidak melakukan usaha</span></label></li>
+                <li><label><input type="radio" name="q3" value="d"><span> d) Melakukan usaha positif</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="4" data-answer="c">
+            <span class="question-number">Soal 4</span>
+            <div class="question-text">Perubahan energi yang terjadi pada saat menyetrika pakaian adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="a"><span> a) Energi gerak menjadi energi panas</span></label></li>
+                <li><label><input type="radio" name="q4" value="b"><span> b) Energi kimia menjadi energi panas</span></label></li>
+                <li><label><input type="radio" name="q4" value="c"><span> c) Energi listrik menjadi energi panas</span></label></li>
+                <li><label><input type="radio" name="q4" value="d"><span> d) Energi cahaya menjadi energi panas</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="5" data-answer="d">
+            <span class="question-number">Soal 5</span>
+            <div class="question-text">"Energi tidak dapat diciptakan dan tidak dapat dimusnahkan, tetapi hanya dapat berubah dari satu bentuk ke bentuk yang lain." Pernyataan ini dikenal sebagai hukum...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="a"><span> a) Newton</span></label></li>
+                <li><label><input type="radio" name="q5" value="b"><span> b) Archimedes</span></label></li>
+                <li><label><input type="radio" name="q5" value="c"><span> c) Pascal</span></label></li>
+                <li><label><input type="radio" name="q5" value="d"><span> d) Kekekalan Energi</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="6" data-answer="b">
+            <span class="question-number">Soal 6</span>
+            <div class="question-text">Rumus yang digunakan untuk menghitung besar Usaha (W) adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" value="a"><span> a) W = m × g × h</span></label></li>
+                <li><label><input type="radio" name="q6" value="b"><span> b) W = F × s</span></label></li>
+                <li><label><input type="radio" name="q6" value="c"><span> c) W = F / s</span></label></li>
+                <li><label><input type="radio" name="q6" value="d"><span> d) W = ½ × m × v²</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="7" data-answer="a">
+            <span class="question-number">Soal 7</span>
+            <div class="question-text">Sebuah benda bermassa 2 kg bergerak dengan kecepatan 3 m/s. Besar energi kinetik benda tersebut adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" value="a"><span> a) 9 Joule</span></label></li>
+                <li><label><input type="radio" name="q7" value="b"><span> b) 6 Joule</span></label></li>
+                <li><label><input type="radio" name="q7" value="c"><span> c) 18 Joule</span></label></li>
+                <li><label><input type="radio" name="q7" value="d"><span> d) 3 Joule</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="8" data-answer="c">
+            <span class="question-number">Soal 8</span>
+            <div class="question-text">Satuan untuk Daya (Power) dalam Sistem Internasional adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" value="a"><span> a) Joule (J)</span></label></li>
+                <li><label><input type="radio" name="q8" value="b"><span> b) Newton (N)</span></label></li>
+                <li><label><input type="radio" name="q8" value="c"><span> c) Watt (W)</span></label></li>
+                <li><label><input type="radio" name="q8" value="d"><span> d) Sekon (s)</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="9" data-answer="b">
+            <span class="question-number">Soal 9</span>
+            <div class="question-text">Berikut ini yang merupakan sumber energi yang <u>tidak dapat diperbarui</u> adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q9" value="a"><span> a) Energi matahari</span></label></li>
+                <li><label><input type="radio" name="q9" value="b"><span> b) Batu bara</span></label></li>
+                <li><label><input type="radio" name="q9" value="c"><span> c) Energi angin</span></label></li>
+                <li><label><input type="radio" name="q9" value="d"><span> d) Energi air</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="10" data-answer="d">
+            <span class="question-number">Soal 10</span>
+            <div class="question-text">Seorang anak melakukan usaha sebesar 300 Joule untuk memindahkan sebuah kotak dalam waktu 1 menit (60 sekon). Daya yang dikeluarkan anak tersebut adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" value="a"><span> a) 18.000 Watt</span></label></li>
+                <li><label><input type="radio" name="q10" value="b"><span> b) 10 Watt</span></label></li>
+                <li><label><input type="radio" name="q10" value="c"><span> c) 240 Watt</span></label></li>
+                <li><label><input type="radio" name="q10" value="d"><span> d) 5 Watt</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- BAGIAN B: ESSAY -->
+        <h3>✍️ Bagian B – Essay</h3>
+        <div class="info-box">
+            <p>⚠️ Isi <strong>Nama Lengkap</strong> dan <strong>NIS</strong> terlebih dahulu! Setiap soal essay bernilai <strong>20 poin</strong>.</p>
+        </div>
+
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 1</span>
+            <div class="question-text">Jelaskan bunyi <strong>Hukum Kekekalan Energi</strong> dan berikan 3 contoh perubahan energi dalam kehidupan sehari-hari!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="1"></textarea>
+        </div>
+
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 2</span>
+            <div class="question-text">Sebutkan <strong>3 syarat</strong> terjadinya usaha dalam tinjauan fisika! Berikan contoh kegiatan yang termasuk usaha dan yang bukan usaha!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="2"></textarea>
+        </div>
+
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 3</span>
+            <div class="question-text">Jelaskan perbedaan antara <strong>energi kinetik</strong> dan <strong>energi potensial</strong>! Tuliskan rumus masing-masing dan berikan 2 contoh bendanya!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="3"></textarea>
+        </div>
+
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 4</span>
+            <div class="question-text">Sebuah benda bermassa 4 kg berada pada ketinggian 5 meter dari tanah. Jika percepatan gravitasi bumi 10 m/s², berapakah <strong>energi potensial</strong> benda tersebut? Tuliskan cara perhitungannya!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="4"></textarea>
+        </div>
+
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 5</span>
+            <div class="question-text">Seorang siswa mendorong meja dengan gaya 50 Newton sehingga meja berpindah sejauh 4 meter dalam waktu 10 sekon. Berapakah <strong>usaha</strong> dan <strong>daya</strong> yang dilakukan siswa tersebut? Tuliskan cara perhitungannya!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="5"></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button class="btn" onclick="submitForm()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+            <button class="btn btn-blue" onclick="resetForm()">🔄 MULAI ULANG</button>
+        </div>
+
+        <!-- Result Box -->
+        <div class="result-box" id="resultBox">
+            <h3>📊 Hasil Uji Formatif</h3>
+            <p>Terima kasih telah menyelesaikan uji formatif ini!</p>
+            
+            <div class="score-grid">
+                <div class="score-item">
+                    <div class="label">Skor Pilihan Ganda</div>
+                    <div class="value" id="scorePG">0/100</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Skor Essay</div>
+                    <div class="value" id="scoreEssay">0/100</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Skor Total</div>
+                    <div class="value" id="scoreTotal">0/200</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Nilai Akhir</div>
+                    <div class="value" id="nilaiAkhir">0</div>
+                </div>
+            </div>
+
+            <div class="grade" id="gradeDisplay">-</div>
+
+            <div style="margin-top: 1.5rem;">
+                <button class="btn" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+                <button class="btn btn-blue" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+                <button class="btn btn-gray" onclick="sendEmail()">✉️ Kirim Email Guru</button>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Kembali ke Beranda</a>
+            <a href="8.html">📖 Kembali ke Materi Bab 8</a>
+            <a href="9.html">Lanjut ke Materi Bab 9 →</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Set tanggal hari ini
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci jawaban pilihan ganda
+        const answerKey = {
+            1: 'b', 2: 'a', 3: 'c', 4: 'c', 5: 'd',
+            6: 'b', 7: 'a', 8: 'c', 9: 'b', 10: 'd'
+        };
+
+        // Pembahasan
+        const explanations = {
+            1: 'Satuan energi dan usaha dalam SI adalah Joule (J). Newton untuk gaya, Watt untuk daya, Pascal untuk tekanan.',
+            2: 'Energi kinetik adalah energi yang dimiliki benda karena geraknya. Semakin besar massa dan kecepatan, semakin besar energi kinetiknya.',
+            3: 'Dalam fisika, usaha hanya terjadi jika ada gaya DAN perpindahan. Karena tembok tidak bergerak (s=0), maka usaha = 0.',
+            4: 'Setrika listrik mengubah energi listrik menjadi energi panas (kalor) untuk menghaluskan pakaian.',
+            5: 'Hukum Kekekalan Energi dikemukakan oleh James Prescott Joule. Total energi di alam semesta adalah tetap.',
+            6: 'Rumus Usaha (W) = Gaya (F) × Perpindahan (s). W = F × s.',
+            7: 'Ek = ½ × m × v² = ½ × 2 × 3² = 1 × 9 = 9 Joule.',
+            8: 'Satuan daya adalah Watt (W), di mana 1 Watt = 1 Joule/sekon.',
+            9: 'Batu bara, minyak bumi, dan gas alam adalah sumber energi yang tidak dapat diperbarui (akan habis). Matahari, angin, dan air dapat diperbarui.',
+            10: 'P = W / t = 300 Joule / 60 sekon = 5 Watt.'
+        };
+
+        function submitForm() {
+            const nama = document.getElementById('nama').value.trim();
+            const nis = document.getElementById('nis').value.trim();
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('⚠️ Mohon lengkapi data siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            // Hitung skor pilihan ganda
+            let scorePG = 0;
+            let correctCount = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionCard = document.querySelector(`.question-card[data-question="${i}"]`);
+                const feedback = questionCard.querySelector('.feedback');
+
+                if (selected) {
+                    if (selected.value === answerKey[i]) {
+                        scorePG += 10;
+                        correctCount++;
+                        questionCard.classList.add('correct');
+                        questionCard.classList.remove('incorrect');
+                        feedback.className = 'feedback show correct';
+                        feedback.innerHTML = `✅ <strong>Benar!</strong> ${explanations[i]}`;
+                    } else {
+                        questionCard.classList.add('incorrect');
+                        questionCard.classList.remove('correct');
+                        feedback.className = 'feedback show incorrect';
+                        feedback.innerHTML = `❌ <strong>Salah.</strong> Jawaban yang benar adalah <strong>${answerKey[i].toUpperCase()}</strong>. ${explanations[i]}`;
+                    }
+                } else {
+                    questionCard.classList.add('incorrect');
+                    questionCard.classList.remove('correct');
+                    feedback.className = 'feedback show incorrect';
+                    feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar adalah <strong>${answerKey[i].toUpperCase()}</strong>. ${explanations[i]}`;
+                }
+            }
+
+            // Hitung skor essay (berdasarkan panjang jawaban)
+            let scoreEssay = 0;
+            for (let i = 1; i <= 5; i++) {
+                const textarea = document.querySelector(`textarea[data-essay="${i}"]`);
+                const length = textarea.value.trim().length;
+                
+                if (length > 200) scoreEssay += 20;
+                else if (length > 100) scoreEssay += 15;
+                else if (length > 50) scoreEssay += 10;
+                else if (length > 20) scoreEssay += 5;
+                else scoreEssay += 0;
+            }
+
+            const scoreTotal = scorePG + scoreEssay;
+            const nilaiAkhir = Math.round((scoreTotal / 200) * 100);
+
+            // Tampilkan hasil
+            document.getElementById('scorePG').textContent = `${scorePG}/100`;
+            document.getElementById('scoreEssay').textContent = `${scoreEssay}/100`;
+            document.getElementById('scoreTotal').textContent = `${scoreTotal}/200`;
+            document.getElementById('nilaiAkhir').textContent = nilaiAkhir;
+
+            // Grade
+            const gradeDisplay = document.getElementById('gradeDisplay');
+            let grade, gradeClass;
+            if (nilaiAkhir >= 85) { grade = 'A'; gradeClass = 'grade-a'; }
+            else if (nilaiAkhir >= 70) { grade = 'B'; gradeClass = 'grade-b'; }
+            else if (nilaiAkhir >= 55) { grade = 'C'; gradeClass = 'grade-c'; }
+            else { grade = 'D'; gradeClass = 'grade-d'; }
+
+            gradeDisplay.textContent = grade;
+            gradeDisplay.className = `grade ${gradeClass}`;
+
+            // Tampilkan result box
+            const resultBox = document.getElementById('resultBox');
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Simpan data untuk download
+            window.resultData = {
+                nama, nis, kelas,
+                tanggal: document.getElementById('tanggal').value,
+                sekolah: document.getElementById('sekolah').value,
+                scorePG, scoreEssay, scoreTotal, nilaiAkhir, grade,
+                correctCount
+            };
+        }
+
+        function resetForm() {
+            if (confirm('Apakah Anda yakin ingin mengulang uji formatif? Semua jawaban akan dihapus.')) {
+                // Reset pilihan ganda
+                for (let i = 1; i <= 10; i++) {
+                    const radios = document.querySelectorAll(`input[name="q${i}"]`);
+                    radios.forEach(r => r.checked = false);
+                    
+                    const questionCard = document.querySelector(`.question-card[data-question="${i}"]`);
+                    questionCard.classList.remove('correct', 'incorrect');
+                    const feedback = questionCard.querySelector('.feedback');
+                    feedback.className = 'feedback';
+                    feedback.innerHTML = '';
+                }
+
+                // Reset essay
+                document.querySelectorAll('textarea[data-essay]').forEach(t => t.value = '');
+
+                // Sembunyikan hasil
+                document.getElementById('resultBox').classList.remove('show');
+
+                // Scroll ke atas
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function downloadPDF() {
+            if (!window.resultData) {
+                alert('Silakan kirim jawaban terlebih dahulu!');
+                return;
+            }
+            generateReport(true);
+        }
+
+        function downloadScore() {
+            if (!window.resultData) {
+                alert('Silakan kirim jawaban terlebih dahulu!');
+                return;
+            }
+            generateReport(false);
+        }
+
+        function generateReport(full) {
+            const d = window.resultData;
+            let content = `
+========================================
+HASIL UJI FORMATIF BAB 8
+USAHA DAN ENERGI DALAM KEHIDUPAN SEHARI-HARI
+IPA KELAS VIII SEMESTER 1
+========================================
+
+Nama    : ${d.nama}
+NIS     : ${d.nis}
+Kelas   : ${d.kelas}
+Sekolah : ${d.sekolah}
+Tanggal : ${d.tanggal || '-'}
+
+----------------------------------------
+HASIL PENILAIAN
+----------------------------------------
+Pilihan Ganda : ${d.scorePG} / 100
+Essay         : ${d.scoreEssay} / 100
+Total Skor    : ${d.scoreTotal} / 200
+Nilai Akhir   : ${d.nilaiAkhir}
+Grade         : ${d.grade}
+----------------------------------------
+`;
+
+            if (full) {
+                content += `\nJAWABAN ESSAY:\n\n`;
+                for (let i = 1; i <= 5; i++) {
+                    const answer = document.querySelector(`textarea[data-essay="${i}"]`).value.trim();
+                    content += `Soal ${i}:\n${answer || '(Tidak dijawab)'}\n\n`;
+                }
+            }
+
+            content += `\n========================================\nGuru: Titin Sepriza, S.Si., Gr\nMTsN 4 Lima Puluh Kota\n========================================`;
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Uji-Formatif-Bab8-${d.nama.replace(/\s+/g, '_')}${full ? '-Lengkap' : '-Skor'}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function sendEmail() {
+            if (!window.resultData) {
+                alert('Silakan kirim jawaban terlebih dahulu!');
+                return;
+            }
+            const d = window.resultData;
+            const subject = encodeURIComponent(`Hasil Uji Formatif Bab 8 - ${d.nama} (${d.kelas})`);
+            const body = encodeURIComponent(
+                `Nama: ${d.nama}\nNIS: ${d.nis}\nKelas: ${d.kelas}\n\n` +
+                `Skor Pilihan Ganda: ${d.scorePG}/100\n` +
+                `Skor Essay: ${d.scoreEssay}/100\n` +
+                `Total: ${d.scoreTotal}/200\n` +
+                `Nilai Akhir: ${d.nilaiAkhir} (Grade: ${d.grade})`
+            );
+            window.location.href = `mailto:t12nsepriz4@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>

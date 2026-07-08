@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPA Kelas VIII Semester 1 | Titin Sepriza, S.Si., Gr</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.85;
+        }
+
+        .hero-text .edition {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text .author-info {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-text .btn {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        .hero-text .btn:hover {
+            background: #d35400;
+        }
+
+        /* Cover Image */
+        .hero-image {
+            flex: 0 0 auto;
+        }
+
+        .hero-image img {
+            max-width: 280px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a5276;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .about-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-card h3 {
+            color: #1a5276;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Structure Section */
+        .structure-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-top: 1.5rem;
+        }
+
+        .structure-box p {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .structure-box p:last-child {
+            border-bottom: none;
+        }
+
+        /* Chapters Section */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .chapter-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .chapter-card .chapter-number {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .chapter-card.uts .chapter-number,
+        .chapter-card.uas .chapter-number {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+        }
+
+        .chapter-card .chapter-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .chapter-card .chapter-desc {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.3rem;
+        }
+
+        /* Author Section */
+        .author-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .author-photo {
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .author-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            border: 5px solid #2980b9;
+        }
+
+        .author-details {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .author-details h3 {
+            font-size: 1.5rem;
+            color: #1a5276;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-details .position {
+            color: #2980b9;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .author-details p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .author-details blockquote {
+            font-style: italic;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-top: 1.5rem;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-box a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang Buku</a></li>
+            <li><a href="#bab">Daftar Bab</a></li>
+            <li><a href="#penulis">Penulis</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="edition">📘 Edisi 2026</span>
+                <h1>IPA Kelas VIII Semester 1</h1>
+                <h2>Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</h2>
+                <p>Buku pelajaran IPA yang dirancang khusus untuk siswa kelas VIII MTs, membahas konsep-konsep sains secara menyeluruh dengan pendekatan yang mudah dipahami dan relevan dengan kehidupan sehari-hari.</p>
+                <div class="author-info"><strong>Penulis:</strong> TITIN SEPRIZA, S.Si., Gr</div>
+                <div class="author-info"><strong>Sekolah:</strong> MTsN 4 Lima Puluh Kota</div>
+                <a href="#bab" class="btn">Lihat Daftar Bab</a>
+            </div>
+            <div class="hero-image">
+                <!-- 
+                    =====================================================
+                    CARA MENGGANTI COVER BUKU:
+                    Ganti file "cover-buku.png" dengan gambar cover buku Anda.
+                    Letakkan file gambar di folder yang sama dengan file HTML ini.
+                    Format yang didukung: PNG, JPG, JPEG, WEBP
+                    Ukuran rekomendasi: 600x800 pixel atau rasio 3:4
+                    =====================================================
+                -->
+                <img src="cover-buku.png" alt="Cover Buku IPA Kelas VIII Semester 1" 
+                     onerror="this.style.background='linear-gradient(135deg, #1a5276, #2980b9)'; this.style.display='flex'; this.alt='[Ganti dengan cover-buku.png]'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='1rem'; this.style.padding='2rem'; this.style.textAlign='center'; this.style.height='380px';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Buku -->
+    <section id="tentang">
+        <h2>Tentang Buku</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; color: #555;">
+            Buku ini disusun sebagai panduan belajar Ilmu Pengetahuan Alam bagi siswa kelas VIII MTs pada Semester 1. 
+            Materi disajikan secara sistematis dengan bahasa yang mudah dipahami, dilengkapi ilustrasi, contoh-contoh 
+            dalam kehidupan sehari-hari, serta latihan soal untuk mengasah pemahaman siswa.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="icon">📚</div>
+                <h3>10 Bab Lengkap</h3>
+                <p>Materi IPA terstruktur dari sel hingga pesawat sederhana</p>
+            </div>
+            <div class="about-card">
+                <div class="icon">🔬</div>
+                <h3>Berbasis Sains</h3>
+                <p>Konsep ilmiah yang relevan dengan kurikulum terkini</p>
+            </div>
+            <div class="about-card">
+                <div class="icon">💡</div>
+                <h3>Kontekstual</h3>
+                <p>Dikaitkan dengan kehidupan sehari-hari siswa</p>
+            </div>
+            <div class="about-card">
+                <div class="icon">✅</div>
+                <h3>UTS & UAS</h3>
+                <p>Evalusi pembelajaran di tengah dan akhir semester</p>
+            </div>
+        </div>
+
+        <div class="structure-box">
+            <h3 style="text-align: center; color: #1a5276; margin-bottom: 1rem;">Struktur Pembahasan</h3>
+            <p><strong>Bab 1–4:</strong> Sistem Organ Manusia (Sel, Pencernaan, Peredaran Darah, Pernapasan)</p>
+            <p><strong>Bab 5:</strong> Ujian Tengah Semester (UTS) – Review Materi Bab 1–4</p>
+            <p><strong>Bab 6–7:</strong> Sistem Ekskresi serta Zat Aditif dan Adiktif</p>
+            <p><strong>Bab 8–9:</strong> Energi dan Pesawat Sederhana dalam Kehidupan Sehari-hari</p>
+            <p><strong>Bab 10:</strong> Ujian Akhir Semester (UAS) – Review Komprehensif</p>
+        </div>
+    </section>
+
+    <!-- Daftar Bab -->
+    <section id="bab">
+        <h2>Daftar Bab</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #555;">
+            Klik pada setiap bab untuk membuka materi lengkap (file .html terpisah). Semua bab akan terbuka di tab baru.
+        </p>
+
+        <div class="chapters-grid">
+            <a href="1.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">1</div>
+                <div>
+                    <div class="chapter-title">Sel dan Mikroskop</div>
+                    <div class="chapter-desc">Mengenal sel sebagai unit terkecil makhluk hidup dan cara pengamatannya</div>
+                </div>
+            </a>
+
+            <a href="2.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">2</div>
+                <div>
+                    <div class="chapter-title">Makanan dan Sistem Pencernaan pada Manusia</div>
+                    <div class="chapter-desc">Zat gizi, proses pencernaan, dan kesehatan sistem pencernaan</div>
+                </div>
+            </a>
+
+            <a href="3.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">3</div>
+                <div>
+                    <div class="chapter-title">Sistem Peredaran Darah pada Manusia</div>
+                    <div class="chapter-desc">Jantung, pembuluh darah, dan mekanisme peredaran darah</div>
+                </div>
+            </a>
+
+            <a href="4.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">4</div>
+                <div>
+                    <div class="chapter-title">Sistem Pernapasan pada Manusia</div>
+                    <div class="chapter-desc">Organ pernapasan, proses respirasi, dan gangguan pernapasan</div>
+                </div>
+            </a>
+
+            <a href="5.html" target="_blank" class="chapter-card uts">
+                <div class="chapter-number">UTS</div>
+                <div>
+                    <div class="chapter-title">Ujian Tengah Semester</div>
+                    <div class="chapter-desc">Review dan evaluasi materi Bab 1–4</div>
+                </div>
+            </a>
+
+            <a href="6.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">6</div>
+                <div>
+                    <div class="chapter-title">Sistem Ekskresi pada Manusia</div>
+                    <div class="chapter-desc">Ginjal, kulit, paru-paru, dan hati sebagai organ ekskresi</div>
+                </div>
+            </a>
+
+            <a href="7.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">7</div>
+                <div>
+                    <div class="chapter-title">Zat Aditif dan Adiktif</div>
+                    <div class="chapter-desc">Jenis zat aditif dalam makanan dan dampak zat adiktif bagi kesehatan</div>
+                </div>
+            </a>
+
+            <a href="8.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">8</div>
+                <div>
+                    <div class="chapter-title">Usaha dan Energi dalam Kehidupan Sehari-hari</div>
+                    <div class="chapter-desc">Konsep usaha, energi, dan penerapannya dalam aktivitas sehari-hari</div>
+                </div>
+            </a>
+
+            <a href="9.html" target="_blank" class="chapter-card">
+                <div class="chapter-number">9</div>
+                <div>
+                    <div class="chapter-title">Pesawat Sederhana dan Penerapannya</div>
+                    <div class="chapter-desc">Tuas, katrol, bidang miring, dan roda gigi dalam kehidupan</div>
+                </div>
+            </a>
+
+            <a href="10.html" target="_blank" class="chapter-card uas">
+                <div class="chapter-number">UAS</div>
+                <div>
+                    <div class="chapter-title">Ujian Akhir Semester</div>
+                    <div class="chapter-desc">Review komprehensif seluruh materi Semester 1</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tentang Penulis -->
+    <section id="penulis">
+        <h2>Tentang Penulis</h2>
+
+        <div class="author-section">
+            <div class="author-photo">
+                <!-- 
+                    =====================================================
+                    CARA MENGGANTI FOTO PENULIS:
+                    Ganti file "photo-penulis.png" dengan foto penulis.
+                    Letakkan file gambar di folder yang sama dengan file HTML ini.
+                    Format yang didukung: PNG, JPG, JPEG, WEBP
+                    Ukuran rekomendasi: 400x400 pixel (persegi)
+                    =====================================================
+                -->
+                <img src="photo-penulis.png" alt="Foto Penulis - Titin Sepriza, S.Si., Gr"
+                     onerror="this.style.background='#ddd'; this.alt='[Ganti dengan photo-penulis.png]'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#999'; this.style.fontSize='0.8rem'; this.style.textAlign='center'; this.style.padding='1rem';">
+            </div>
+            <div class="author-details">
+                <h3>TITIN SEPRIZA, S.Si., Gr</h3>
+                <div class="position">Guru IPA – MTsN 4 Lima Puluh Kota</div>
+                <p>
+                    Titin Sepriza, S.Si., Gr adalah seorang pendidik dan praktisi di bidang sains yang mengabdi 
+                    di MTsN 4 Lima Puluh Kota. Dengan latar belakang pendidikan Sains (S.Si.), beliau aktif 
+                    mengajar mata pelajaran Ilmu Pengetahuan Alam dan berdedikasi dalam mengembangkan 
+                    metode pembelajaran yang inovatif dan menyenangkan bagi siswa.
+                </p>
+                <p>
+                    Buku ini disusun berdasarkan pengalaman mengajar di kelas, dengan harapan dapat membantu 
+                    siswa memahami konsep-konsep IPA secara lebih mudah dan aplikatif.
+                </p>
+                <blockquote>
+                    "Sains adalah cara kita memahami dunia. Dengan belajar IPA, siswa tidak hanya menghafal, 
+                    tetapi belajar berpikir kritis dan memecahkan masalah."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak">
+        <h2>Informasi Kontak</h2>
+        <div class="contact-box">
+            <p>Untuk informasi lebih lanjut tentang buku ini, silakan hubungi:</p>
+            <p><strong>Email:</strong> <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
+            <p><strong>Institusi:</strong> MTsN 4 Lima Puluh Kota</p>
+            <p><strong>Tahun Terbit:</strong> 2026</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Titin Sepriza, S.Si., Gr – MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> – Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Hak Cipta Dilindungi</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 9 - Pesawat Sederhana dan Penerapannya | IPA Kelas VIII Semester 1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        nav { background: linear-gradient(135deg, #2c3e50, #34495e); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        nav ul li a:hover { opacity: 0.8; }
+        .header { background: linear-gradient(135deg, #1a252f, #2c3e50); color: white; padding: 3rem 2rem; text-align: center; }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header h2 { font-size: 1.3rem; font-weight: 300; margin-bottom: 1rem; }
+        .header p { font-size: 1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        .content h3 { color: #2c3e50; font-size: 1.5rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #34495e; }
+        .content h4 { color: #34495e; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
+        .content p { margin-bottom: 1rem; text-align: justify; }
+        .nav-buttons { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-buttons a { display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #34495e, #7f8c8d); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+        .nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .image-container { text-align: center; margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .image-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .image-container p { margin-top: 1rem; font-style: italic; color: #555; text-align: center; }
+        ul, ol { margin: 1rem 0 1rem 2rem; }
+        li { margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        th, td { padding: 1rem; text-align: left; border: 1px solid #ddd; }
+        th { background: linear-gradient(135deg, #34495e, #7f8c8d); color: white; font-weight: 600; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+        .info-box { background: linear-gradient(135deg, #eaf2f8, #d4e6f1); border-left: 5px solid #34495e; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
+        .info-box h4 { color: #2c3e50; margin-top: 0; }
+        .warning-box { background: linear-gradient(135deg, #fef9e7, #fcf3cf); border-left: 5px solid #f1c40f; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
+        .highlight { background: #fff9c4; padding: 0.2rem 0.5rem; border-radius: 3px; font-weight: 600; }
+        .formula-box { background: #2c3e50; color: #ecf0f1; padding: 1.5rem; border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; margin: 1.5rem 0; font-family: 'Courier New', Courier, monospace; }
+        footer { background: #1a252f; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: #7f8c8d; text-decoration: none; }
+        @media (max-width: 768px) { .header h1 { font-size: 1.5rem; } .nav-buttons { flex-direction: column; } .nav-buttons a { text-align: center; } table { font-size: 0.9rem; } th, td { padding: 0.7rem; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="index.html#bab"> Daftar Bab</a></li>
+            <li><a href="index.html#penulis">️ Penulis</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>BAB 9</h1>
+        <h2>Pesawat Sederhana dan Penerapannya</h2>
+        <p>Memahami prinsip kerja tuas, katrol, bidang miring, dan roda berporos serta penerapannya dalam kehidupan sehari-hari</p>
+    </div>
+
+    <div class="content">
+
+        <div class="nav-buttons">
+            <a href="index.html"> Kembali ke Beranda</a>
+            <a href="uji-formatif-9.html">📝 Uji Formatif Bab 9</a>
+            <a href="10.html">Bab Selanjutnya →</a>
+        </div>
+
+        <!-- A. Pengertian -->
+        <h3>A. Pengertian Pesawat Sederhana</h3>
+        <p>
+            <strong>Pesawat sederhana</strong> adalah alat-alat yang sederhana dan dapat memudahkan manusia dalam melakukan usaha atau kerja. Pesawat sederhana tidak mengurangi jumlah usaha yang harus dilakukan, tetapi alat ini membantu dengan cara:
+        </p>
+        <ul>
+            <li>Memperkecil gaya yang dibutuhkan untuk memindahkan benda.</li>
+            <li>Mengubah arah gaya yang diberikan.</li>
+            <li>Memperbesar kecepatan perpindahan benda.</li>
+        </ul>
+        <div class="info-box">
+            <h4>💡 Tahukah Kamu?</h4>
+            <p>Manusia telah menggunakan pesawat sederhana sejak zaman prasejarah. Arkhimedes, seorang ilmuwan Yunani kuno, pernah berkata: <em>"Berikan saya sebuah titik tumpu, dan saya akan menggerakkan dunia!"</em> Pernyataan ini merujuk pada prinsip kerja tuas/pengungkit.</p>
+        </div>
+
+        <!-- B. Keuntungan Mekanik -->
+        <h3>B. Keuntungan Mekanik (KM)</h3>
+        <p>
+            <strong>Keuntungan Mekanik (KM)</strong> adalah perbandingan antara gaya beban (berat benda) dengan gaya kuasa (gaya yang kita keluarkan). Semakin besar nilai KM, semakin ringan beban yang dapat kita angkat.
+        </p>
+        <div class="formula-box">
+            KM = W / F
+        </div>
+        <p style="text-align: center;">
+            <strong>Keterangan:</strong><br>
+            KM = Keuntungan Mekanik (tidak bersatuan)<br>
+            W = Gaya Beban / Berat Benda (Newton)<br>
+            F = Gaya Kuasa (Newton)
+        </p>
+
+        <!-- C. Jenis-Jenis -->
+        <h3>C. Jenis-Jenis Pesawat Sederhana</h3>
+        <p>Ada 4 jenis pesawat sederhana yang sering kita temui dalam kehidupan sehari-hari:</p>
+
+        <h4>1. Tuas atau Pengungkit (Lever)</h4>
+        <p>
+            Tuas adalah batang keras yang dapat berputar pada suatu titik tetap yang disebut <strong>titik tumpu (T)</strong>. Pada tuas terdapat tiga komponen utama: <strong>Titik Tumpu (T)</strong>, <strong>Titik Beban (B)</strong>, dan <strong>Titik Kuasa (K)</strong>.
+        </p>
+        <p>Berdasarkan letak titik tumpunya, tuas dibagi menjadi 3 golongan:</p>
+        <table>
+            <tr>
+                <th>Golongan</th>
+                <th>Letak Titik Tumpu</th>
+                <th>Rumus Keseimbangan</th>
+                <th>Contoh Alat</th>
+            </tr>
+            <tr>
+                <td><strong>Golongan I</strong></td>
+                <td>Titik tumpu berada di <strong>tengah</strong> (antara beban dan kuasa).</td>
+                <td>W × Lb = F × Lk</td>
+                <td>Gunting, tang, jungkat-jungkit, crowbar (linggis).</td>
+            </tr>
+            <tr>
+                <td><strong>Golongan II</strong></td>
+                <td>Titik beban berada di <strong>tengah</strong> (antara tumpu dan kuasa).</td>
+                <td>W × Lb = F × Lk</td>
+                <td>Gerobak dorong, pemecah kemiri, pembuka botol, stapler.</td>
+            </tr>
+            <tr>
+                <td><strong>Golongan III</strong></td>
+                <td>Titik kuasa berada di <strong>tengah</strong> (antara tumpu dan beban).</td>
+                <td>W × Lb = F × Lk</td>
+                <td>Pinset, sekop, lengan bawah manusia, alat pancing.</td>
+            </tr>
+        </table>
+        <div class="formula-box">
+            W × Lb = F × Lk  <br>  KM = Lk / Lb
+        </div>
+        <p style="text-align: center;">
+            <strong>Keterangan:</strong> W = Beban (N), F = Kuasa (N), Lb = Lengan Beban (m), Lk = Lengan Kuasa (m)
+        </p>
+
+        <h4>2. Katrol (Pulley)</h4>
+        <p>
+            Katrol adalah roda berporos yang dililiti tali atau rantai. Katrol digunakan untuk mengangkat benda dengan cara menarik tali. Katrol dibedakan menjadi:
+        </p>
+        <ul>
+            <li><strong>Katrol Tetap:</strong> Katrol yang posisinya tidak berubah (terpasang di tempat). KM = 1. Contoh: katrol pada tiang bendera, katrol sumur timba.</li>
+            <li><strong>Katrol Bebas:</strong> Katrol yang posisinya dapat berubah (turut bergerak bersama beban). KM = 2. Contoh: katrol pada alat pengangkat peti kemas.</li>
+            <li><strong>Katrol Majemuk (Berganda):</strong> Perpaduan katrol tetap dan katrol bebas. KM = jumlah tali yang menopang beban. Contoh: derek (crane), alat angkat pada gedung bertingkat.</li>
+        </ul>
+
+        <h4>3. Bidang Miring (Inclined Plane)</h4>
+        <p>
+            Bidang miring adalah permukaan datar yang salah satu ujungnya lebih tinggi dari ujung lainnya. Bidang miring memudahkan kita memindahkan benda ke tempat yang lebih tinggi dengan gaya yang lebih kecil, tetapi lintasannya menjadi lebih panjang.
+        </p>
+        <div class="formula-box">
+            W × h = F × s  <br>  KM = s / h
+        </div>
+        <p style="text-align: center;">
+            <strong>Keterangan:</strong> W = Beban (N), h = Tinggi bidang miring (m), F = Gaya kuasa (N), s = Panjang bidang miring (m)
+        </p>
+        <p><strong>Contoh penerapan:</strong> Tangga, jalan di pegunungan yang berkelok-kelok, sekrup, kapak, baji, dan pisau.</p>
+
+        <h4>4. Roda Berporos (Roda dan Gandar)</h4>
+        <p>
+            Roda berporos adalah roda yang dihubungkan dengan sebuah poros (gandar) yang dapat berputar bersama-sama. Alat ini memudahkan perpindahan benda dan mengubah gaya putar.
+        </p>
+        <p><strong>Contoh penerapan:</strong> Setir mobil/motor, roda sepeda, roda gigi (gear), engkol pintu, obeng, dan kerekan bendera.</p>
+
+        <!-- D. Penerapan -->
+        <h3>D. Penerapan Pesawat Sederhana dalam Kehidupan Sehari-hari</h3>
+        <div class="info-box">
+            <h4>🔧 Contoh Alat di Sekitar Kita</h4>
+            <ul>
+                <li><strong>Gunting:</strong> Tuas Golongan I (titik tumpu di tengah, di antara beban/kertas dan kuasa/tangan).</li>
+                <li><strong>Gerobak Dorong:</strong> Tuas Golongan II (beban/muatan di tengah, antara roda/tumpu dan tangan/kuasa).</li>
+                <li><strong>Pinset:</strong> Tuas Golongan III (kuasa/jari di tengah, antara tumpu/ujung pinset dan beban/benda yang dipetik).</li>
+                <li><strong>Sekrup:</strong> Prinsip bidang miring yang dililitkan pada sebuah silinder.</li>
+                <li><strong>Tiang Bendera:</strong> Katrol tetap (mengubah arah gaya tarik dari bawah ke atas).</li>
+            </ul>
+        </div>
+
+        <!-- E. Rangkuman -->
+        <h3>E. Rangkuman</h3>
+        <div class="info-box">
+            <ul>
+                <li>Pesawat sederhana adalah alat yang memudahkan manusia melakukan usaha.</li>
+                <li>Keuntungan Mekanik (KM) = W / F. Semakin besar KM, semakin mudah mengangkat beban.</li>
+                <li>4 jenis pesawat sederhana: Tuas, Katrol, Bidang Miring, dan Roda Berporos.</li>
+                <li>Tuas Golongan I: Titik tumpu di tengah. Golongan II: Beban di tengah. Golongan III: Kuasa di tengah.</li>
+                <li>Rumus Tuas: W × Lb = F × Lk.</li>
+                <li>Rumus Bidang Miring: W × h = F × s.</li>
+                <li>Katrol tetap memiliki KM = 1, katrol bebas memiliki KM = 2.</li>
+            </ul>
+        </div>
+
+        <!-- F. Latihan Soal -->
+        <h3>F. Latihan Soal</h3>
+
+        <h4>A. Pilihan Ganda</h4>
+        <ol>
+            <li>Alat yang digunakan untuk memudahkan manusia melakukan usaha disebut...
+                <ul><li>a. Pesawat terbang</li><li>b. Pesawat sederhana</li><li>c. Mesin kompleks</li><li>d. Robot</li></ul>
+            </li>
+            <li>Gunting dan tang termasuk tuas golongan...
+                <ul><li>a. I</li><li>b. II</li><li>c. III</li><li>d. IV</li></ul>
+            </li>
+            <li>Prinsip kerja sekrup dan baji didasarkan pada pesawat sederhana...
+                <ul><li>a. Tuas</li><li>b. Katrol</li><li>c. Bidang miring</li><li>d. Roda berporos</li></ul>
+            </li>
+            <li>Keuntungan mekanik katrol tetap adalah...
+                <ul><li>a. 1</li><li>b. 2</li><li>c. 3</li><li>d. 4</li></ul>
+            </li>
+            <li>Sebuah beban 100 N diangkat dengan tuas. Jika lengan beban 0,5 m dan lengan kuasa 2 m, gaya kuasa yang dibutuhkan adalah...
+                <ul><li>a. 25 N</li><li>b. 50 N</li><li>c. 100 N</li><li>d. 400 N</li></ul>
+            </li>
+        </ol>
+
+        <h4>B. Essay</h4>
+        <ol>
+            <li>Sebutkan 4 jenis pesawat sederhana dan berikan masing-masing 2 contoh alatnya!</li>
+            <li>Jelaskan perbedaan tuas golongan I, II, dan III berdasarkan letak titik tumpunya!</li>
+            <li>Sebuah batu seberat 400 N akan diangkat dengan tuas. Jika lengan beban 0,5 m dan lengan kuasa 2 m, berapakah gaya kuasa yang diperlukan?</li>
+            <li>Mengapa jalan di pegunungan dibuat berkelok-kelok (zig-zag)? Jelaskan hubungannya dengan prinsip pesawat sederhana!</li>
+            <li>Sebutkan 3 contoh penerapan roda berporos dalam kehidupan sehari-hari dan jelaskan cara kerjanya!</li>
+        </ol>
+
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Kembali ke Beranda</a>
+            <a href="uji-formatif-9.html">📝 Uji Formatif Bab 9</a>
+            <a href="10.html">Bab Selanjutnya (UAS) →</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>

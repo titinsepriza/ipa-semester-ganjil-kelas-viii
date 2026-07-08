@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uji Formatif Bab 1 - Sel dan Mikroskop | IPA Kelas VIII Semester 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a5276, #2980b9);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content h3 {
+            color: #1a5276;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #27ae60;
+        }
+
+        .content h4 {
+            color: #2980b9;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-left: 5px solid #27ae60;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .info-box h4 {
+            color: #1a5276;
+            margin-top: 0;
+        }
+
+        /* Form */
+        .form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 2rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a5276;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #27ae60;
+            box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Question Card */
+        .question-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #27ae60;
+        }
+
+        .question-card.correct {
+            border-left-color: #27ae60;
+            background: #e8f5e9;
+        }
+
+        .question-card.incorrect {
+            border-left-color: #e74c3c;
+            background: #fadbd8;
+        }
+
+        .question-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+        }
+
+        .question-text {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .options {
+            list-style: none;
+        }
+
+        .options li {
+            margin-bottom: 0.5rem;
+        }
+
+        .options label {
+            display: block;
+            padding: 0.7rem 1rem;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .options label:hover {
+            background: #e8f5e9;
+            border-color: #27ae60;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        .options input[type="radio"]:checked + span {
+            font-weight: 600;
+            color: #27ae60;
+        }
+
+        /* Essay */
+        .essay-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #2980b9;
+        }
+
+        .essay-card textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+        }
+
+        .essay-card textarea:focus {
+            outline: none;
+            border-color: #2980b9;
+            box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.3rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-blue {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+
+        .btn-orange {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+        }
+
+        .btn-gray {
+            background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .button-group {
+            text-align: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        /* Result Box */
+        .result-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            text-align: center;
+            display: none;
+        }
+
+        .result-box.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-box h3 {
+            color: #27ae60;
+            border: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .score-item {
+            background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+            padding: 1.2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .score-item .label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .score-item .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1a5276;
+        }
+
+        .grade {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .grade-a { background: #d4efdf; color: #1e8449; }
+        .grade-b { background: #d6eaf8; color: #1a5276; }
+        .grade-c { background: #fcf3cf; color: #b7950b; }
+        .grade-d { background: #fadbd8; color: #922b21; }
+
+        /* Feedback */
+        .feedback {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background: #d4efdf;
+            color: #1e8449;
+            border-left: 4px solid #27ae60;
+        }
+
+        .feedback.incorrect {
+            background: #fadbd8;
+            color: #922b21;
+            border-left: 4px solid #e74c3c;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-buttons a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .nav-buttons a {
+                text-align: center;
+            }
+
+            .score-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="index.html#bab">📚 Daftar Bab</a></li>
+            <li><a href="index.html#penulis">✍️ Penulis</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>📋 UJI FORMATIF BAB 1</h1>
+        <h2>Sel dan Mikroskop</h2>
+        <p>Evaluasi pemahaman konsep dasar sel sebagai unit terkecil kehidupan dan penggunaan mikroskop dalam pengamatan</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Info Box -->
+        <div class="info-box">
+            <h4>📋 Petunjuk Pengerjaan</h4>
+            <p><strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) | <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)</p>
+            <p><strong>Materi:</strong> Pengertian sel, sejarah penemuan sel, struktur sel hewan dan tumbuhan, bagian-bagian mikroskop, cara menggunakan mikroskop, perhitungan perbesaran, dan praktik pengamatan sel.</p>
+            <p><strong>Waktu:</strong> Tidak terbatas | <strong>Total Skor:</strong> 200 poin</p>
+        </div>
+
+        <!-- Form Data Siswa -->
+        <div class="form-section">
+            <h3 style="border: none; margin-top: 0;">📋 Data Siswa</h3>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap <span style="color: red;">*</span></label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nis">NIS (Nomor Induk Siswa) <span style="color: red;">*</span></label>
+                        <input type="text" id="nis" name="nis" required placeholder="Masukkan NIS">
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">📅 Tanggal Ujian</label>
+                        <input type="date" id="tanggal" name="tanggal">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="kelas">Kelas <span style="color: red;">*</span></label>
+                        <select id="kelas" name="kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VIII A">Kelas VIII A</option>
+                            <option value="VIII B">Kelas VIII B</option>
+                            <option value="VIII C">Kelas VIII C</option>
+                            <option value="VIII D">Kelas VIII D</option>
+                            <option value="VIII E">Kelas VIII E</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sekolah">Sekolah</label>
+                        <input type="text" id="sekolah" name="sekolah" value="MTsN 4 Lima Puluh Kota" readonly>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- BAGIAN A: PILIHAN GANDA -->
+        <h3>📋 Bagian A – Pilihan Ganda</h3>
+        <div class="info-box">
+            <p>⚠️ Lengkapi semua 10 soal pilihan ganda! Setiap soal bernilai <strong>10 poin</strong>.</p>
+        </div>
+
+        <!-- Soal 1 -->
+        <div class="question-card" data-question="1" data-answer="b">
+            <span class="question-number">Soal 1</span>
+            <div class="question-text">Ilmuwan yang pertama kali menggunakan istilah "cell" (sel) setelah mengamati sayatan gabus dengan mikroskop pada tahun 1665 adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="a"><span> a) Anton van Leeuwenhoek</span></label></li>
+                <li><label><input type="radio" name="q1" value="b"><span> b) Robert Hooke</span></label></li>
+                <li><label><input type="radio" name="q1" value="c"><span> c) Matthias Schleiden</span></label></li>
+                <li><label><input type="radio" name="q1" value="d"><span> d) Rudolf Virchow</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 2 -->
+        <div class="question-card" data-question="2" data-answer="b">
+            <span class="question-number">Soal 2</span>
+            <div class="question-text">Organel sel yang berfungsi sebagai tempat berlangsungnya respirasi sel untuk menghasilkan energi dalam bentuk ATP disebut...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="a"><span> a) Kloroplas</span></label></li>
+                <li><label><input type="radio" name="q2" value="b"><span> b) Mitokondria</span></label></li>
+                <li><label><input type="radio" name="q2" value="c"><span> c) Ribosom</span></label></li>
+                <li><label><input type="radio" name="q2" value="d"><span> d) Badan Golgi</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 3 -->
+        <div class="question-card" data-question="3" data-answer="c">
+            <span class="question-number">Soal 3</span>
+            <div class="question-text">Berikut ini yang merupakan perbedaan utama antara sel tumbuhan dan sel hewan adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="a"><span> a) Sel hewan memiliki dinding sel, sel tumbuhan tidak</span></label></li>
+                <li><label><input type="radio" name="q3" value="b"><span> b) Sel hewan memiliki kloroplas, sel tumbuhan tidak</span></label></li>
+                <li><label><input type="radio" name="q3" value="c"><span> c) Sel tumbuhan memiliki dinding sel dan kloroplas, sel hewan tidak</span></label></li>
+                <li><label><input type="radio" name="q3" value="d"><span> d) Sel tumbuhan tidak memiliki nukleus</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 4 -->
+        <div class="question-card" data-question="4" data-answer="c">
+            <span class="question-number">Soal 4</span>
+            <div class="question-text">Bagian mikroskop yang berfungsi mengatur banyak sedikitnya cahaya yang masuk ke objek pengamatan adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="a"><span> a) Kondensor</span></label></li>
+                <li><label><input type="radio" name="q4" value="b"><span> b) Revolver</span></label></li>
+                <li><label><input type="radio" name="q4" value="c"><span> c) Diafragma</span></label></li>
+                <li><label><input type="radio" name="q4" value="d"><span> d) Makrometer</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 5 -->
+        <div class="question-card" data-question="5" data-answer="c">
+            <span class="question-number">Soal 5</span>
+            <div class="question-text">Jika seorang siswa menggunakan lensa okuler 10x dan lensa objektif 40x, maka perbesaran total yang diperoleh adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="a"><span> a) 40 kali</span></label></li>
+                <li><label><input type="radio" name="q5" value="b"><span> b) 100 kali</span></label></li>
+                <li><label><input type="radio" name="q5" value="c"><span> c) 400 kali</span></label></li>
+                <li><label><input type="radio" name="q5" value="d"><span> d) 1000 kali</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 6 -->
+        <div class="question-card" data-question="6" data-answer="b">
+            <span class="question-number">Soal 6</span>
+            <div class="question-text">Organel sel yang hanya dimiliki oleh sel tumbuhan dan berfungsi sebagai tempat berlangsungnya fotosintesis adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" value="a"><span> a) Mitokondria</span></label></li>
+                <li><label><input type="radio" name="q6" value="b"><span> b) Kloroplas</span></label></li>
+                <li><label><input type="radio" name="q6" value="c"><span> c) Vakuola</span></label></li>
+                <li><label><input type="radio" name="q6" value="d"><span> d) Retikulum Endoplasma</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 7 -->
+        <div class="question-card" data-question="7" data-answer="a">
+            <span class="question-number">Soal 7</span>
+            <div class="question-text">Nukleus (inti sel) memiliki fungsi utama sebagai...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" value="a"><span> a) Pusat kendali aktivitas sel dan penyimpan informasi genetik (DNA)</span></label></li>
+                <li><label><input type="radio" name="q7" value="b"><span> b) Tempat menghasilkan energi ATP</span></label></li>
+                <li><label><input type="radio" name="q7" value="c"><span> c) Tempat berlangsungnya fotosintesis</span></label></li>
+                <li><label><input type="radio" name="q7" value="d"><span> d) Pelindung sel dari lingkungan luar</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 8 -->
+        <div class="question-card" data-question="8" data-answer="d">
+            <span class="question-number">Soal 8</span>
+            <div class="question-text">Bagian mikroskop yang digunakan untuk memfokuskan bayangan secara halus setelah bayangan ditemukan dengan makrometer adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" value="a"><span> a) Revolver</span></label></li>
+                <li><label><input type="radio" name="q8" value="b"><span> b) Kondensor</span></label></li>
+                <li><label><input type="radio" name="q8" value="c"><span> c) Makrometer</span></label></li>
+                <li><label><input type="radio" name="q8" value="d"><span> d) Mikrometer</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 9 -->
+        <div class="question-card" data-question="9" data-answer="b">
+            <span class="question-number">Soal 9</span>
+            <div class="question-text">Sel berikut ini yang <u>tidak memiliki</u> dinding sel adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q9" value="a"><span> a) Sel daun</span></label></li>
+                <li><label><input type="radio" name="q9" value="b"><span> b) Sel epitel pipi manusia</span></label></li>
+                <li><label><input type="radio" name="q9" value="c"><span> c) Sel batang pohon</span></label></li>
+                <li><label><input type="radio" name="q9" value="d"><span> d) Sel akar tumbuhan</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal 10 -->
+        <div class="question-card" data-question="10" data-answer="c">
+            <span class="question-number">Soal 10</span>
+            <div class="question-text">Cara membawa mikroskop yang benar adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" value="a"><span> a) Memegang tabung mikroskop dengan satu tangan</span></label></li>
+                <li><label><input type="radio" name="q10" value="b"><span> b) Memegang meja benda dengan kedua tangan</span></label></li>
+                <li><label><input type="radio" name="q10" value="c"><span> c) Satu tangan memegang lengan mikroskop, tangan lain menyangga kaki mikroskop</span></label></li>
+                <li><label><input type="radio" name="q10" value="d"><span> d) Memegang lensa okuler dengan jari</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- BAGIAN B: ESSAY -->
+        <h3>✍️ Bagian B – Essay</h3>
+        <div class="info-box">
+            <p>⚠️ Isi <strong>Nama Lengkap</strong> dan <strong>NIS</strong> terlebih dahulu! Setiap soal essay bernilai <strong>20 poin</strong>.</p>
+        </div>
+
+        <!-- Essay 1 -->
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 1</span>
+            <div class="question-text">Jelaskan minimal <strong>3 perbedaan</strong> antara sel hewan dan sel tumbuhan, serta berikan alasan mengapa sel tumbuhan memiliki bentuk yang tetap!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="1"></textarea>
+        </div>
+
+        <!-- Essay 2 -->
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 2</span>
+            <div class="question-text">Sebutkan dan jelaskan fungsi dari <strong>5 bagian mikroskop</strong> (boleh dari bagian optik maupun mekanik)!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="2"></textarea>
+        </div>
+
+        <!-- Essay 3 -->
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 3</span>
+            <div class="question-text">Uraikan <strong>langkah-langkah menggunakan mikroskop</strong> dengan benar, mulai dari persiapan hingga setelah selesai pengamatan!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="3"></textarea>
+        </div>
+
+        <!-- Essay 4 -->
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 4</span>
+            <div class="question-text">Ceritakan secara singkat <strong>sejarah penemuan sel</strong> mulai dari Robert Hooke hingga Rudolf Virchow! Jelaskan kontribusi masing-masing ilmuwan!</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="4"></textarea>
+        </div>
+
+        <!-- Essay 5 -->
+        <div class="essay-card">
+            <span class="question-number">Soal Essay 5</span>
+            <div class="question-text">Jika kamu melakukan praktik pengamatan <strong>sel bawang merah</strong> menggunakan mikroskop, jelaskan alat dan bahan yang dibutuhkan serta langkah-langkah kerjanya! Mengapa diperlukan larutan iodin dalam pengamatan tersebut?</div>
+            <textarea placeholder="Tuliskan jawaban Anda di sini..." data-essay="5"></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button class="btn" onclick="submitForm()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+            <button class="btn btn-blue" onclick="resetForm()">🔄 MULAI ULANG</button>
+        </div>
+
+        <!-- Result Box -->
+        <div class="result-box" id="resultBox">
+            <h3>📊 Hasil Uji Formatif</h3>
+            <p>Terima kasih telah menyelesaikan uji formatif ini!</p>
+            
+            <div class="score-grid">
+                <div class="score-item">
+                    <div class="label">Skor Pilihan Ganda</div>
+                    <div class="value" id="scorePG">0/100</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Skor Essay</div>
+                    <div class="value" id="scoreEssay">0/100</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Skor Total</div>
+                    <div class="value" id="scoreTotal">0/200</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Nilai Akhir</div>
+                    <div class="value" id="nilaiAkhir">0</div>
+                </div>
+            </div>
+
+            <div class="grade" id="gradeDisplay">-</div>
+
+            <div style="margin-top: 1.5rem;">
+                <button class="btn btn-orange" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+                <button class="btn btn-blue" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+                <button class="btn btn-gray" onclick="sendEmail()">✉️ Kirim Email Guru</button>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Kembali ke Beranda</a>
+            <a href="1.html">📖 Kembali ke Materi Bab 1</a>
+            <a href="2.html">Lanjut ke Materi Bab 2 →</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Set tanggal hari ini
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci jawaban pilihan ganda
+        const answerKey = {
+            1: 'b', 2: 'b', 3: 'c', 4: 'c', 5: 'c',
+            6: 'b', 7: 'a', 8: 'd', 9: 'b', 10: 'c'
+        };
+
+        // Pembahasan
+        const explanations = {
+            1: 'Robert Hooke (1665) mengamati sayatan gabus dengan mikroskop dan melihat ruangan-ruangan kecil yang disebutnya "cell" (sel).',
+            2: 'Mitokondria dikenal sebagai "the powerhouse of the cell" karena berfungsi sebagai tempat respirasi sel untuk menghasilkan energi ATP.',
+            3: 'Sel tumbuhan memiliki dinding sel (dari selulosa) dan kloroplas (untuk fotosintesis), sedangkan sel hewan tidak memilikinya.',
+            4: 'Diafragma terletak di bawah meja benda dan berfungsi mengatur intensitas cahaya yang masuk.',
+            5: 'Perbesaran total = perbesaran lensa okuler × perbesaran lensa objektif = 10 × 40 = 400 kali.',
+            6: 'Kloroplas adalah organel yang mengandung klorofil dan hanya dimiliki oleh sel tumbuhan, berfungsi untuk fotosintesis.',
+            7: 'Nukleus berfungsi sebagai pusat kendali sel, menyimpan DNA, dan mengatur seluruh aktivitas sel.',
+            8: 'Mikrometer (pemutar halus) digunakan untuk memfokuskan bayangan secara perlahan setelah bayangan ditemukan dengan makrometer.',
+            9: 'Sel hewan (termasuk sel epitel pipi manusia) tidak memiliki dinding sel, berbeda dengan sel tumbuhan yang memilikinya.',
+            10: 'Cara membawa mikroskop yang benar adalah satu tangan memegang lengan mikroskop, tangan lain menyangga kaki mikroskop agar stabil.'
+        };
+
+        function submitForm() {
+            const nama = document.getElementById('nama').value.trim();
+            const nis = document.getElementById('nis').value.trim();
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('⚠️ Mohon lengkapi data siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            // Hitung skor pilihan ganda
+            let scorePG = 0;
+            let correctCount = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionCard = document.querySelector(`.question-card[data-question="${i}"]`);
+                const feedback = questionCard.querySelector('.feedback');
+
+                if (selected) {
+                    if (selected.value === answerKey[i]) {
+                        scorePG += 10;
+                        correctCount++;
+                        questionCard.classList.add('correct');
+                        questionCard.classList.remove('incorrect');
+                        feedback.className = 'feedback show correct';
+                        feedback.innerHTML = `✅ <strong>Benar!</strong> ${explanations[i]}`;
+                    } else {
+                        questionCard.classList.add('incorrect');
+                        questionCard.classList.remove('correct');
+                        feedback.className = 'feedback show incorrect';
+                        feedback.innerHTML = `❌ <strong>Salah.</strong> Jawaban yang benar adalah <strong>${answerKey[i].toUpperCase()}</strong>. ${explanations[i]}`;
+                    }
+                } else {
+                    questionCard.classList.add('incorrect');
+                    questionCard.classList.remove('correct');
+                    feedback.className = 'feedback show incorrect';
+                    feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar adalah <strong>${answerKey[i].toUpperCase()}</strong>. ${explanations[i]}`;
+                }
+            }
+
+            // Hitung skor essay (berdasarkan panjang jawaban)
+            let scoreEssay = 0;
+            for (let i = 1; i <= 5; i++) {
+                const textarea = document.querySelector(`textarea[data-essay="${i}"]`);
+                const length = textarea.value.trim().length;
+                
+                if (length > 200) scoreEssay += 20;
+                else if (length > 100) scoreEssay += 15;
+                else if (length > 50) scoreEssay += 10;
+                else if (length > 20) scoreEssay += 5;
+                else scoreEssay += 0;
+            }
+
+            const scoreTotal = scorePG + scoreEssay;
+            const nilaiAkhir = Math.round((scoreTotal / 200) * 100);
+
+            // Tampilkan hasil
+            document.getElementById('scorePG').textContent = `${scorePG}/100`;
+            document.getElementById('scoreEssay').textContent = `${scoreEssay}/100`;
+            document.getElementById('scoreTotal').textContent = `${scoreTotal}/200`;
+            document.getElementById('nilaiAkhir').textContent = nilaiAkhir;
+
+            // Grade
+            const gradeDisplay = document.getElementById('gradeDisplay');
+            let grade, gradeClass;
+            if (nilaiAkhir >= 85) { grade = 'A'; gradeClass = 'grade-a'; }
+            else if (nilaiAkhir >= 70) { grade = 'B'; gradeClass = 'grade-b'; }
+            else if (nilaiAkhir >= 55) { grade = 'C'; gradeClass = 'grade-c'; }
+            else { grade = 'D'; gradeClass = 'grade-d'; }
+
+            gradeDisplay.textContent = grade;
+            gradeDisplay.className = `grade ${gradeClass}`;
+
+            // Tampilkan result box
+            const resultBox = document.getElementById('resultBox');
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Simpan data untuk download
+            window.resultData = {
+                nama, nis, kelas,
+                tanggal: document.getElementById('tanggal').value,
+                sekolah: document.getElementById('sekolah').value,
+                scorePG, scoreEssay, scoreTotal, nilaiAkhir, grade,
+                correctCount
+            };
+        }
+
+        function resetForm() {
+            if (confirm('Apakah Anda yakin ingin mengulang uji formatif? Semua jawaban akan dihapus.')) {
+                // Reset pilihan ganda
+                for (let i = 1; i <= 10; i++) {
+                    const radios = document.querySelectorAll(`input[name="q${i}"]`);
+                    radios.forEach(r => r.checked = false);
+                    
+                    const questionCard = document.querySelector(`.question-card[data-question="${i}"]`);
+                    questionCard.classList.remove('correct', 'incorrect');
+                    const feedback = questionCard.querySelector('.feedback');
+                    feedback.className = 'feedback';
+                    feedback.innerHTML = '';
+                }
+
+                // Reset essay
+                document.querySelectorAll('textarea[data-essay]').forEach(t => t.value = '');
+
+                // Sembunyikan hasil
+                document.getElementById('resultBox').classList.remove('show');
+
+                // Scroll ke atas
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function downloadPDF() {
+            if (!window.resultData) {
+                alert('Silakan kirim jawaban terlebih dahulu!');
+                return;
+            }
+            generateReport(true);
+        }
+
+        function downloadScore() {
+            if (!window.resultData) {
+                alert('Silakan kirim jawaban terlebih dahulu!');
+                return;
+            }
+            generateReport(false);
+        }
+
+        function generateReport(full) {
+            const d = window.resultData;
+            let content = `
+========================================
+HASIL UJI FORMATIF BAB 1
+SEL DAN MIKROSKOP
+IPA KELAS VIII SEMESTER 1
+========================================
+
+Nama    : ${d.nama}
+NIS     : ${d.nis}
+Kelas   : ${d.kelas}
+Sekolah : ${d.sekolah}
+Tanggal : ${d.tanggal || '-'}
+
+----------------------------------------
+HASIL PENILAIAN
+----------------------------------------
+Pilihan Ganda : ${d.scorePG} / 100
+Essay         : ${d.scoreEssay} / 100
+Total Skor    : ${d.scoreTotal} / 200
+Nilai Akhir   : ${d.nilaiAkhir}
+Grade         : ${d.grade}
+----------------------------------------
+`;
+
+            if (full) {
+                content += `\nJAWABAN ESSAY:\n\n`;
+                for (let i = 1; i <= 5; i++) {
+                    const answer = document.querySelector(`textarea[data-essay="${i}"]`).value.trim();
+                    content += `Soal ${i}:\n${answer || '(Tidak dijawab)'}\n\n`;
+                }
+            }
+
+            content += `\n========================================\nGuru: Titin Sepriza, S.Si., Gr\nMTsN 4 Lima Puluh Kota\n========================================`;
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Uji-Formatif-Bab1-${d.nama.replace(/\s+/g, '_')}${full ? '-Lengkap' : '-Skor'}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function sendEmail() {
+            if (!window.resultData) {
+                alert('Silakan kirim jawaban terlebih dahulu!');
+                return;
+            }
+            const d = window.resultData;
+            const subject = encodeURIComponent(`Hasil Uji Formatif Bab 1 - ${d.nama} (${d.kelas})`);
+            const body = encodeURIComponent(
+                `Nama: ${d.nama}\nNIS: ${d.nis}\nKelas: ${d.kelas}\n\n` +
+                `Skor Pilihan Ganda: ${d.scorePG}/100\n` +
+                `Skor Essay: ${d.scoreEssay}/100\n` +
+                `Total: ${d.scoreTotal}/200\n` +
+                `Nilai Akhir: ${d.nilaiAkhir} (Grade: ${d.grade})`
+            );
+            window.location.href = `mailto:t12nsepriz4@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>

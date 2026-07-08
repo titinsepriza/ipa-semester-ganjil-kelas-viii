@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 10 - Ujian Akhir Semester (UAS) | IPA Kelas VIII Semester 1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        nav { background: linear-gradient(135deg, #6c3483, #8e44ad); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        nav ul li a:hover { opacity: 0.8; }
+        .header { background: linear-gradient(135deg, #5b2c6f, #7d3c98); color: white; padding: 3rem 2rem; text-align: center; }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header h2 { font-size: 1.3rem; font-weight: 300; margin-bottom: 1rem; }
+        .header p { font-size: 1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        .content h3 { color: #6c3483; font-size: 1.5rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #9b59b6; }
+        .content h4 { color: #8e44ad; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
+        .content p { margin-bottom: 1rem; text-align: justify; }
+        .info-box { background: linear-gradient(135deg, #f4ecf7, #e8daef); border-left: 5px solid #9b59b6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
+        .info-box h4 { color: #6c3483; margin-top: 0; }
+        .warning-box { background: linear-gradient(135deg, #fef9e7, #fcf3cf); border-left: 5px solid #f1c40f; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
+        .form-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin: 2rem 0; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #6c3483; }
+        .form-group input, .form-group select { width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #9b59b6; box-shadow: 0 0 5px rgba(155, 89, 182, 0.3); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .question-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 1.5rem; border-left: 4px solid #9b59b6; }
+        .question-card.correct { border-left-color: #27ae60; background: #e8f5e9; }
+        .question-card.incorrect { border-left-color: #e74c3c; background: #fadbd8; }
+        .question-number { display: inline-block; background: linear-gradient(135deg, #8e44ad, #9b59b6); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 0.8rem; }
+        .question-text { font-size: 1.05rem; margin-bottom: 1rem; font-weight: 500; }
+        .options { list-style: none; }
+        .options li { margin-bottom: 0.5rem; }
+        .options label { display: block; padding: 0.7rem 1rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .options label:hover { background: #f4ecf7; border-color: #9b59b6; }
+        .options input[type="radio"], .options input[type="checkbox"] { margin-right: 0.5rem; }
+        .options input[type="radio"]:checked + span, .options input[type="checkbox"]:checked + span { font-weight: 600; color: #8e44ad; }
+        .matching-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.8rem; align-items: center; padding: 0.8rem; background: #f9f9f9; border-radius: 5px; }
+        .matching-row select { padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px; font-size: 0.95rem; }
+        .btn { display: inline-block; padding: 0.8rem 1.8rem; background: linear-gradient(135deg, #8e44ad, #9b59b6); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; border: none; cursor: pointer; font-size: 1rem; transition: transform 0.3s, box-shadow 0.3s; margin: 0.3rem; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-blue { background: linear-gradient(135deg, #2980b9, #3498db); }
+        .btn-green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .btn-gray { background: linear-gradient(135deg, #7f8c8d, #95a5a6); }
+        .button-group { text-align: center; margin: 2rem 0; flex-wrap: wrap; }
+        .result-box { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin: 2rem 0; text-align: center; display: none; }
+        .result-box.show { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-box h3 { color: #8e44ad; border: none; margin-bottom: 1.5rem; }
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .score-item { background: linear-gradient(135deg, #f5f7fa, #e8ecf1); padding: 1.2rem; border-radius: 10px; text-align: center; }
+        .score-item .label { font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }
+        .score-item .value { font-size: 1.8rem; font-weight: bold; color: #1a5276; }
+        .grade { font-size: 3rem; font-weight: bold; margin: 1rem 0; padding: 1rem; border-radius: 10px; display: inline-block; min-width: 120px; }
+        .grade-a { background: #d4efdf; color: #1e8449; }
+        .grade-b { background: #d6eaf8; color: #1a5276; }
+        .grade-c { background: #fcf3cf; color: #b7950b; }
+        .grade-d { background: #fadbd8; color: #922b21; }
+        .feedback { margin-top: 1rem; padding: 0.8rem; border-radius: 5px; font-size: 0.95rem; display: none; }
+        .feedback.show { display: block; }
+        .feedback.correct { background: #d4efdf; color: #1e8449; border-left: 4px solid #27ae60; }
+        .feedback.incorrect { background: #fadbd8; color: #922b21; border-left: 4px solid #e74c3c; }
+        .nav-buttons { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-buttons a { display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #8e44ad, #9b59b6); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+        .nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .section-badge { display: inline-block; background: #9b59b6; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin-bottom: 1rem; }
+        footer { background: #1a252f; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: #9b59b6; text-decoration: none; }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .nav-buttons { flex-direction: column; }
+            .nav-buttons a { text-align: center; }
+            .score-grid { grid-template-columns: 1fr 1fr; }
+            .matching-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="index.html#bab"> Daftar Bab</a></li>
+            <li><a href="index.html#penulis">️ Penulis</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>📝 UJIAN AKHIR SEMESTER (UAS)</h1>
+        <h2>IPA Kelas VIII Semester 1</h2>
+        <p>Evaluasi komprehensif materi Bab 1-4 dan 6-9: Sel, Pencernaan, Peredaran Darah, Pernapasan, Ekskresi, Usaha-Energi, dan Pesawat Sederhana</p>
+    </div>
+
+    <div class="content">
+
+        <div class="info-box">
+            <h4>📋 Petunjuk Pengerjaan</h4>
+            <p><strong>Bagian A:</strong> Pilihan Ganda (20 soal, skor 5/soal = 100 poin)</p>
+            <p><strong>Bagian B:</strong> Pilihan Ganda Kompleks (10 soal, skor 5/soal = 50 poin) — <em>Pilih lebih dari satu jawaban yang benar</em></p>
+            <p><strong>Bagian C:</strong> Benar/Salah (5 soal, skor 4/soal = 20 poin)</p>
+            <p><strong>Bagian D:</strong> Menjodohkan (5 soal, skor 6/soal = 30 poin)</p>
+            <p><strong>Total Skor:</strong> 200 poin | <strong>Waktu:</strong> Disarankan 120 menit</p>
+        </div>
+
+        <!-- Form Data Siswa -->
+        <div class="form-section">
+            <h3 style="border: none; margin-top: 0;">📋 Data Siswa</h3>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap <span style="color: red;">*</span></label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nis">NIS (Nomor Induk Siswa) <span style="color: red;">*</span></label>
+                        <input type="text" id="nis" name="nis" required placeholder="Masukkan NIS">
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">📅 Tanggal Ujian</label>
+                        <input type="date" id="tanggal" name="tanggal">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="kelas">Kelas <span style="color: red;">*</span></label>
+                        <select id="kelas" name="kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VIII A">Kelas VIII A</option>
+                            <option value="VIII B">Kelas VIII B</option>
+                            <option value="VIII C">Kelas VIII C</option>
+                            <option value="VIII D">Kelas VIII D</option>
+                            <option value="VIII E">Kelas VIII E</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sekolah">Sekolah</label>
+                        <input type="text" id="sekolah" name="sekolah" value="MTsN 4 Lima Puluh Kota" readonly>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- ==================== BAGIAN A: PILIHAN GANDA ==================== -->
+        <h3>📋 Bagian A – Pilihan Ganda (20 Soal)</h3>
+        <span class="section-badge">Skor: 5 poin/soal | Total: 100 poin</span>
+        <div class="info-box">
+            <p>⚠️ Pilih <strong>satu jawaban</strong> yang paling tepat untuk setiap soal!</p>
+        </div>
+
+        <!-- Soal PG 1-3: Bab 1 (Sel & Mikroskop) -->
+        <div class="question-card" data-question="pg1" data-answer="c">
+            <span class="question-number">Soal 1 (Bab 1)</span>
+            <div class="question-text">Organel sel yang berfungsi sebagai "pusat energi" (tempat respirasi seluler) dan menghasilkan ATP adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg1" value="a"><span> a) Nukleus</span></label></li>
+                <li><label><input type="radio" name="pg1" value="b"><span> b) Ribosom</span></label></li>
+                <li><label><input type="radio" name="pg1" value="c"><span> c) Mitokondria</span></label></li>
+                <li><label><input type="radio" name="pg1" value="d"><span> d) Badan Golgi</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg2" data-answer="b">
+            <span class="question-number">Soal 2 (Bab 1)</span>
+            <div class="question-text">Jika seorang siswa menggunakan lensa okuler 15x dan lensa objektif 10x, maka perbesaran total mikroskop adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg2" value="a"><span> a) 25 kali</span></label></li>
+                <li><label><input type="radio" name="pg2" value="b"><span> b) 150 kali</span></label></li>
+                <li><label><input type="radio" name="pg2" value="c"><span> c) 1000 kali</span></label></li>
+                <li><label><input type="radio" name="pg2" value="d"><span> d) 1500 kali</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg3" data-answer="a">
+            <span class="question-number">Soal 3 (Bab 1)</span>
+            <div class="question-text">Sel tumbuhan memiliki bentuk yang tetap karena memiliki...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg3" value="a"><span> a) Dinding sel dari selulosa</span></label></li>
+                <li><label><input type="radio" name="pg3" value="b"><span> b) Membran sel yang tebal</span></label></li>
+                <li><label><input type="radio" name="pg3" value="c"><span> c) Vakuola yang besar</span></label></li>
+                <li><label><input type="radio" name="pg3" value="d"><span> d) Kloroplas yang banyak</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal PG 4-6: Bab 2 (Pencernaan) -->
+        <div class="question-card" data-question="pg4" data-answer="b">
+            <span class="question-number">Soal 4 (Bab 2)</span>
+            <div class="question-text">Enzim yang dihasilkan lambung dan berfungsi mengubah protein menjadi pepton adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg4" value="a"><span> a) Ptialin</span></label></li>
+                <li><label><input type="radio" name="pg4" value="b"><span> b) Pepsin</span></label></li>
+                <li><label><input type="radio" name="pg4" value="c"><span> c) Tripsin</span></label></li>
+                <li><label><input type="radio" name="pg4" value="d"><span> d) Lipase</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg5" data-answer="c">
+            <span class="question-number">Soal 5 (Bab 2)</span>
+            <div class="question-text">Tempat utama penyerapan sari-sari makanan ke dalam darah adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg5" value="a"><span> a) Lambung</span></label></li>
+                <li><label><input type="radio" name="pg5" value="b"><span> b) Usus besar</span></label></li>
+                <li><label><input type="radio" name="pg5" value="c"><span> c) Usus halus</span></label></li>
+                <li><label><input type="radio" name="pg5" value="d"><span> d) Kerongkongan</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg6" data-answer="d">
+            <span class="question-number">Soal 6 (Bab 2)</span>
+            <div class="question-text">Penyakit yang disebabkan oleh kekurangan vitamin C adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg6" value="a"><span> a) Rabun senja</span></label></li>
+                <li><label><input type="radio" name="pg6" value="b"><span> b) Beri-beri</span></label></li>
+                <li><label><input type="radio" name="pg6" value="c"><span> c) Rakhitis</span></label></li>
+                <li><label><input type="radio" name="pg6" value="d"><span> d) Skorbut (sariawan/gusi berdarah)</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal PG 7-9: Bab 3 (Peredaran Darah) -->
+        <div class="question-card" data-question="pg7" data-answer="d">
+            <span class="question-number">Soal 7 (Bab 3)</span>
+            <div class="question-text">Ruang jantung yang memiliki dinding paling tebal karena memompa darah ke seluruh tubuh adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg7" value="a"><span> a) Atrium kanan</span></label></li>
+                <li><label><input type="radio" name="pg7" value="b"><span> b) Atrium kiri</span></label></li>
+                <li><label><input type="radio" name="pg7" value="c"><span> c) Ventrikel kanan</span></label></li>
+                <li><label><input type="radio" name="pg7" value="d"><span> d) Ventrikel kiri</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg8" data-answer="a">
+            <span class="question-number">Soal 8 (Bab 3)</span>
+            <div class="question-text">Urutan peredaran darah kecil yang benar adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg8" value="a"><span> a) Ventrikel kanan → Paru-paru → Atrium kiri</span></label></li>
+                <li><label><input type="radio" name="pg8" value="b"><span> b) Ventrikel kiri → Seluruh tubuh → Atrium kanan</span></label></li>
+                <li><label><input type="radio" name="pg8" value="c"><span> c) Atrium kanan → Ventrikel kanan → Seluruh tubuh</span></label></li>
+                <li><label><input type="radio" name="pg8" value="d"><span> d) Atrium kiri → Ventrikel kiri → Paru-paru</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg9" data-answer="c">
+            <span class="question-number">Soal 9 (Bab 3)</span>
+            <div class="question-text">Golongan darah yang dapat mendonorkan darahnya ke semua golongan darah lain (donor universal) adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg9" value="a"><span> a) Golongan A</span></label></li>
+                <li><label><input type="radio" name="pg9" value="b"><span> b) Golongan B</span></label></li>
+                <li><label><input type="radio" name="pg9" value="c"><span> c) Golongan O</span></label></li>
+                <li><label><input type="radio" name="pg9" value="d"><span> d) Golongan AB</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal PG 10-12: Bab 4 (Pernapasan) -->
+        <div class="question-card" data-question="pg10" data-answer="d">
+            <span class="question-number">Soal 10 (Bab 4)</span>
+            <div class="question-text">Tempat terjadinya pertukaran gas O2 dan CO2 antara udara dan darah di paru-paru adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg10" value="a"><span> a) Trakea</span></label></li>
+                <li><label><input type="radio" name="pg10" value="b"><span> b) Bronkus</span></label></li>
+                <li><label><input type="radio" name="pg10" value="c"><span> c) Bronkiolus</span></label></li>
+                <li><label><input type="radio" name="pg10" value="d"><span> d) Alveolus</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg11" data-answer="b">
+            <span class="question-number">Soal 11 (Bab 4)</span>
+            <div class="question-text">Pada pernapasan perut, saat inspirasi (menarik napas), otot diafragma akan...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg11" value="a"><span> a) Relaksasi dan melengkung ke atas</span></label></li>
+                <li><label><input type="radio" name="pg11" value="b"><span> b) Berkontraksi dan mendatar</span></label></li>
+                <li><label><input type="radio" name="pg11" value="c"><span> c) Berkontraksi dan melengkung</span></label></li>
+                <li><label><input type="radio" name="pg11" value="d"><span> d) Tidak bergerak</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg12" data-answer="a">
+            <span class="question-number">Soal 12 (Bab 4)</span>
+            <div class="question-text">Udara yang tersisa di paru-paru setelah menghembuskan napas sekuat-kuatnya agar paru-paru tidak kempes total disebut...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg12" value="a"><span> a) Volume Residu</span></label></li>
+                <li><label><input type="radio" name="pg12" value="b"><span> b) Volume Tidal</span></label></li>
+                <li><label><input type="radio" name="pg12" value="c"><span> c) Kapasitas Vital</span></label></li>
+                <li><label><input type="radio" name="pg12" value="d"><span> d) Volume Cadangan Ekspirasi</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal PG 13-15: Bab 6 (Ekskresi) -->
+        <div class="question-card" data-question="pg13" data-answer="c">
+            <span class="question-number">Soal 13 (Bab 6)</span>
+            <div class="question-text">Unit penyaring terkecil di dalam ginjal yang berjumlah sekitar 1 juta buah disebut...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg13" value="a"><span> a) Glomerulus</span></label></li>
+                <li><label><input type="radio" name="pg13" value="b"><span> b) Ureter</span></label></li>
+                <li><label><input type="radio" name="pg13" value="c"><span> c) Nefron</span></label></li>
+                <li><label><input type="radio" name="pg13" value="d"><span> d) Kapsul Bowman</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg14" data-answer="b">
+            <span class="question-number">Soal 14 (Bab 6)</span>
+            <div class="question-text">Tahap pembentukan urine di mana zat-zat yang masih berguna (glukosa, asam amino) diserap kembali ke darah disebut...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg14" value="a"><span> a) Filtrasi</span></label></li>
+                <li><label><input type="radio" name="pg14" value="b"><span> b) Reabsorpsi</span></label></li>
+                <li><label><input type="radio" name="pg14" value="c"><span> c) Augmentasi</span></label></li>
+                <li><label><input type="radio" name="pg14" value="d"><span> d) Defekasi</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg15" data-answer="c">
+            <span class="question-number">Soal 15 (Bab 6)</span>
+            <div class="question-text">Organ yang berfungsi mengubah amonia (zat beracun) menjadi urea yang kurang beracun adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg15" value="a"><span> a) Ginjal</span></label></li>
+                <li><label><input type="radio" name="pg15" value="b"><span> b) Paru-paru</span></label></li>
+                <li><label><input type="radio" name="pg15" value="c"><span> c) Hati</span></label></li>
+                <li><label><input type="radio" name="pg15" value="d"><span> d) Kulit</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal PG 16-18: Bab 8 (Usaha & Energi) -->
+        <div class="question-card" data-question="pg16" data-answer="b">
+            <span class="question-number">Soal 16 (Bab 8)</span>
+            <div class="question-text">Satuan untuk energi dan usaha dalam Sistem Internasional (SI) adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg16" value="a"><span> a) Newton (N)</span></label></li>
+                <li><label><input type="radio" name="pg16" value="b"><span> b) Joule (J)</span></label></li>
+                <li><label><input type="radio" name="pg16" value="c"><span> c) Watt (W)</span></label></li>
+                <li><label><input type="radio" name="pg16" value="d"><span> d) Pascal (Pa)</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg17" data-answer="a">
+            <span class="question-number">Soal 17 (Bab 8)</span>
+            <div class="question-text">Seorang siswa mendorong tembok dengan sekuat tenaga tetapi tembok tidak bergerak. Dalam tinjauan fisika, siswa tersebut...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg17" value="a"><span> a) Tidak melakukan usaha</span></label></li>
+                <li><label><input type="radio" name="pg17" value="b"><span> b) Melakukan usaha besar</span></label></li>
+                <li><label><input type="radio" name="pg17" value="c"><span> c) Melakukan usaha kecil</span></label></li>
+                <li><label><input type="radio" name="pg17" value="d"><span> d) Melakukan usaha positif</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg18" data-answer="d">
+            <span class="question-number">Soal 18 (Bab 8)</span>
+            <div class="question-text">Sebuah benda bermassa 2 kg bergerak dengan kecepatan 3 m/s. Besar energi kinetik benda tersebut adalah...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg18" value="a"><span> a) 3 Joule</span></label></li>
+                <li><label><input type="radio" name="pg18" value="b"><span> b) 6 Joule</span></label></li>
+                <li><label><input type="radio" name="pg18" value="c"><span> c) 18 Joule</span></label></li>
+                <li><label><input type="radio" name="pg18" value="d"><span> d) 9 Joule</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Soal PG 19-20: Bab 9 (Pesawat Sederhana) -->
+        <div class="question-card" data-question="pg19" data-answer="a">
+            <span class="question-number">Soal 19 (Bab 9)</span>
+            <div class="question-text">Gunting, tang, dan jungkat-jungkit termasuk tuas (pengungkit) golongan...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg19" value="a"><span> a) Golongan I (Titik tumpu di tengah)</span></label></li>
+                <li><label><input type="radio" name="pg19" value="b"><span> b) Golongan II (Beban di tengah)</span></label></li>
+                <li><label><input type="radio" name="pg19" value="c"><span> c) Golongan III (Kuasa di tengah)</span></label></li>
+                <li><label><input type="radio" name="pg19" value="d"><span> d) Golongan IV</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pg20" data-answer="c">
+            <span class="question-number">Soal 20 (Bab 9)</span>
+            <div class="question-text">Prinsip kerja sekrup, kapak, dan baji didasarkan pada pesawat sederhana...</div>
+            <ul class="options">
+                <li><label><input type="radio" name="pg20" value="a"><span> a) Tuas</span></label></li>
+                <li><label><input type="radio" name="pg20" value="b"><span> b) Katrol</span></label></li>
+                <li><label><input type="radio" name="pg20" value="c"><span> c) Bidang miring</span></label></li>
+                <li><label><input type="radio" name="pg20" value="d"><span> d) Roda berporos</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- ==================== BAGIAN B: PILIHAN GANDA KOMPLEKS ==================== -->
+        <h3>✅ Bagian B – Pilihan Ganda Kompleks (10 Soal)</h3>
+        <span class="section-badge">Skor: 5 poin/soal | Total: 50 poin</span>
+        <div class="info-box">
+            <p>⚠️ <strong>Pilih SEMUA jawaban yang benar!</strong> (Bisa lebih dari satu). Skor diberikan hanya jika semua jawaban benar dipilih dan tidak ada yang salah.</p>
+        </div>
+
+        <div class="question-card" data-question="pgk1" data-answers="a,c,d">
+            <span class="question-number">Soal 21 (Bab 1)</span>
+            <div class="question-text">Bagian-bagian sel yang dimiliki BAIK oleh sel hewan MAUPUN sel tumbuhan adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk1" value="a"><span> a) Membran sel</span></label></li>
+                <li><label><input type="checkbox" name="pgk1" value="b"><span> b) Dinding sel</span></label></li>
+                <li><label><input type="checkbox" name="pgk1" value="c"><span> c) Sitoplasma</span></label></li>
+                <li><label><input type="checkbox" name="pgk1" value="d"><span> d) Nukleus</span></label></li>
+                <li><label><input type="checkbox" name="pgk1" value="e"><span> e) Kloroplas</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk2" data-answers="a,b,d">
+            <span class="question-number">Soal 22 (Bab 2)</span>
+            <div class="question-text">Zat-zat yang dihasilkan oleh lambung dalam getah lambung adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk2" value="a"><span> a) Asam klorida (HCl)</span></label></li>
+                <li><label><input type="checkbox" name="pgk2" value="b"><span> b) Pepsin</span></label></li>
+                <li><label><input type="checkbox" name="pgk2" value="c"><span> c) Ptialin</span></label></li>
+                <li><label><input type="checkbox" name="pgk2" value="d"><span> d) Renin</span></label></li>
+                <li><label><input type="checkbox" name="pgk2" value="e"><span> e) Tripsin</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk3" data-answers="b,c,d">
+            <span class="question-number">Soal 23 (Bab 3)</span>
+            <div class="question-text">Komponen-komponen darah manusia adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk3" value="a"><span> a) Hemoglobin (sebagai komponen terpisah)</span></label></li>
+                <li><label><input type="checkbox" name="pgk3" value="b"><span> b) Plasma darah</span></label></li>
+                <li><label><input type="checkbox" name="pgk3" value="c"><span> c) Eritrosit</span></label></li>
+                <li><label><input type="checkbox" name="pgk3" value="d"><span> d) Trombosit</span></label></li>
+                <li><label><input type="checkbox" name="pgk3" value="e"><span> e) Serum (sebagai komponen terpisah)</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk4" data-answers="a,b,c">
+            <span class="question-number">Soal 24 (Bab 4)</span>
+            <div class="question-text">Organ-organ yang termasuk saluran pernapasan bagian atas adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk4" value="a"><span> a) Hidung</span></label></li>
+                <li><label><input type="checkbox" name="pgk4" value="b"><span> b) Faring</span></label></li>
+                <li><label><input type="checkbox" name="pgk4" value="c"><span> c) Laring</span></label></li>
+                <li><label><input type="checkbox" name="pgk4" value="d"><span> d) Alveolus</span></label></li>
+                <li><label><input type="checkbox" name="pgk4" value="e"><span> e) Bronkiolus</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk5" data-answers="a,c,d">
+            <span class="question-number">Soal 25 (Bab 6)</span>
+            <div class="question-text">Organ-organ yang termasuk sistem ekskresi pada manusia adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk5" value="a"><span> a) Ginjal</span></label></li>
+                <li><label><input type="checkbox" name="pgk5" value="b"><span> b) Jantung</span></label></li>
+                <li><label><input type="checkbox" name="pgk5" value="c"><span> c) Kulit</span></label></li>
+                <li><label><input type="checkbox" name="pgk5" value="d"><span> d) Hati</span></label></li>
+                <li><label><input type="checkbox" name="pgk5" value="e"><span> e) Lambung</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk6" data-answers="b,c,d">
+            <span class="question-number">Soal 26 (Bab 8)</span>
+            <div class="question-text">Bentuk-bentuk energi yang dapat kita temui dalam kehidupan sehari-hari adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk6" value="a"><span> a) Energi gravitasi (sebagai bentuk terpisah)</span></label></li>
+                <li><label><input type="checkbox" name="pgk6" value="b"><span> b) Energi kinetik</span></label></li>
+                <li><label><input type="checkbox" name="pgk6" value="c"><span> c) Energi potensial</span></label></li>
+                <li><label><input type="checkbox" name="pgk6" value="d"><span> d) Energi kimia</span></label></li>
+                <li><label><input type="checkbox" name="pgk6" value="e"><span> e) Energi magnetik (sebagai bentuk terpisah)</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk7" data-answers="a,d">
+            <span class="question-number">Soal 27 (Bab 9)</span>
+            <div class="question-text">Ciri-ciri pembuluh arteri (nadi) adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk7" value="a"><span> a) Dinding tebal dan elastis</span></label></li>
+                <li><label><input type="checkbox" name="pgk7" value="b"><span> b) Membawa darah menuju jantung</span></label></li>
+                <li><label><input type="checkbox" name="pgk7" value="c"><span> c) Memiliki banyak katup</span></label></li>
+                <li><label><input type="checkbox" name="pgk7" value="d"><span> d) Tekanan darah tinggi</span></label></li>
+                <li><label><input type="checkbox" name="pgk7" value="e"><span> e) Dinding tipis</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk8" data-answers="a,c">
+            <span class="question-number">Soal 28 (Bab 8)</span>
+            <div class="question-text">Pernyataan yang BENAR tentang Hukum Kekekalan Energi adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk8" value="a"><span> a) Energi tidak dapat diciptakan</span></label></li>
+                <li><label><input type="checkbox" name="pgk8" value="b"><span> b) Energi dapat dimusnahkan</span></label></li>
+                <li><label><input type="checkbox" name="pgk8" value="c"><span> c) Energi hanya dapat berubah bentuk</span></label></li>
+                <li><label><input type="checkbox" name="pgk8" value="d"><span> d) Total energi di alam semesta selalu berubah</span></label></li>
+                <li><label><input type="checkbox" name="pgk8" value="e"><span> e) Energi dapat diciptakan dari ketiadaan</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk9" data-answers="a,b,d">
+            <span class="question-number">Soal 29 (Bab 9)</span>
+            <div class="question-text">Contoh alat yang menggunakan prinsip tuas (pengungkit) adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk9" value="a"><span> a) Gunting</span></label></li>
+                <li><label><input type="checkbox" name="pgk9" value="b"><span> b) Gerobak dorong</span></label></li>
+                <li><label><input type="checkbox" name="pgk9" value="c"><span> c) Sekrup</span></label></li>
+                <li><label><input type="checkbox" name="pgk9" value="d"><span> d) Pinset</span></label></li>
+                <li><label><input type="checkbox" name="pgk9" value="e"><span> e) Katrol tetap</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="pgk10" data-answers="b,c">
+            <span class="question-number">Soal 30 (Integrasi)</span>
+            <div class="question-text">Organel sel yang terlibat langsung dalam proses respirasi seluler (menghasilkan energi ATP) adalah... (Pilih semua yang benar)</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="pgk10" value="a"><span> a) Kloroplas</span></label></li>
+                <li><label><input type="checkbox" name="pgk10" value="b"><span> b) Mitokondria</span></label></li>
+                <li><label><input type="checkbox" name="pgk10" value="c"><span> c) Sitoplasma (glikolisis)</span></label></li>
+                <li><label><input type="checkbox" name="pgk10" value="d"><span> d) Ribosom</span></label></li>
+                <li><label><input type="checkbox" name="pgk10" value="e"><span> e) Badan Golgi</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- ==================== BAGIAN C: BENAR/SALAH ==================== -->
+        <h3>⚖️ Bagian C – Benar atau Salah (5 Soal)</h3>
+        <span class="section-badge">Skor: 4 poin/soal | Total: 20 poin</span>
+        <div class="info-box">
+            <p>️ Tentukan apakah pernyataan berikut <strong>Benar</strong> atau <strong>Salah</strong>!</p>
+        </div>
+
+        <div class="question-card" data-question="bs1" data-answer="benar">
+            <span class="question-number">Soal 31 (Bab 1)</span>
+            <div class="question-text">Sel tumbuhan memiliki dinding sel yang terbuat dari selulosa, sedangkan sel hewan tidak memiliki dinding sel.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="bs1" value="benar"><span> ✅ Benar</span></label></li>
+                <li><label><input type="radio" name="bs1" value="salah"><span> ❌ Salah</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="bs2" data-answer="salah">
+            <span class="question-number">Soal 32 (Bab 2)</span>
+            <div class="question-text">Usus besar adalah tempat utama penyerapan sari-sari makanan ke dalam darah.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="bs2" value="benar"><span> ✅ Benar</span></label></li>
+                <li><label><input type="radio" name="bs2" value="salah"><span> ❌ Salah</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="bs3" data-answer="benar">
+            <span class="question-number">Soal 33 (Bab 3)</span>
+            <div class="question-text">Vena pulmonalis adalah satu-satunya pembuluh vena yang membawa darah kaya oksigen dari paru-paru ke jantung.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="bs3" value="benar"><span> ✅ Benar</span></label></li>
+                <li><label><input type="radio" name="bs3" value="salah"><span> ❌ Salah</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="bs4" data-answer="salah">
+            <span class="question-number">Soal 34 (Bab 8)</span>
+            <div class="question-text">Satuan untuk Daya (Power) dalam Sistem Internasional adalah Joule (J).</div>
+            <ul class="options">
+                <li><label><input type="radio" name="bs4" value="benar"><span> ✅ Benar</span></label></li>
+                <li><label><input type="radio" name="bs4" value="salah"><span>  Salah</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question-card" data-question="bs5" data-answer="benar">
+            <span class="question-number">Soal 35 (Bab 9)</span>
+            <div class="question-text">Keuntungan Mekanik (KM) katrol bebas adalah 2, sedangkan katrol tetap memiliki KM = 1.</div>
+            <ul class="options">
+                <li><label><input type="radio" name="bs5" value="benar"><span> ✅ Benar</span></label></li>
+                <li><label><input type="radio" name="bs5" value="salah"><span> ❌ Salah</span></label></li>
+            </ul>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- ==================== BAGIAN D: MENJODOHKAN ==================== -->
+        <h3> Bagian D – Menjodohkan (5 Soal)</h3>
+        <span class="section-badge">Skor: 6 poin/soal | Total: 30 poin</span>
+        <div class="info-box">
+            <p>⚠️ <strong>Jodohkan</strong> istilah di sebelah kiri dengan definisi/fungsi yang tepat di sebelah kanan! Setiap pilihan hanya boleh digunakan <strong>satu kali</strong>.</p>
+        </div>
+
+        <div class="question-card" data-question="jodoh">
+            <span class="question-number">Soal 36-40</span>
+            <div class="question-text">Pasangkan istilah berikut dengan definisi/fungsinya yang tepat!</div>
+            
+            <div class="matching-row">
+                <div><strong>1. Alveolus</strong></div>
+                <select id="jodoh1">
+                    <option value="">-- Pilih Jawaban --</option>
+                    <option value="a">a) Enzim yang mengubah protein menjadi pepton di lambung</option>
+                    <option value="b">b) Kantung udara kecil tempat pertukaran gas O2 dan CO2</option>
+                    <option value="c">c) Sel darah yang berfungsi mengangkut oksigen</option>
+                    <option value="d">d) Unit penyaring terkecil di dalam ginjal</option>
+                    <option value="e">e) Rumus Usaha (W = F × s)</option>
+                </select>
+            </div>
+
+            <div class="matching-row">
+                <div><strong>2. Pepsin</strong></div>
+                <select id="jodoh2">
+                    <option value="">-- Pilih Jawaban --</option>
+                    <option value="a">a) Enzim yang mengubah protein menjadi pepton di lambung</option>
+                    <option value="b">b) Kantung udara kecil tempat pertukaran gas O2 dan CO2</option>
+                    <option value="c">c) Sel darah yang berfungsi mengangkut oksigen</option>
+                    <option value="d">d) Unit penyaring terkecil di dalam ginjal</option>
+                    <option value="e">e) Rumus Usaha (W = F × s)</option>
+                </select>
+            </div>
+
+            <div class="matching-row">
+                <div><strong>3. Eritrosit</strong></div>
+                <select id="jodoh3">
+                    <option value="">-- Pilih Jawaban --</option>
+                    <option value="a">a) Enzim yang mengubah protein menjadi pepton di lambung</option>
+                    <option value="b">b) Kantung udara kecil tempat pertukaran gas O2 dan CO2</option>
+                    <option value="c">c) Sel darah yang berfungsi mengangkut oksigen</option>
+                    <option value="d">d) Unit penyaring terkecil di dalam ginjal</option>
+                    <option value="e">e) Rumus Usaha (W = F × s)</option>
+                </select>
+            </div>
+
+            <div class="matching-row">
+                <div><strong>4. Nefron</strong></div>
+                <select id="jodoh4">
+                    <option value="">-- Pilih Jawaban --</option>
+                    <option value="a">a) Enzim yang mengubah protein menjadi pepton di lambung</option>
+                    <option value="b">b) Kantung udara kecil tempat pertukaran gas O2 dan CO2</option>
+                    <option value="c">c) Sel darah yang berfungsi mengangkut oksigen</option>
+                    <option value="d">d) Unit penyaring terkecil di dalam ginjal</option>
+                    <option value="e">e) Rumus Usaha (W = F × s)</option>
+                </select>
+            </div>
+
+            <div class="matching-row">
+                <div><strong>5. Joule</strong></div>
+                <select id="jodoh5">
+                    <option value="">-- Pilih Jawaban --</option>
+                    <option value="a">a) Enzim yang mengubah protein menjadi pepton di lambung</option>
+                    <option value="b">b) Kantung udara kecil tempat pertukaran gas O2 dan CO2</option>
+                    <option value="c">c) Sel darah yang berfungsi mengangkut oksigen</option>
+                    <option value="d">d) Unit penyaring terkecil di dalam ginjal</option>
+                    <option value="e">e) Satuan untuk Usaha dan Energi dalam SI</option>
+                </select>
+            </div>
+            <div class="feedback" id="jodohFeedback"></div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button class="btn" onclick="submitForm()">📤 KIRIM JAWABAN & LIHAT HASIL</button>
+            <button class="btn btn-blue" onclick="resetForm()"> MULAI ULANG</button>
+        </div>
+
+        <!-- Result Box -->
+        <div class="result-box" id="resultBox">
+            <h3>📊 Hasil Ujian Akhir Semester</h3>
+            <p>Terima kasih telah menyelesaikan UAS IPA Kelas VIII Semester 1!</p>
+            
+            <div class="score-grid">
+                <div class="score-item">
+                    <div class="label">Bagian A (PG)</div>
+                    <div class="value" id="scoreA">0/100</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Bagian B (PG Kompleks)</div>
+                    <div class="value" id="scoreB">0/50</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Bagian C (B/S)</div>
+                    <div class="value" id="scoreC">0/20</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Bagian D (Jodoh)</div>
+                    <div class="value" id="scoreD">0/30</div>
+                </div>
+            </div>
+
+            <div class="score-grid">
+                <div class="score-item">
+                    <div class="label">Skor Total</div>
+                    <div class="value" id="scoreTotal">0/200</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Nilai Akhir</div>
+                    <div class="value" id="nilaiAkhir">0</div>
+                </div>
+            </div>
+
+            <div class="grade" id="gradeDisplay">-</div>
+
+            <div style="margin-top: 1.5rem;">
+                <button class="btn btn-green" onclick="downloadPDF()"> UNDUH HASIL LENGKAP</button>
+                <button class="btn btn-blue" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+                <button class="btn btn-gray" onclick="sendEmail()">✉️ Kirim Email Guru</button>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Kembali ke Beranda</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Set tanggal hari ini
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // ==================== KUNCI JAWABAN ====================
+        
+        // Bagian A: Pilihan Ganda (20 soal)
+        const answerKeyPG = {
+            pg1: 'c', pg2: 'b', pg3: 'a', pg4: 'b', pg5: 'c',
+            pg6: 'd', pg7: 'd', pg8: 'a', pg9: 'c', pg10: 'd',
+            pg11: 'b', pg12: 'a', pg13: 'c', pg14: 'b', pg15: 'c',
+            pg16: 'b', pg17: 'a', pg18: 'd', pg19: 'a', pg20: 'c'
+        };
+
+        // Bagian B: Pilihan Ganda Kompleks (10 soal)
+        const answerKeyPGK = {
+            pgk1: ['a', 'c', 'd'],   // Membran sel, Sitoplasma, Nukleus
+            pgk2: ['a', 'b', 'd'],    // HCl, Pepsin, Renin
+            pgk3: ['b', 'c', 'd'],    // Plasma, Eritrosit, Trombosit
+            pgk4: ['a', 'b', 'c'],    // Hidung, Faring, Laring
+            pgk5: ['a', 'c', 'd'],    // Ginjal, Kulit, Hati
+            pgk6: ['b', 'c', 'd'],    // Kinetik, Potensial, Kimia
+            pgk7: ['a', 'd'],         // Dinding tebal, Tekanan tinggi
+            pgk8: ['a', 'c'],         // Tidak dapat diciptakan, Hanya berubah bentuk
+            pgk9: ['a', 'b', 'd'],    // Gunting, Gerobak, Pinset
+            pgk10: ['b', 'c']         // Mitokondria, Sitoplasma
+        };
+
+        // Bagian C: Benar/Salah (5 soal)
+        const answerKeyBS = {
+            bs1: 'benar', bs2: 'salah', bs3: 'benar', bs4: 'salah', bs5: 'benar'
+        };
+
+        // Bagian D: Menjodohkan
+        const answerKeyJodoh = {
+            jodoh1: 'b', jodoh2: 'a', jodoh3: 'c', jodoh4: 'd', jodoh5: 'e'
+        };
+
+        // Pembahasan
+        const explanations = {
+            pg1: 'Mitokondria adalah organel sel yang berfungsi sebagai tempat respirasi seluler untuk menghasilkan energi dalam bentuk ATP.',
+            pg2: 'Perbesaran total = Lensa Okuler × Lensa Objektif = 15 × 10 = 150 kali.',
+            pg3: 'Sel tumbuhan memiliki dinding sel yang terbuat dari selulosa, memberikan bentuk tetap pada sel. Sel hewan tidak memiliki dinding sel.',
+            pg4: 'Pepsin adalah enzim yang dihasilkan lambung (dari pepsinogen yang diaktifkan HCl) untuk mengubah protein menjadi pepton.',
+            pg5: 'Usus halus (terutama ileum) adalah tempat utama penyerapan sari makanan dengan bantuan jonjot usus (vili).',
+            pg6: 'Kekurangan vitamin C menyebabkan skorbut (sariawan, gusi berdarah). Vitamin C banyak terdapat dalam jeruk, jambu biji, dan tomat.',
+            pg7: 'Ventrikel kiri (bilik kiri) memompa darah ke seluruh tubuh sehingga membutuhkan tekanan yang sangat tinggi. Oleh karena itu, dindingnya paling tebal.',
+            pg8: 'Peredaran darah kecil: Ventrikel Kanan → Arteri Pulmonalis → Paru-paru → Vena Pulmonalis → Atrium Kiri.',
+            pg9: 'Golongan darah O tidak memiliki aglutinogen (antigen) A maupun B, sehingga darahnya tidak akan menggumpal saat ditransfusikan ke golongan darah lain.',
+            pg10: 'Alveolus adalah kantung udara kecil di ujung bronkiolus yang memiliki dinding tipis dan banyak kapiler untuk pertukaran gas.',
+            pg11: 'Saat inspirasi pernapasan perut, otot diafragma berkontraksi sehingga posisinya mendatar, memperbesar volume rongga dada.',
+            pg12: 'Volume Residu (sekitar 1500 ml) adalah udara yang selalu tersisa di paru-paru setelah ekspirasi maksimal agar paru-paru tidak kempes total.',
+            pg13: 'Nefron adalah unit fungsional terkecil ginjal. Setiap ginjal memiliki sekitar 1 juta nefron yang bertugas menyaring darah.',
+            pg14: 'Reabsorpsi adalah tahap di mana zat-zat yang masih berguna (glukosa, asam amino, air, ion) diserap kembali dari urine primer ke dalam darah di tubulus proksimal.',
+            pg15: 'Hati mengubah amonia (NH3) yang sangat beracun menjadi urea yang kurang beracun, kemudian urea dibuang melalui ginjal dalam urine.',
+            pg16: 'Satuan energi dan usaha dalam SI adalah Joule (J). Newton untuk gaya, Watt untuk daya, Pascal untuk tekanan.',
+            pg17: 'Dalam fisika, usaha hanya terjadi jika ada gaya DAN perpindahan. Karena tembok tidak bergerak (s=0), maka usaha = 0.',
+            pg18: 'Ek = ½ × m × v² = ½ × 2 × 3² = 1 × 9 = 9 Joule.',
+            pg19: 'Tuas Golongan I memiliki titik tumpu di tengah (antara beban dan kuasa). Contoh: gunting, tang, jungkat-jungkit, linggis.',
+            pg20: 'Sekrup adalah bidang miring yang dililitkan pada silinder. Kapak dan baji juga menggunakan prinsip bidang miring untuk membelah benda.',
+            pgk1: 'Sel hewan dan tumbuhan sama-sama memiliki membran sel, sitoplasma, dan nukleus. Dinding sel dan kloroplas hanya dimiliki sel tumbuhan.',
+            pgk2: 'Lambung menghasilkan HCl, pepsin, dan renin. Ptialin dari kelenjar ludah, tripsin dari pankreas.',
+            pgk3: 'Komponen darah: plasma darah, eritrosit, leukosit, dan trombosit. Hemoglobin adalah protein di dalam eritrosit, bukan komponen terpisah.',
+            pgk4: 'Saluran pernapasan atas: hidung, faring, laring. Alveolus dan bronkiolus ada di paru-paru (bawah).',
+            pgk5: 'Organ ekskresi manusia: ginjal, kulit, paru-paru, dan hati. Jantung dan lambung bukan organ ekskresi.',
+            pgk6: 'Bentuk energi: kinetik, potensial, kimia, listrik, panas, cahaya, bunyi, nuklir. Gravitasi dan magnetik bukan bentuk energi utama.',
+            pgk7: 'Arteri memiliki dinding tebal, elastis, dan tekanan tinggi. Vena yang memiliki katup dan dinding tipis.',
+            pgk8: 'Hukum Kekekalan Energi: Energi tidak dapat diciptakan dan dimusnahkan, hanya dapat berubah bentuk. Total energi di alam semesta tetap.',
+            pgk9: 'Gunting (Gol I), Gerobak dorong (Gol II), dan Pinset (Gol III) adalah contoh tuas. Sekrup = bidang miring, Katrol = pesawat terpisah.',
+            pgk10: 'Respirasi seluler terjadi di sitoplasma (glikolisis) dan mitokondria (siklus Krebs & rantai transpor elektron).',
+            bs1: 'Pernyataan BENAR. Sel tumbuhan memiliki dinding sel dari selulosa, sel hewan tidak.',
+            bs2: 'Pernyataan SALAH. Usus HALUS adalah tempat utama penyerapan sari makanan. Usus besar menyerap air.',
+            bs3: 'Pernyataan BENAR. Vena pulmonalis unik karena membawa darah kaya O2 dari paru-paru ke jantung.',
+            bs4: 'Pernyataan SALAH. Satuan daya adalah Watt (W), bukan Joule. Joule adalah satuan energi/usaha.',
+            bs5: 'Pernyataan BENAR. Katrol bebas memiliki KM = 2 (memperkecil gaya setengahnya), katrol tetap KM = 1 (hanya mengubah arah).',
+            jodoh: 'Alveolus = kantung udara pertukaran gas; Pepsin = enzim pencerna protein di lambung; Eritrosit = sel darah pengangkut O2; Nefron = unit penyaring ginjal; Joule = satuan usaha/energi dalam SI.'
+        };
+
+        function submitForm() {
+            const nama = document.getElementById('nama').value.trim();
+            const nis = document.getElementById('nis').value.trim();
+            const kelas = document.getElementById('kelas').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('⚠️ Mohon lengkapi data siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            // ==================== BAGIAN A: PILIHAN GANDA ====================
+            let scoreA = 0;
+            let correctA = 0;
+
+            for (let i = 1; i <= 20; i++) {
+                const qName = `pg${i}`;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const questionCard = document.querySelector(`.question-card[data-question="${qName}"]`);
+                const feedback = questionCard.querySelector('.feedback');
+
+                if (selected) {
+                    if (selected.value === answerKeyPG[qName]) {
+                        scoreA += 5;
+                        correctA++;
+                        questionCard.classList.add('correct');
+                        questionCard.classList.remove('incorrect');
+                        feedback.className = 'feedback show correct';
+                        feedback.innerHTML = `✅ <strong>Benar!</strong> ${explanations[qName]}`;
+                    } else {
+                        questionCard.classList.add('incorrect');
+                        questionCard.classList.remove('correct');
+                        feedback.className = 'feedback show incorrect';
+                        feedback.innerHTML = `❌ <strong>Salah.</strong> Jawaban yang benar adalah <strong>${answerKeyPG[qName].toUpperCase()}</strong>. ${explanations[qName]}`;
+                    }
+                } else {
+                    questionCard.classList.add('incorrect');
+                    questionCard.classList.remove('correct');
+                    feedback.className = 'feedback show incorrect';
+                    feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar adalah <strong>${answerKeyPG[qName].toUpperCase()}</strong>. ${explanations[qName]}`;
+                }
+            }
+
+            // ==================== BAGIAN B: PILIHAN GANDA KOMPLEKS ====================
+            let scoreB = 0;
+            let correctB = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = `pgk${i}`;
+                const checkboxes = document.querySelectorAll(`input[name="${qName}"]:checked`);
+                const questionCard = document.querySelector(`.question-card[data-question="${qName}"]`);
+                const feedback = questionCard.querySelector('.feedback');
+                const correctAnswers = answerKeyPGK[qName];
+
+                // Ambil nilai yang dipilih
+                const selectedValues = Array.from(checkboxes).map(cb => cb.value).sort();
+                const correctSorted = [...correctAnswers].sort();
+
+                // Cek apakah semua jawaban benar dipilih dan tidak ada yang salah
+                const isCorrect = selectedValues.length === correctSorted.length && 
+                                  selectedValues.every((val, idx) => val === correctSorted[idx]);
+
+                if (isCorrect) {
+                    scoreB += 5;
+                    correctB++;
+                    questionCard.classList.add('correct');
+                    questionCard.classList.remove('incorrect');
+                    feedback.className = 'feedback show correct';
+                    feedback.innerHTML = `✅ <strong>Benar!</strong> ${explanations[qName]}`;
+                } else {
+                    questionCard.classList.add('incorrect');
+                    questionCard.classList.remove('correct');
+                    feedback.className = 'feedback show incorrect';
+                    const correctText = correctAnswers.map(a => a.toUpperCase()).join(', ');
+                    feedback.innerHTML = `❌ <strong>Kurang tepat.</strong> Jawaban yang benar: <strong>${correctText}</strong>. ${explanations[qName]}`;
+                }
+            }
+
+            // ==================== BAGIAN C: BENAR/SALAH ====================
+            let scoreC = 0;
+            let correctC = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                const qName = `bs${i}`;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const questionCard = document.querySelector(`.question-card[data-question="${qName}"]`);
+                const feedback = questionCard.querySelector('.feedback');
+
+                if (selected) {
+                    if (selected.value === answerKeyBS[qName]) {
+                        scoreC += 4;
+                        correctC++;
+                        questionCard.classList.add('correct');
+                        questionCard.classList.remove('incorrect');
+                        feedback.className = 'feedback show correct';
+                        feedback.innerHTML = `✅ <strong>Benar!</strong> ${explanations[qName]}`;
+                    } else {
+                        questionCard.classList.add('incorrect');
+                        questionCard.classList.remove('correct');
+                        feedback.className = 'feedback show incorrect';
+                        const correctText = answerKeyBS[qName] === 'benar' ? 'BENAR' : 'SALAH';
+                        feedback.innerHTML = `❌ <strong>Salah.</strong> Jawaban yang benar adalah <strong>${correctText}</strong>. ${explanations[qName]}`;
+                    }
+                } else {
+                    questionCard.classList.add('incorrect');
+                    questionCard.classList.remove('correct');
+                    feedback.className = 'feedback show incorrect';
+                    const correctText = answerKeyBS[qName] === 'benar' ? 'BENAR' : 'SALAH';
+                    feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar adalah <strong>${correctText}</strong>. ${explanations[qName]}`;
+                }
+            }
+
+            // ==================== BAGIAN D: MENJODOHKAN ====================
+            let scoreD = 0;
+            let correctD = 0;
+            let allJodohCorrect = true;
+
+            for (let i = 1; i <= 5; i++) {
+                const select = document.getElementById(`jodoh${i}`);
+                const selectedValue = select.value;
+                const correctValue = answerKeyJodoh[`jodoh${i}`];
+
+                if (selectedValue === correctValue) {
+                    scoreD += 6;
+                    correctD++;
+                    select.style.borderColor = '#27ae60';
+                    select.style.background = '#e8f5e9';
+                } else {
+                    allJodohCorrect = false;
+                    select.style.borderColor = '#e74c3c';
+                    select.style.background = '#fadbd8';
+                }
+            }
+
+            const jodohFeedback = document.getElementById('jodohFeedback');
+            if (allJodohCorrect) {
+                jodohFeedback.className = 'feedback show correct';
+                jodohFeedback.innerHTML = `✅ <strong>Semua jawaban benar!</strong> ${explanations.jodoh}`;
+            } else {
+                jodohFeedback.className = 'feedback show incorrect';
+                jodohFeedback.innerHTML = `❌ <strong>Ada yang kurang tepat.</strong> Kunci: 1-b, 2-a, 3-c, 4-d, 5-e. ${explanations.jodoh}`;
+            }
+
+            // ==================== HITUNG TOTAL ====================
+            const scoreTotal = scoreA + scoreB + scoreC + scoreD;
+            const nilaiAkhir = Math.round((scoreTotal / 200) * 100);
+
+            // Tampilkan hasil
+            document.getElementById('scoreA').textContent = `${scoreA}/100`;
+            document.getElementById('scoreB').textContent = `${scoreB}/50`;
+            document.getElementById('scoreC').textContent = `${scoreC}/20`;
+            document.getElementById('scoreD').textContent = `${scoreD}/30`;
+            document.getElementById('scoreTotal').textContent = `${scoreTotal}/200`;
+            document.getElementById('nilaiAkhir').textContent = nilaiAkhir;
+
+            // Grade
+            const gradeDisplay = document.getElementById('gradeDisplay');
+            let grade, gradeClass;
+            if (nilaiAkhir >= 85) { grade = 'A'; gradeClass = 'grade-a'; }
+            else if (nilaiAkhir >= 70) { grade = 'B'; gradeClass = 'grade-b'; }
+            else if (nilaiAkhir >= 55) { grade = 'C'; gradeClass = 'grade-c'; }
+            else { grade = 'D'; gradeClass = 'grade-d'; }
+
+            gradeDisplay.textContent = grade;
+            gradeDisplay.className = `grade ${gradeClass}`;
+
+            // Tampilkan result box
+            const resultBox = document.getElementById('resultBox');
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Simpan data untuk download
+            window.resultData = {
+                nama, nis, kelas,
+                tanggal: document.getElementById('tanggal').value,
+                sekolah: document.getElementById('sekolah').value,
+                scoreA, scoreB, scoreC, scoreD, scoreTotal, nilaiAkhir, grade,
+                correctA, correctB, correctC, correctD
+            };
+        }
+
+        function resetForm() {
+            if (confirm('Apakah Anda yakin ingin mengulang UAS? Semua jawaban akan dihapus.')) {
+                // Reset PG
+                for (let i = 1; i <= 20; i++) {
+                    const radios = document.querySelectorAll(`input[name="pg${i}"]`);
+                    radios.forEach(r => r.checked = false);
+                    const questionCard = document.querySelector(`.question-card[data-question="pg${i}"]`);
+                    questionCard.classList.remove('correct', 'incorrect');
+                    const feedback = questionCard.querySelector('.feedback');
+                    feedback.className = 'feedback';
+                    feedback.innerHTML = '';
+                }
+
+                // Reset PG Kompleks
+                for (let i = 1; i <= 10; i++) {
+                    const checkboxes = document.querySelectorAll(`input[name="pgk${i}"]`);
+                    checkboxes.forEach(cb => cb.checked = false);
+                    const questionCard = document.querySelector(`.question-card[data-question="pgk${i}"]`);
+                    questionCard.classList.remove('correct', 'incorrect');
+                    const feedback = questionCard.querySelector('.feedback');
+                    feedback.className = 'feedback';
+                    feedback.innerHTML = '';
+                }
+
+                // Reset B/S
+                for (let i = 1; i <= 5; i++) {
+                    const radios = document.querySelectorAll(`input[name="bs${i}"]`);
+                    radios.forEach(r => r.checked = false);
+                    const questionCard = document.querySelector(`.question-card[data-question="bs${i}"]`);
+                    questionCard.classList.remove('correct', 'incorrect');
+                    const feedback = questionCard.querySelector('.feedback');
+                    feedback.className = 'feedback';
+                    feedback.innerHTML = '';
+                }
+
+                // Reset Menjodohkan
+                for (let i = 1; i <= 5; i++) {
+                    const select = document.getElementById(`jodoh${i}`);
+                    select.value = '';
+                    select.style.borderColor = '#ddd';
+                    select.style.background = 'white';
+                }
+                const jodohFeedback = document.getElementById('jodohFeedback');
+                jodohFeedback.className = 'feedback';
+                jodohFeedback.innerHTML = '';
+
+                // Sembunyikan hasil
+                document.getElementById('resultBox').classList.remove('show');
+
+                // Scroll ke atas
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function downloadPDF() {
+            if (!window.resultData) { alert('Silakan kirim jawaban terlebih dahulu!'); return; }
+            generateReport(true);
+        }
+
+        function downloadScore() {
+            if (!window.resultData) { alert('Silakan kirim jawaban terlebih dahulu!'); return; }
+            generateReport(false);
+        }
+
+        function generateReport(full) {
+            const d = window.resultData;
+            let content = `
+========================================
+HASIL UJIAN AKHIR SEMESTER (UAS)
+IPA KELAS VIII SEMESTER 1
+========================================
+
+Nama    : ${d.nama}
+NIS     : ${d.nis}
+Kelas   : ${d.kelas}
+Sekolah : ${d.sekolah}
+Tanggal : ${d.tanggal || '-'}
+
+----------------------------------------
+RINCIAN SKOR PER BAGIAN
+----------------------------------------
+Bagian A (Pilihan Ganda)      : ${d.scoreA} / 100  (Benar: ${d.correctA}/20)
+Bagian B (PG Kompleks)        : ${d.scoreB} / 50   (Benar: ${d.correctB}/10)
+Bagian C (Benar/Salah)        : ${d.scoreC} / 20   (Benar: ${d.correctC}/5)
+Bagian D (Menjodohkan)        : ${d.scoreD} / 30   (Benar: ${d.correctD}/5)
+----------------------------------------
+TOTAL SKOR                    : ${d.scoreTotal} / 200
+NILAI AKHIR                   : ${d.nilaiAkhir}
+GRADE                         : ${d.grade}
+----------------------------------------
+`;
+
+            if (full) {
+                content += `\nKUNCI JAWABAN:\n\n`;
+                content += `Bagian A (Pilihan Ganda):\n`;
+                for (let i = 1; i <= 20; i++) {
+                    content += `  Soal ${i}: ${answerKeyPG[`pg${i}`].toUpperCase()}\n`;
+                }
+                content += `\nBagian B (PG Kompleks):\n`;
+                for (let i = 1; i <= 10; i++) {
+                    content += `  Soal ${i+20}: ${answerKeyPGK[`pgk${i}`].map(a => a.toUpperCase()).join(', ')}\n`;
+                }
+                content += `\nBagian C (Benar/Salah):\n`;
+                for (let i = 1; i <= 5; i++) {
+                    content += `  Soal ${i+30}: ${answerKeyBS[`bs${i}`].toUpperCase()}\n`;
+                }
+                content += `\nBagian D (Menjodohkan):\n`;
+                content += `  1. Alveolus → b\n  2. Pepsin → a\n  3. Eritrosit → c\n  4. Nefron → d\n  5. Joule → e\n`;
+            }
+
+            content += `\n========================================\nGuru: Titin Sepriza, S.Si., Gr\nMTsN 4 Lima Puluh Kota\nEmail: t12nsepriz4@gmail.com\n========================================`;
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `UAS-IPA-Kls8-${d.nama.replace(/\s+/g, '_')}${full ? '-Lengkap' : '-Skor'}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function sendEmail() {
+            if (!window.resultData) { alert('Silakan kirim jawaban terlebih dahulu!'); return; }
+            const d = window.resultData;
+            const subject = encodeURIComponent(`Hasil UAS IPA - ${d.nama} (${d.kelas})`);
+            const body = encodeURIComponent(
+                `Nama: ${d.nama}\nNIS: ${d.nis}\nKelas: ${d.kelas}\n\n` +
+                `Bagian A (PG): ${d.scoreA}/100\n` +
+                `Bagian B (PG Kompleks): ${d.scoreB}/50\n` +
+                `Bagian C (B/S): ${d.scoreC}/20\n` +
+                `Bagian D (Jodoh): ${d.scoreD}/30\n` +
+                `Total: ${d.scoreTotal}/200\n` +
+                `Nilai Akhir: ${d.nilaiAkhir} (Grade: ${d.grade})`
+            );
+            window.location.href = `mailto:t12nsepriz4@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>
