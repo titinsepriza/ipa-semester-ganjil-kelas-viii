@@ -6,285 +6,460 @@
     <title>Bab 4 - Sistem Pernapasan pada Manusia | IPA Kelas VIII Semester 1</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
-        nav { background: linear-gradient(135deg, #2980b9, #3498db); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background-color: #f4f4f4; }
+
+        /* Navigation */
+        nav { background: linear-gradient(135deg, #16a085, #1abc9c); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
         nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
         nav ul li a:hover { opacity: 0.8; }
-        .header { background: linear-gradient(135deg, #1a5276, #2980b9); color: white; padding: 3rem 2rem; text-align: center; }
+
+        /* Header */
+        .header { background: linear-gradient(135deg, #148f77, #16a085); color: white; padding: 3rem 2rem; text-align: center; }
         .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
         .header h2 { font-size: 1.3rem; font-weight: 300; margin-bottom: 1rem; }
         .header p { font-size: 1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+
+        /* Content */
         .content { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
-        .content h3 { color: #1a5276; font-size: 1.5rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #3498db; }
-        .content h4 { color: #2980b9; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
+        .content h3 { color: #148f77; font-size: 1.5rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #1abc9c; }
+        .content h4 { color: #16a085; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
         .content p { margin-bottom: 1rem; text-align: justify; }
+
+        /* Nav Buttons */
         .nav-buttons { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
-        .nav-buttons a { display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #2980b9, #3498db); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+        .nav-buttons a { display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #16a085, #1abc9c); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
         .nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* Images */
         .image-container { text-align: center; margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .image-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
         .image-container p { margin-top: 1rem; font-style: italic; color: #555; text-align: center; }
+
+        /* Lists */
         ul, ol { margin: 1rem 0 1rem 2rem; }
         li { margin-bottom: 0.5rem; }
-        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
         th, td { padding: 1rem; text-align: left; border: 1px solid #ddd; }
-        th { background: linear-gradient(135deg, #2980b9, #3498db); color: white; font-weight: 600; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #f1f1f1; }
-        .info-box { background: linear-gradient(135deg, #eafaf1, #d5f5e3); border-left: 5px solid #2ecc71; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
-        .info-box h4 { color: #1a5276; margin-top: 0; }
+        th { background: linear-gradient(135deg, #16a085, #1abc9c); color: white; font-weight: 600; }
+        tr:nth-child(even) { background-color: #e8f8f5; }
+        tr:hover { background-color: #d1f2eb; }
+
+        /* Boxes */
+        .info-box { background: linear-gradient(135deg, #e8f8f5, #d1f2eb); border-left: 5px solid #1abc9c; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
+        .info-box h4 { color: #148f77; margin-top: 0; }
         .warning-box { background: linear-gradient(135deg, #fef9e7, #fcf3cf); border-left: 5px solid #f1c40f; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
         .highlight { background: #fff9c4; padding: 0.2rem 0.5rem; border-radius: 3px; font-weight: 600; }
+        .formula-box { background: #2c3e50; color: #1abc9c; padding: 1.2rem 1.5rem; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; margin: 1.5rem 0; font-family: 'Courier New', Courier, monospace; }
+
+        /* Footer */
         footer { background: #1a252f; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-        footer a { color: #3498db; text-decoration: none; }
-        @media (max-width: 768px) { .header h1 { font-size: 1.5rem; } .nav-buttons { flex-direction: column; } .nav-buttons a { text-align: center; } table { font-size: 0.9rem; } th, td { padding: 0.7rem; } }
+        footer a { color: #1abc9c; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .nav-buttons { flex-direction: column; }
+            .nav-buttons a { text-align: center; }
+            table { font-size: 0.9rem; }
+            th, td { padding: 0.7rem; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="index.html"> Beranda</a></li>
+            <li><a href="index.html">🏠 Beranda</a></li>
             <li><a href="index.html#bab">📚 Daftar Bab</a></li>
             <li><a href="index.html#penulis">✍️ Penulis</a></li>
         </ul>
     </nav>
 
+    <!-- Header -->
     <div class="header">
         <h1>BAB 4</h1>
         <h2>Sistem Pernapasan pada Manusia</h2>
-        <p>Memahami organ-organ pernapasan, mekanisme inspirasi dan ekspirasi, pertukaran gas, serta gangguan kesehatan</p>
+        <p>Memahami organ-organ pernapasan, mekanisme pertukaran gas, volume udara pernapasan, serta gangguan dan cara menjaga kesehatan sistem pernapasan</p>
     </div>
 
+    <!-- Content -->
     <div class="content">
 
+        <!-- Nav Buttons Top -->
+        <div class="nav-buttons">
+            <a href="index.html">🏠 Beranda</a>
+            <a href="uji-formatif-4.html">📝 Uji Formatif Bab 4</a>
+            <a href="5.html">Bab Selanjutnya →</a>
+        </div>
+
+        <!-- A. Pengertian -->
+        <h3>A. Pengertian Sistem Pernapasan</h3>
+        <p>
+            <strong>Sistem pernapasan</strong> (sistem respirasi) adalah sistem organ yang berfungsi untuk mengambil oksigen (O₂) dari udara dan mengeluarkan karbon dioksida (CO₂) serta uap air. Pernapasan sangat penting karena oksigen dibutuhkan untuk proses respirasi seluler yang menghasilkan energi (ATP) untuk aktivitas tubuh.
+        </p>
+        <p>Proses pernapasan terdiri dari dua tahap utama:</p>
+        <ul>
+            <li><strong>Pernapasan Eksternal:</strong> Pertukaran gas antara udara di paru-paru dengan darah di kapiler paru-paru</li>
+            <li><strong>Pernapasan Internal:</strong> Pertukaran gas antara darah di kapiler dengan sel-sel tubuh</li>
+        </ul>
+
+        <div class="info-box">
+            <h4> Fakta Menarik</h4>
+            <p>Manusia dewasa bernapas sekitar <strong>12-20 kali per menit</strong> saat istirahat. Dalam satu hari, kita menghirup sekitar <strong>11.000 liter udara</strong>! Paru-paru memiliki luas permukaan sekitar <strong>70-100 m²</strong> (setengah lapangan tenis) karena adanya jutaan alveolus.</p>
+        </div>
+
+        <!-- B. Organ Pernapasan -->
+        <h3>B. Organ-Organ Sistem Pernapasan</h3>
+        <p>Sistem pernapasan manusia terdiri dari saluran pernapasan dan organ-organ yang terlibat dalam pertukaran gas.</p>
+
+        <!-- IMAGE ORGAN PERNAPASAN -->
+        <div class="image-container">
+            <!--
+                =====================================================
+                CARA MENGGANTI FOTO ORGAN PERNAPASAN:
+                1. Siapkan gambar organ pernapasan lengkap (hidung, faring, laring, trakea, bronkus, paru-paru, diafragma).
+                2. Beri nama file: "photo-organ-pernapasan.png"
+                3. Letakkan file gambar di folder yang sama dengan file 4.html ini.
+                4. Format yang didukung: PNG, JPG, JPEG, WEBP
+                5. Ukuran rekomendasi: 700x500 pixel atau rasio mendekati 7:5
+                =====================================================
+            -->
+            <img src="photo-organ-pernapasan.png" alt="Organ-Organ Sistem Pernapasan Manusia"
+                 onerror="this.style.background='linear-gradient(135deg, #e8f8f5, #d1f2eb)'; this.style.display='flex'; this.alt='[Ganti dengan photo-organ-pernapasan.png — Gambar Organ Pernapasan]'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#16a085'; this.style.fontSize='1rem'; this.style.padding='2rem'; this.style.textAlign='center'; this.style.height='400px'; this.style.fontWeight='bold';">
+            <p><strong>Gambar 4.1:</strong> Organ-organ sistem pernapasan — a) Hidung, b) Faring, c) Laring, d) Trakea, e) Bronkus, f) Paru-paru, g) Diafragma</p>
+        </div>
+
+        <h4>1. Hidung (Cavum Nasalis)</h4>
+        <p>Hidung adalah organ pertama yang dilewati udara. Di dalam rongga hidung terdapat:</p>
+        <ul>
+            <li><strong>Bulu hidung:</strong> Menyaring debu dan kotoran</li>
+            <li><strong>Selaput lendir (mukosa):</strong> Melembabkan dan menghangatkan udara</li>
+            <li><strong>Konka (tulang karang hidung):</strong> Memperluas permukaan untuk pertukaran panas</li>
+        </ul>
+
+        <h4>2. Faring (Tenggorokan)</h4>
+        <p>Faring adalah persimpangan antara saluran pernapasan dan saluran pencernaan. Faring terbagi menjadi tiga bagian:</p>
+        <ul>
+            <li><strong>Nasofaring:</strong> Bagian atas, di belakang hidung</li>
+            <li><strong>Orofaring:</strong> Bagian tengah, di belakang mulut</li>
+            <li><strong>Laringofaring:</strong> Bagian bawah, mengarah ke laring dan esofagus</li>
+        </ul>
+
+        <h4>3. Laring (Pangkal Tenggorokan)</h4>
+        <p>Laring terletak di antara faring dan trakea. Di dalam laring terdapat:</p>
+        <ul>
+            <li><strong>Pita suara (vocal cords):</strong> Bergetar menghasilkan suara</li>
+            <li><strong>Epiglotis:</strong> Katup yang menutup laring saat menelan untuk mencegah makanan masuk ke saluran pernapasan</li>
+            <li><strong>Tulang rawan:</strong> Memberi struktur pada laring</li>
+        </ul>
+
+        <h4>4. Trakea (Batang Tenggorokan)</h4>
+        <p>Trakea adalah pipa sepanjang 10-12 cm yang menghubungkan laring dengan bronkus. Dinding trakea diperkuat oleh <strong>cincin tulang rawan</strong> berbentuk huruf C yang mencegah trakea kolaps (kempes).</p>
+        <p>Dinding dalam trakea dilapisi <strong>silia</strong> (rambut getar) dan sel penghasil lendir yang berfungsi menyaring partikel asing.</p>
+
+        <h4>5. Bronkus dan Bronkiolus</h4>
+        <p>Trakea bercabang menjadi dua <strong>bronkus</strong> (kanan dan kiri) yang masuk ke paru-paru. Bronkus bercabang-cabang menjadi <strong>bronkiolus</strong> yang lebih kecil. Percabangan ini membentuk <strong>pohon bronkial</strong>.</p>
+
+        <h4>6. Paru-Paru (Pulmo)</h4>
+        <p>Paru-paru adalah organ utama sistem pernapasan. Manusia memiliki dua paru-paru:</p>
+        <ul>
+            <li><strong>Paru-paru kanan:</strong> Terdiri dari 3 lobus (gelambir)</li>
+            <li><strong>Paru-paru kiri:</strong> Terdiri dari 2 lobus (lebih kecil untuk memberi ruang bagi jantung)</li>
+        </ul>
+        <p>Paru-paru dilindungi oleh selaput <strong>pleura</strong> (selaput paru-paru) yang terdiri dari dua lapisan dengan cairan di antaranya untuk mengurangi gesekan.</p>
+
+        <!-- IMAGE PARU-PARU -->
+        <div class="image-container">
+            <!--
+                =====================================================
+                CARA MENGGANTI FOTO PARU-PARU:
+                1. Siapkan gambar struktur paru-paru dengan bronkus dan alveolus.
+                2. Beri nama file: "photo-paru-paru.png"
+                3. Letakkan file gambar di folder yang sama dengan file 4.html ini.
+                4. Format yang didukung: PNG, JPG, JPEG, WEBP
+                5. Ukuran rekomendasi: 700x450 pixel atau rasio mendekati 3:2
+                =====================================================
+            -->
+            <img src="photo-paru-paru.png" alt="Struktur Paru-Paru dan Alveolus"
+                 onerror="this.style.background='linear-gradient(135deg, #e8f8f5, #d1f2eb)'; this.style.display='flex'; this.alt='[Ganti dengan photo-paru-paru.png — Gambar Paru-Paru dan Alveolus]'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#16a085'; this.style.fontSize='1rem'; this.style.padding='2rem'; this.style.textAlign='center'; this.style.height='380px'; this.style.fontWeight='bold';">
+            <p><strong>Gambar 4.2:</strong> Struktur paru-paru menunjukkan bronkus dan alveolus yang dikelilingi kapiler darah untuk pertukaran gas</p>
+        </div>
+
+        <h4>7. Alveolus (Kantung Udara)</h4>
+        <p>Di ujung bronkiolus terdapat jutaan <strong>alveolus</strong> (kantung udara kecil) yang merupakan <span class="highlight">tempat pertukaran gas</span>. Alveolus memiliki karakteristik:</p>
+        <ul>
+            <li>Dinding sangat tipis (satu lapis sel)</li>
+            <li>Dikelilingi oleh <strong>kapiler darah</strong> yang sangat banyak</li>
+            <li>Permukaan sangat luas (70-100 m²)</li>
+            <li>Berfungsi sebagai tempat difusi O₂ dan CO₂</li>
+        </ul>
+
+        <h4>8. Diafragma</h4>
+        <p>Diafragma adalah otot berbentuk kubah yang memisahkan rongga dada dan rongga perut. Kontraksi dan relaksasi diafragma berperan penting dalam mekanisme pernapasan.</p>
+
+        <!-- C. Mekanisme Pernapasan -->
+        <h3>C. Mekanisme Pernapasan</h3>
+        <p>Pernapasan melibatkan dua proses utama: <strong>inspirasi</strong> (menarik napas) dan <strong>ekspirasi</strong> (menghembuskan napas). Berdasarkan otot yang terlibat, pernapasan dibedakan menjadi:</p>
+
+        <!-- IMAGE MEKANISME PERNAPASAN -->
+        <div class="image-container">
+            <!--
+                =====================================================
+                CARA MENGGANTI FOTO MEKANISME PERNAPASAN:
+                1. Siapkan gambar mekanisme pernapasan (inspirasi dan ekspirasi).
+                2. Beri nama file: "photo-mekanisme-bernapas.png"
+                3. Letakkan file gambar di folder yang sama dengan file 4.html ini.
+                4. Format yang didukung: PNG, JPG, JPEG, WEBP
+                5. Ukuran rekomendasi: 700x500 pixel atau rasio mendekati 7:5
+                =====================================================
+            -->
+            <img src="photo-mekanisme-bernapas.png" alt="Mekanisme Pernapasan: Inspirasi dan Ekspirasi"
+                 onerror="this.style.background='linear-gradient(135deg, #e8f8f5, #d1f2eb)'; this.style.display='flex'; this.alt='[Ganti dengan photo-mekanisme-bernapas.png — Gambar Mekanisme Pernapasan]'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#16a085'; this.style.fontSize='1rem'; this.style.padding='2rem'; this.style.textAlign='center'; this.style.height='400px'; this.style.fontWeight='bold';">
+            <p><strong>Gambar 4.3:</strong> Mekanisme pernapasan — Inspirasi (menarik napas) dan Ekspirasi (menghembuskan napas) dengan pergerakan diafragma dan tulang rusuk</p>
+        </div>
+
+        <h4>1. Pernapasan Dada</h4>
+        <p>Melibatkan otot antar tulang rusuk (otot interkostal).</p>
+        <table>
+            <tr>
+                <th>Fase</th>
+                <th>Proses</th>
+                <th>Perubahan</th>
+            </tr>
+            <tr>
+                <td><strong>Inspirasi</strong></td>
+                <td>Otot interkostal berkontraksi</td>
+                <td>Tulang rusuk terangkat → rongga dada membesar → tekanan udara di paru-paru mengecil → udara masuk</td>
+            </tr>
+            <tr>
+                <td><strong>Ekspirasi</strong></td>
+                <td>Otot interkostal relaksasi</td>
+                <td>Tulang rusuk turun → rongga dada mengecil → tekanan udara di paru-paru membesar → udara keluar</td>
+            </tr>
+        </table>
+
+        <h4>2. Pernapasan Perut</h4>
+        <p>Melibatkan otot diafragma.</p>
+        <table>
+            <tr>
+                <th>Fase</th>
+                <th>Proses</th>
+                <th>Perubahan</th>
+            </tr>
+            <tr>
+                <td><strong>Inspirasi</strong></td>
+                <td>Diafragma berkontraksi (mendatar)</td>
+                <td>Rongga dada membesar → tekanan mengecil → udara masuk</td>
+            </tr>
+            <tr>
+                <td><strong>Ekspirasi</strong></td>
+                <td>Diafragma relaksasi (melengkung ke atas)</td>
+                <td>Rongga dada mengecil → tekanan membesar → udara keluar</td>
+            </tr>
+        </table>
+
+        <h4>3. Pertukaran Gas di Alveolus</h4>
+        <p>Pertukaran gas terjadi melalui proses <strong>difusi</strong> (perpindahan zat dari konsentrasi tinggi ke rendah):</p>
+        <ul>
+            <li><strong>Oksigen (O₂):</strong> Berdifusi dari alveolus (konsentrasi tinggi) ke kapiler darah (konsentrasi rendah), kemudian diikat oleh hemoglobin dalam eritrosit</li>
+            <li><strong>Karbon dioksida (CO₂):</strong> Berdifusi dari kapiler darah (konsentrasi tinggi) ke alveolus (konsentrasi rendah), kemudian dikeluarkan saat ekspirasi</li>
+        </ul>
+
+        <!-- D. Volume Udara -->
+        <h3>D. Volume Udara Pernapasan</h3>
+        <p>Volume udara yang terlibat dalam pernapasan dapat diukur dengan <strong>spirometer</strong>.</p>
+
+        <table>
+            <tr>
+                <th>Jenis Volume</th>
+                <th>Pengertian</th>
+                <th>Volume Normal</th>
+            </tr>
+            <tr>
+                <td><strong>Volume Tidal (VT)</strong></td>
+                <td>Udara yang masuk/keluar saat pernapasan normal</td>
+                <td>± 500 ml</td>
+            </tr>
+            <tr>
+                <td><strong>Volume Cadangan Inspirasi (VCI)</strong></td>
+                <td>Udara yang masih bisa dihirup setelah inspirasi normal</td>
+                <td>± 1500-3000 ml</td>
+            </tr>
+            <tr>
+                <td><strong>Volume Cadangan Ekspirasi (VCE)</strong></td>
+                <td>Udara yang masih bisa dihembuskan setelah ekspirasi normal</td>
+                <td>± 1000-1500 ml</td>
+            </tr>
+            <tr>
+                <td><strong>Volume Residu (VR)</strong></td>
+                <td>Udara yang tersisa di paru-paru setelah ekspirasi maksimal (tidak bisa dikeluarkan)</td>
+                <td>± 1000-1500 ml</td>
+            </tr>
+            <tr>
+                <td><strong>Kapasitas Vital (KV)</strong></td>
+                <td>Volume udara maksimal yang bisa dikeluarkan setelah inspirasi maksimal (VT + VCI + VCE)</td>
+                <td>± 3000-5000 ml</td>
+            </tr>
+            <tr>
+                <td><strong>Kapasitas Total Paru-Paru</strong></td>
+                <td>Seluruh volume udara di paru-paru (KV + VR)</td>
+                <td>± 4000-6000 ml</td>
+            </tr>
+        </table>
+
+        <!-- E. Gangguan -->
+        <h3>E. Gangguan dan Penyakit pada Sistem Pernapasan</h3>
+        <table>
+            <tr>
+                <th>Penyakit</th>
+                <th>Penyebab / Keterangan</th>
+            </tr>
+            <tr>
+                <td><strong>Asma</strong></td>
+                <td>Penyempitan saluran napas akibat alergi, stres, atau iritasi. Gejala: sesak napas, mengi (bunyi ngik), batuk.</td>
+            </tr>
+            <tr>
+                <td><strong>Bronkitis</strong></td>
+                <td>Peradangan pada bronkus akibat infeksi virus/bakteri atau iritasi (rokok). Gejala: batuk berdahak, sesak napas.</td>
+            </tr>
+            <tr>
+                <td><strong>Pneumonia</strong></td>
+                <td>Peradangan paru-paru (alveolus terisi cairan) akibat infeksi bakteri, virus, atau jamur. Gejala: demam, batuk, sesak napas.</td>
+            </tr>
+            <tr>
+                <td><strong>TBC (Tuberkulosis)</strong></td>
+                <td>Infeksi bakteri <em>Mycobacterium tuberculosis</em> yang menyerang paru-paru. Gejala: batuk lebih dari 3 minggu, demam, berat badan turun.</td>
+            </tr>
+            <tr>
+                <td><strong>Emfisema</strong></td>
+                <td>Rusaknya dinding alveolus sehingga permukaan pertukaran gas berkurang. Umum pada perokok berat. Gejala: sesak napas kronis.</td>
+            </tr>
+            <tr>
+                <td><strong>Rinitis</strong></td>
+                <td>Peradangan selaput lendir hidung (pilek) akibat alergi atau infeksi. Gejala: hidung tersumbat, bersin-bersin.</td>
+            </tr>
+            <tr>
+                <td><strong>Faringitis</strong></td>
+                <td>Peradangan faring (radang tenggorokan) akibat infeksi virus/bakteri. Gejala: sakit tenggorokan, sulit menelan.</td>
+            </tr>
+            <tr>
+                <td><strong>Laringitis</strong></td>
+                <td>Peradangan laring (pita suara). Gejala: suara serak atau hilang.</td>
+            </tr>
+            <tr>
+                <td><strong>Kanker Paru-Paru</strong></td>
+                <td>Pertumbuhan sel abnormal di paru-paru, sering disebabkan oleh merokok. Gejala: batuk berdarah, sesak napas, nyeri dada.</td>
+            </tr>
+            <tr>
+                <td><strong>Sesak Napas (Dispnea)</strong></td>
+                <td>Kesulitan bernapas yang bisa disebabkan oleh berbagai faktor (asma, penyakit jantung, obesitas, dll).</td>
+            </tr>
+        </table>
+
+        <!-- F. Menjaga Kesehatan -->
+        <h3>F. Cara Menjaga Kesehatan Sistem Pernapasan</h3>
+        <div class="warning-box">
+            <h4>💡 Tips Paru-Paru Sehat</h4>
+            <ul>
+                <li><strong>Tidak merokok:</strong> Hindari rokok dan asap rokok (perokok pasif) yang merusak paru-paru</li>
+                <li><strong>Olahraga teratur:</strong> Meningkatkan kapasitas paru-paru dan kekuatan otot pernapasan</li>
+                <li><strong>Hindari polusi:</strong> Gunakan masker di tempat berpolusi tinggi, hindari area berasap</li>
+                <li><strong>Jaga kebersihan:</strong> Cuci tangan rutin untuk mencegah infeksi saluran pernapasan</li>
+                <li><strong>Vaksinasi:</strong> Lakukan vaksinasi flu dan pneumonia untuk mencegah infeksi</li>
+                <li><strong>Hindari alergen:</strong> Jika memiliki alergi, hindari pemicu alergi (debu, bulu hewan, serbuk sari)</li>
+                <li><strong>Pola makan sehat:</strong> Konsumsi makanan kaya antioksidan (buah, sayur) untuk menjaga kesehatan paru-paru</li>
+                <li><strong>Latihan pernapasan:</strong> Lakukan latihan pernapasan dalam untuk memperkuat paru-paru</li>
+                <li><strong>Cukup tidur:</strong> Istirahat yang cukup untuk pemulihan sistem pernapasan</li>
+                <li><strong>Periksa kesehatan:</strong> Rutin memeriksakan kesehatan paru-paru, terutama jika perokok atau berisiko</li>
+            </ul>
+        </div>
+
+        <!-- G. Rangkuman -->
+        <h3>G. Rangkuman</h3>
+        <div class="info-box">
+            <ul>
+                <li>Sistem pernapasan berfungsi mengambil O₂ dan mengeluarkan CO₂ serta uap air.</li>
+                <li>Organ pernapasan: hidung → faring → laring → trakea → bronkus → bronkiolus → alveolus (di paru-paru).</li>
+                <li><strong>Alveolus</strong> adalah tempat pertukaran gas O₂ dan CO₂ melalui difusi.</li>
+                <li>Pernapasan dada menggunakan otot antar tulang rusuk, pernapasan perut menggunakan otot diafragma.</li>
+                <li>Volume udara pernapasan: tidal (500 ml), cadangan inspirasi (1500-3000 ml), cadangan ekspirasi (1000-1500 ml), residu (1000-1500 ml).</li>
+                <li>Penyakit pernapasan: asma, bronkitis, pneumonia, TBC, emfisema, kanker paru-paru.</li>
+                <li>Cara menjaga kesehatan: tidak merokok, olahraga teratur, hindari polusi, vaksinasi, pola makan sehat.</li>
+            </ul>
+        </div>
+
+        <!-- H. Latihan Soal -->
+        <h3>H. Latihan Soal</h3>
+
+        <h4>A. Pilihan Ganda</h4>
+        <ol>
+            <li>Organ pernapasan yang berfungsi sebagai tempat pertukaran gas adalah...
+                <ul>
+                    <li>a. Bronkus</li>
+                    <li>b. Trakea</li>
+                    <li>c. Alveolus</li>
+                    <li>d. Faring</li>
+                </ul>
+            </li>
+            <li>Otot yang berperan dalam pernapasan perut adalah...
+                <ul>
+                    <li>a. Otot interkostal</li>
+                    <li>b. Diafragma</li>
+                    <li>c. Otot perut</li>
+                    <li>d. Otot dada</li>
+                </ul>
+            </li>
+            <li>Volume udara yang masuk/keluar saat pernapasan normal disebut...
+                <ul>
+                    <li>a. Volume cadangan</li>
+                    <li>b. Volume residu</li>
+                    <li>c. Volume tidal</li>
+                    <li>d. Kapasitas vital</li>
+                </ul>
+            </li>
+            <li>Penyakit pernapasan yang disebabkan oleh bakteri Mycobacterium tuberculosis adalah...
+                <ul>
+                    <li>a. Pneumonia</li>
+                    <li>b. Bronkitis</li>
+                    <li>c. TBC</li>
+                    <li>d. Asma</li>
+                </ul>
+            </li>
+            <li>Fungsi epiglotis adalah...
+                <ul>
+                    <li>a) Menghasilkan suara</li>
+                    <li>b) Menutup laring saat menelan</li>
+                    <li>c) Menyaring udara</li>
+                    <li>d) Menghangatkan udara</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h4>B. Essay</h4>
+        <ol>
+            <li>Sebutkan organ-organ sistem pernapasan secara urut dari luar ke dalam!</li>
+            <li>Jelaskan perbedaan mekanisme pernapasan dada dan pernapasan perut!</li>
+            <li>Mengapa alveolus sangat efektif untuk pertukaran gas? Jelaskan strukturnya!</li>
+            <li>Sebutkan minimal 5 penyakit pada sistem pernapasan beserta penyebabnya!</li>
+            <li>Jelaskan cara-cara menjaga kesehatan sistem pernapasan!</li>
+        </ol>
+
+        <!-- Nav Buttons Bottom -->
         <div class="nav-buttons">
             <a href="index.html">🏠 Kembali ke Beranda</a>
             <a href="uji-formatif-4.html">📝 Uji Formatif Bab 4</a>
             <a href="5.html">Bab Selanjutnya →</a>
         </div>
 
-        <!-- A. Pengertian -->
-        <h3>A. Pengertian Pernapasan (Respirasi)</h3>
-        <p>
-            <strong>Pernapasan (Respirasi)</strong> adalah proses menghirup udara yang mengandung oksigen (O2) dan mengeluarkan udara yang mengandung karbon dioksida (CO2) serta uap air. Pernapasan sangat penting karena tubuh membutuhkan oksigen untuk melakukan metabolisme seluler agar menghasilkan energi.
-        </p>
-        
-        <div class="info-box">
-            <h4>🌬️ Tahukah Kamu?</h4>
-            <p>Manusia rata-rata bernapas sekitar <strong>15-20 kali per menit</strong> saat istirahat. Dalam satu hari, kita bernapas sekitar <strong>20.000 kali</strong> dan menghirup sekitar <strong>10.000 liter udara</strong>!</p>
-        </div>
-
-        <p>Penting untuk membedakan antara <strong>pernapasan (breathing)</strong> dan <strong>respirasi seluler (cellular respiration)</strong>:</p>
-        <ul>
-            <li><strong>Pernapasan:</strong> Proses fisik pertukaran gas antara tubuh dan lingkungan (inspirasi dan ekspirasi).</li>
-            <li><strong>Respirasi Seluler:</strong> Proses kimia di dalam sel (mitokondria) yang memecah glukosa menggunakan oksigen untuk menghasilkan energi (ATP).</li>
-        </ul>
-
-        <!-- B. Organ -->
-        <h3>B. Organ-Organ Sistem Pernapasan</h3>
-        <p>Sistem pernapasan terdiri dari saluran pernapasan dan organ utama (paru-paru).</p>
-
-        <!-- Image Struktur Pernapasan -->
-        <div class="image-container">
-            <img src="struktur-sistem-pernapasan.png" alt="Struktur Sistem Pernapasan Manusia">
-            <p><strong>Gambar 4.1:</strong> Struktur anatomi sistem pernapasan pada manusia</p>
-        </div>
-
-        <h4>1. Hidung (Cavum Nasi)</h4>
-        <p>Hidung adalah pintu utama masuknya udara. Di dalam rongga hidung terdapat:</p>
-        <ul>
-            <li><strong>Lubang Hidung:</strong> Tempat masuk udara.</li>
-            <li><strong>Bulu Hidung:</strong> Menyaring debu dan kotoran.</li>
-            <li><strong>Mukosa (Selaput Lendir):</strong> Menangkap partikel halus dan melembabkan udara.</li>
-            <li><strong>Konka (Tulang Rangka Hidung):</strong> Kaya pembuluh darah untuk menyesuaikan suhu udara.</li>
-        </ul>
-
-        <h4>2. Faring (Tekak)</h4>
-        <p>Faring merupakan persimpangan antara saluran pernapasan dan saluran pencernaan (saluran makanan). Di sini terdapat <strong>Epiglotis</strong> (katup) yang mencegah makanan masuk ke saluran pernapasan saat menelan.</p>
-
-        <h4>3. Laring (Pangkal Tenggorokan)</h4>
-        <p>Laring terdapat <strong>Pita Suara</strong> yang bergetar menghasilkan suara. Laring dilindungi oleh tulang rawan dan epiglotis.</p>
-
-        <h4>4. Trakea (Batang Tenggorokan)</h4>
-        <p>Trakea berbentuk pipa dengan panjang sekitar 11 cm, tersusun dari cincin tulang rawan berbentuk huruf C agar tidak pipih saat menekan udara. Dinding dalam trakea memiliki silia yang bergerak menyapu kotoran ke luar.</p>
-
-        <h4>5. Bronkus dan Bronkiolus</h4>
-        <p>Trakea bercabang menjadi dua <strong>Bronkus</strong> (kanan dan kiri) yang menuju paru-paru. Bronkus bercabang lagi menjadi <strong>Bronkiolus</strong> yang lebih halus. Percabangan ini disebut "pohon bronkial".</p>
-
-        <h4>6. Paru-Paru (Pulmo) dan Alveolus</h4>
-        <p>Paru-paru dilindungi oleh selaput pembungkus yang disebut <strong>Pleura</strong>. Di ujung bronkiolus terdapat kantung udara kecil bernama <strong>Alveolus</strong>. Alveolus memiliki dinding yang sangat tipis dan banyak pembuluh darah kapiler. Di sinilah terjadi <span class="highlight">pertukaran gas</span> antara O2 dan CO2.</p>
-
-        <!-- C. Mekanisme -->
-        <h3>C. Mekanisme Pernapasan</h3>
-        <p>Pernapasan manusia dibantu oleh otot antar tulang rusuk (otot interkostal) dan otot diafragma (otot sekat rongga dada). Ada dua mekanisme pernapasan:</p>
-
-        <h4>1. Pernapasan Dada</h4>
-        <p>Disebabkan oleh aktivitas otot antar tulang rusuk (otot interkostal).</p>
-        <ul>
-            <li><strong>Inspirasi (Menarik Napas):</strong> Otot antar tulang rusuk berkontraksi (menegang) → Tulang rusuk terangkat → Volume rongga dada membesar → Tekanan udara di paru-paru mengecil → Udara masuk.</li>
-            <li><strong>Ekspirasi (Menghembuskan Napas):</strong> Otot antar tulang rusuk relaksasi (mengendur) → Tulang rusuk turun → Volume rongga dada mengecil → Tekanan udara di paru-paru membesar → Udara keluar.</li>
-        </ul>
-
-        <h4>2. Pernapasan Perut</h4>
-        <p>Disebabkan oleh aktivitas otot diafragma (sekat rongga dada).</p>
-        <ul>
-            <li><strong>Inspirasi:</strong> Otot diafragma berkontraksi (posisi mendatar/datar) → Volume rongga dada membesar → Tekanan mengecil → Udara masuk.</li>
-            <li><strong>Ekspirasi:</strong> Otot diafragma relaksasi (posisi melengkung ke atas) → Volume rongga dada mengecil → Tekanan membesar → Udara keluar.</li>
-        </ul>
-
-        <div class="info-box">
-            <h4>📊 Perbandingan Mekanisme</h4>
-            <table>
-                <tr>
-                    <th>Fase</th>
-                    <th>Pernapasan Dada</th>
-                    <th>Pernapasan Perut</th>
-                </tr>
-                <tr>
-                    <td>Inspirasi</td>
-                    <td>Otot antar rusuk berkontraksi</td>
-                    <td>Otot diafragma berkontraksi (datar)</td>
-                </tr>
-                <tr>
-                    <td>Ekspirasi</td>
-                    <td>Otot antar rusuk relaksasi</td>
-                    <td>Otot diafragma relaksasi (melengkung)</td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- D. Pertukaran Gas -->
-        <h3>D. Pertukaran Gas pada Pernapasan</h3>
-        <p>Pertukaran gas terjadi secara <strong>difusi</strong> (perpindahan zat dari konsentrasi tinggi ke rendah).</p>
-
-        <h4>1. Pertukaran Gas Eksternal (Alveolus)</h4>
-        <p>Terjadi di alveolus. Oksigen (O2) dari udara di alveolus berdifusi masuk ke dalam darah (diikat oleh hemoglobin). Karbon dioksida (CO2) dari darah berdifusi masuk ke alveolus untuk dibuang.</p>
-
-        <h4>2. Pertukaran Gas Internal (Jaringan)</h4>
-        <p>Terjadi di sel-sel tubuh. Oksigen dilepaskan dari darah ke dalam sel. Karbon dioksida hasil metabolisme sel masuk ke dalam darah untuk dibawa ke paru-paru.</p>
-
-        <!-- E. Volume Udara -->
-        <h3>E. Volume Udara Pernapasan</h3>
-        <p>Volume udara yang terhirup dan dihembuskan memiliki ukuran tertentu:</p>
-        <ul>
-            <li><strong>Volume Tidal:</strong> Udara yang masuk/keluar saat pernapasan normal (sekitar 500 ml).</li>
-            <li><strong>Volume Cadangan Inspirasi:</strong> Udara yang masih bisa dihirup sedalam-dalamnya setelah napas normal (sekitar 1500 ml).</li>
-            <li><strong>Volume Cadangan Ekspirasi:</strong> Udara yang masih bisa dihembuskan sekuat-kuatnya setelah napas normal (sekitar 1500 ml).</li>
-            <li><strong>Volume Residu:</strong> Udara yang tersisa di paru-paru yang tidak bisa dikeluarkan (sekitar 1500 ml). Ini mencegah paru-paru kempes total.</li>
-        </ul>
-
-        <!-- F. Gangguan -->
-        <h3>F. Gangguan dan Penyakit pada Sistem Pernapasan</h3>
-        <ul>
-            <li><strong>Alergi/Rinitis:</strong> Radang selaput lendir hidung akibat alergi debu, bulu, atau suhu.</li>
-            <li><strong>Faringitis:</strong> Radang pada faring (tenggorokan), sering disebut radang tenggorokan.</li>
-            <li><strong>Laringitis:</strong> Radang pada laring, menyebabkan suara serak atau hilang.</li>
-            <li><strong>Tonsilitis (Amandel):</strong> Peradangan pada tonsil/amandel.</li>
-            <li><strong>Bronkitis:</strong> Peradangan pada bronkus, sering disebabkan oleh infeksi atau asap rokok.</li>
-            <li><strong>Asma:</strong> Penyempitan saluran napas akibat alergi atau hipersensitivitas, menyebabkan sesak napas.</li>
-            <li><strong>TBC (Tuberkulosis):</strong> Infeksi bakteri <em>Mycobacterium tuberculosis</em> yang merusak paru-paru.</li>
-            <li><strong>Pneumonia:</strong> Radang paru-paru akibat infeksi bakteri, virus, atau jamur.</li>
-            <li><strong>Kanker Paru-Paru:</strong> Pertumbuhan sel abnormal di paru-paru, sangat terkait dengan kebiasaan merokok.</li>
-            <li><strong>Emfisema:</strong> Rusaknya dinding alveolus sehingga pertukaran gas terganggu (umum pada perokok berat).</li>
-        </ul>
-
-        <!-- G. Cara Menjaga Kesehatan -->
-        <h3>G. Cara Menjaga Kesehatan Sistem Pernapasan</h3>
-        <div class="warning-box">
-            <h4>💡 Tips Paru-Paru Sehat</h4>
-            <ul>
-                <li>Hindari merokok dan asap rokok (perokok pasif)</li>
-                <li>Olahraga teratur untuk melatih kapasitas paru-paru</li>
-                <li>Gunakan masker saat berada di tempat berdebu atau polusi tinggi</li>
-                <li>Hindari zat alergi jika memiliki riwayat asma</li>
-                <li>Buka jendela untuk sirkulasi udara di ruangan</li>
-                <li>Makan makanan bergizi untuk meningkatkan sistem imun</li>
-            </ul>
-        </div>
-
-        <!-- H. Rangkuman -->
-        <h3>H. Rangkuman</h3>
-        <div class="info-box">
-            <ul>
-                <li>Sistem pernapasan terdiri dari hidung, faring, laring, trakea, bronkus, bronkiolus, dan paru-paru (alveolus).</li>
-                <li>Fungsi utama hidung adalah menyaring, menghangatkan, dan melembabkan udara.</li>
-                <li>Epiglotis berfungsi sebagai katup agar makanan tidak masuk ke saluran napas.</li>
-                <li>Pernapasan dada menggunakan otot antar tulang rusuk, pernapasan perut menggunakan otot diafragma.</li>
-                <li>Pertukaran gas O2 dan CO2 terjadi di alveolus (eksternal) dan jaringan tubuh (internal) melalui difusi.</li>
-                <li>Hemoglobin dalam darah berfungsi mengikat oksigen.</li>
-                <li>Asma, TBC, dan Pneumonia adalah contoh gangguan pada sistem pernapasan.</li>
-            </ul>
-        </div>
-
-        <!-- I. Latihan Soal -->
-        <h3>I. Latihan Soal</h3>
-
-        <h4>A. Pilihan Ganda</h4>
-        <ol>
-            <li>Organ pernapasan yang berfungsi menyaring, menghangatkan, dan melembabkan udara adalah...
-                <ul>
-                    <li>a. Faring</li>
-                    <li>b. Laring</li>
-                    <li>c. Hidung</li>
-                    <li>d. Trakea</li>
-                </ul>
-            </li>
-            <li>Tempat terjadinya pertukaran gas O2 dan CO2 pada paru-paru adalah...
-                <ul>
-                    <li>a. Bronkus</li>
-                    <li>b. Bronkiolus</li>
-                    <li>c. Trakea</li>
-                    <li>d. Alveolus</li>
-                </ul>
-            </li>
-            <li>Urutan saluran pernapasan yang benar dari luar ke dalam adalah...
-                <ul>
-                    <li>a. Hidung - Faring - Laring - Trakea - Bronkus</li>
-                    <li>b. Hidung - Laring - Faring - Trakea - Bronkus</li>
-                    <li>c. Hidung - Faring - Trakea - Laring - Bronkus</li>
-                    <li>d. Hidung - Trakea - Faring - Laring - Bronkus</li>
-                </ul>
-            </li>
-            <li>Pada pernapasan perut, saat inspirasi terjadi...</li>
-            <ul>
-                <li>a. Otot diafragma relaksasi dan melengkung ke atas</li>
-                <li>b. Otot diafragma berkontraksi dan mendatar</li>
-                <li>c. Tulang rusuk terangkat</li>
-                <li>d. Volume rongga dada mengecil</li>
-            </ul>
-            </li>
-            <li>Penyakit saluran pernapasan yang disebabkan oleh infeksi bakteri <em>Mycobacterium tuberculosis</em> adalah...</li>
-            <ul>
-                <li>a. Asma</li>
-                <li>b. Bronkitis</li>
-                <li>c. TBC</li>
-                <li>d. Pneumonia</li>
-            </ul>
-            </li>
-        </ol>
-
-        <h4>B. Essay</h4>
-        <ol>
-            <li>Sebutkan 5 organ penyusun sistem pernapasan manusia secara urut!</li>
-            <li>Jelaskan perbedaan antara pernapasan dada dan pernapasan perut!</li>
-            <li>Apa fungsi dari alveolus dan mengapa dindingnya tipis?</li>
-            <li>Jelaskan mekanisme pertukaran gas (O2 dan CO2) di alveolus!</li>
-            <li>Sebutkan 3 penyakit pada sistem pernapasan dan jelaskan penyebabnya!</li>
-        </ol>
-
-        <div class="nav-buttons">
-            <a href="index.html">🏠 Kembali ke Beranda</a>
-            <a href="uji-formatif-4.html">📝 Uji Formatif Bab 4</a>
-            <a href="5.html">Bab Selanjutnya (UTS) →</a>
-        </div>
-
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
-        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> — MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> — Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
         <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
     </footer>
 

@@ -6,43 +6,70 @@
     <title>Bab 3 - Sistem Peredaran Darah pada Manusia | IPA Kelas VIII Semester 1</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background-color: #f4f4f4; }
+
+        /* Navigation */
         nav { background: linear-gradient(135deg, #c0392b, #e74c3c); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
         nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
         nav ul li a:hover { opacity: 0.8; }
+
+        /* Header */
         .header { background: linear-gradient(135deg, #922b21, #c0392b); color: white; padding: 3rem 2rem; text-align: center; }
         .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
         .header h2 { font-size: 1.3rem; font-weight: 300; margin-bottom: 1rem; }
         .header p { font-size: 1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+
+        /* Content */
         .content { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
-        .content h3 { color: #922b21; font-size: 1.5rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #e74c3c; }
+        .content h3 { color: #922b21; font-size: 1.5rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #e74c3c; }
         .content h4 { color: #c0392b; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
         .content p { margin-bottom: 1rem; text-align: justify; }
+
+        /* Nav Buttons */
         .nav-buttons { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
         .nav-buttons a { display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #c0392b, #e74c3c); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
         .nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* Images */
         .image-container { text-align: center; margin: 2rem 0; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .image-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
         .image-container p { margin-top: 1rem; font-style: italic; color: #555; text-align: center; }
+
+        /* Lists */
         ul, ol { margin: 1rem 0 1rem 2rem; }
         li { margin-bottom: 0.5rem; }
-        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
         th, td { padding: 1rem; text-align: left; border: 1px solid #ddd; }
         th { background: linear-gradient(135deg, #c0392b, #e74c3c); color: white; font-weight: 600; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #f1f1f1; }
+        tr:nth-child(even) { background-color: #fdf2f2; }
+        tr:hover { background-color: #f9e4e4; }
+
+        /* Boxes */
         .info-box { background: linear-gradient(135deg, #fdedec, #fadbd8); border-left: 5px solid #e74c3c; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
         .info-box h4 { color: #922b21; margin-top: 0; }
         .warning-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-left: 5px solid #f39c12; padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px; }
         .highlight { background: #fff9c4; padding: 0.2rem 0.5rem; border-radius: 3px; font-weight: 600; }
+        .formula-box { background: #2c3e50; color: #e74c3c; padding: 1.2rem 1.5rem; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; margin: 1.5rem 0; font-family: 'Courier New', Courier, monospace; }
+
+        /* Footer */
         footer { background: #1a252f; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
         footer a { color: #e74c3c; text-decoration: none; }
-        @media (max-width: 768px) { .header h1 { font-size: 1.5rem; } .nav-buttons { flex-direction: column; } .nav-buttons a { text-align: center; } table { font-size: 0.9rem; } th, td { padding: 0.7rem; } }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .nav-buttons { flex-direction: column; }
+            .nav-buttons a { text-align: center; }
+            table { font-size: 0.9rem; }
+            th, td { padding: 0.7rem; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">🏠 Beranda</a></li>
@@ -51,16 +78,19 @@
         </ul>
     </nav>
 
+    <!-- Header -->
     <div class="header">
         <h1>BAB 3</h1>
         <h2>Sistem Peredaran Darah pada Manusia</h2>
-        <p>Memahami struktur darah, jantung, pembuluh darah, serta mekanisme peredaran darah dan cara menjaganya</p>
+        <p>Memahami komponen darah, struktur jantung, pembuluh darah, mekanisme peredaran darah, golongan darah, serta gangguan dan cara menjaga kesehatan sistem peredaran darah</p>
     </div>
 
+    <!-- Content -->
     <div class="content">
 
+        <!-- Nav Buttons Top -->
         <div class="nav-buttons">
-            <a href="index.html">🏠 Kembali ke Beranda</a>
+            <a href="index.html">🏠 Beranda</a>
             <a href="uji-formatif-3.html">📝 Uji Formatif Bab 3</a>
             <a href="4.html">Bab Selanjutnya →</a>
         </div>
@@ -70,203 +100,295 @@
         <p>
             <strong>Sistem peredaran darah</strong> (sistem kardiovaskular) adalah sistem organ yang berfungsi mengangkut zat-zat penting seperti oksigen, nutrisi, hormon, dan zat sisa metabolisme ke seluruh tubuh. Sistem ini juga berperan dalam menjaga suhu tubuh, melindungi tubuh dari penyakit, dan menjaga keseimbangan cairan tubuh.
         </p>
+        <p>Sistem peredaran darah manusia bersifat <strong>tertutup</strong>, artinya darah selalu mengalir di dalam pembuluh darah dan tidak pernah keluar dari pembuluh darah kecuali terjadi luka.</p>
 
         <div class="info-box">
             <h4>❤️ Fakta Menarik</h4>
-            <p>Jantung manusia berdetak sekitar <strong>100.000 kali per hari</strong> dan memompa sekitar <strong>7.500 liter darah</strong> setiap harinya. Jika pembuluh darah dalam tubuh manusia direntangkan, panjangnya bisa mencapai <strong>100.000 km</strong>!</p>
+            <p>Jantung manusia berdetak sekitar <strong>100.000 kali per hari</strong> dan memompa sekitar <strong>7.500 liter darah</strong> setiap harinya. Jika seluruh pembuluh darah dalam tubuh manusia direntangkan, panjangnya bisa mencapai <strong>100.000 km</strong> — cukup untuk mengelilingi bumi lebih dari 2 kali!</p>
         </div>
 
         <!-- B. Komponen -->
         <h3>B. Komponen Sistem Peredaran Darah</h3>
-        <p>Sistem peredaran darah manusia terdiri dari tiga komponen utama: <strong>Darah, Jantung, dan Pembuluh Darah</strong>.</p>
+        <p>Sistem peredaran darah manusia terdiri dari tiga komponen utama: <strong>Darah</strong>, <strong>Jantung</strong>, dan <strong>Pembuluh Darah</strong>.</p>
 
+        <!-- ===== 1. DARAH ===== -->
         <h4>1. Darah</h4>
-        <p>Darah adalah cairan yang berwarna merah dan kental. Darah terdiri dari dua bagian utama:</p>
-        
-        <h4>a. Plasma Darah (55%)</h4>
-        <p>Bagian cair dari darah yang terdiri dari 90% air dan 10% zat terlarut (protein, garam mineral, hormon, antibodi, dan zat sisa metabolisme). Fungsinya sebagai medium transportasi zat-zat tersebut.</p>
+        <p>Darah adalah jaringan cair berwarna merah yang mengalir di dalam pembuluh darah. Volume darah pada orang dewasa sekitar 4–6 liter. Darah terdiri dari dua bagian utama:</p>
 
-        <h4>b. Sel-Sel Darah (45%)</h4>
+        <h4>a. Plasma Darah (±55%)</h4>
+        <p>Plasma darah adalah bagian cair dari darah yang terdiri dari 90% air dan 10% zat terlarut, antara lain:</p>
+        <ul>
+            <li><strong>Protein darah:</strong> Albumin (menjaga tekanan osmotik), Fibrinogen (pembekuan darah), Globulin (antibodi/imunitas)</li>
+            <li><strong>Sari-sari makanan:</strong> Glukosa, asam amino, asam lemak, vitamin</li>
+            <li><strong>Zat sisa metabolisme:</strong> Urea, asam urat, kreatinin</li>
+            <li><strong>Hormon, enzim, dan garam mineral</strong></li>
+        </ul>
+
+        <h4>b. Sel-Sel Darah (±45%)</h4>
         <table>
             <tr>
                 <th>Komponen</th>
                 <th>Nama Lain</th>
-                <th>Bentuk</th>
+                <th>Ciri-Ciri</th>
                 <th>Fungsi Utama</th>
             </tr>
             <tr>
                 <td>Sel Darah Merah</td>
                 <td>Eritrosit</td>
-                <td>Bikonkaf, tidak berinti</td>
-                <td>Mengangkut oksigen (O2) dan karbon dioksida (CO2) dengan bantuan hemoglobin</td>
+                <td>Bentuk bikonkaf, tidak berinti, mengandung hemoglobin</td>
+                <td>Mengangkut oksigen (O₂) dari paru-paru ke seluruh tubuh dan mengangkut CO₂ kembali ke paru-paru</td>
             </tr>
             <tr>
                 <td>Sel Darah Putih</td>
                 <td>Leukosit</td>
-                <td>Tidak beraturan, berinti</td>
-                <td>Melawan infeksi dan membunuh kuman penyakit (sistem imun)</td>
+                <td>Bentuk tidak beraturan, berinti, dapat bergerak ameboid</td>
+                <td>Melawan infeksi, membunuh kuman penyakit, dan menghasilkan antibodi (sistem imun)</td>
             </tr>
             <tr>
                 <td>Keping Darah</td>
                 <td>Trombosit</td>
-                <td>Kecil, tidak beraturan, tidak berinti</td>
-                <td>Berperan dalam proses pembekuan darah saat terjadi luka</td>
+                <td>Bentuk kecil, tidak beraturan, tidak berinti</td>
+                <td>Berperan dalam proses pembekuan darah (hemostasis) saat terjadi luka</td>
             </tr>
         </table>
 
-        <h4>2. Jantung</h4>
+        <!-- ===== 2. JANTUNG ===== -->
+        <h4>2. Jantung (Cor/Cardium)</h4>
         <p>
-            Jantung adalah organ berotot yang berfungsi memompa darah ke seluruh tubuh. Jantung terletak di rongga dada sebelah kiri, berukuran sebesar kepalan tangan. Jantung terdiri dari <strong>4 ruang</strong>:
+            Jantung adalah organ berotot yang berfungsi sebagai pompa untuk mengalirkan darah ke seluruh tubuh. Jantung terletak di rongga dada (mediastinum) sebelah kiri, di antara kedua paru-paru, dan dilindungi oleh selaput <strong>perikardium</strong>. Ukuran jantung kira-kira sebesar kepalan tangan pemiliknya.
         </p>
-        <ul>
-            <li><strong>Atrium Kanan (Serambi Kanan):</strong> Menerima darah dari seluruh tubuh yang miskin oksigen.</li>
-            <li><strong>Atrium Kiri (Serambi Kiri):</strong> Menerima darah dari paru-paru yang kaya oksigen.</li>
-            <li><strong>Ventrikel Kanan (Bilik Kanan):</strong> Memompa darah ke paru-paru untuk pertukaran gas.</li>
-            <li><strong>Ventrikel Kiri (Bilik Kiri):</strong> Memompa darah ke seluruh tubuh. Dindingnya paling tebal karena harus memompa darah dengan tekanan tinggi.</li>
-        </ul>
-        <p>Jantung dilengkapi dengan <strong>katup</strong> yang mencegah darah mengalir balik: Katup Trikuspid (kanan), Katup Mitral/Bikuspid (kiri), dan Katup Semilunar (di pangkal arteri).</p>
 
+        <!-- IMAGE JANTUNG -->
+        <div class="image-container">
+            <!--
+                =====================================================
+                CARA MENGGANTI FOTO JANTUNG:
+                1. Siapkan gambar organ jantung yang Anda inginkan.
+                2. Beri nama file: "photo-jantung.png"
+                3. Letakkan file gambar di folder yang sama dengan file 3.html ini.
+                4. Format yang didukung: PNG, JPG, JPEG, WEBP
+                5. Ukuran rekomendasi: 700x550 pixel atau rasio mendekati 5:4
+                =====================================================
+            -->
+            <img src="photo-jantung.png" alt="Struktur Jantung Manusia"
+                 onerror="this.style.background='linear-gradient(135deg, #fdedec, #fadbd8)'; this.style.display='flex'; this.alt='[Ganti dengan photo-jantung.png — Gambar Struktur Jantung]'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#c0392b'; this.style.fontSize='1rem'; this.style.padding='2rem'; this.style.textAlign='center'; this.style.height='420px'; this.style.fontWeight='bold';">
+            <p><strong>Gambar 3.1:</strong> Struktur jantung manusia — Aorta, Arteri Paru-paru, Atrium (Serambi) Kiri & Kanan, Vena Paru-paru, Katup Jantung, Ventrikel (Bilik) Kiri & Kanan, Vena Kava</p>
+        </div>
+
+        <p>Jantung terdiri dari <strong>4 ruang</strong>:</p>
+        <ul>
+            <li><strong>Atrium Kanan (Serambi Kanan):</strong> Menerima darah kotor (miskin O₂, kaya CO₂) dari seluruh tubuh melalui <em>Vena Kava Superior</em> (dari tubuh bagian atas) dan <em>Vena Kava Inferior</em> (dari tubuh bagian bawah).</li>
+            <li><strong>Atrium Kiri (Serambi Kiri):</strong> Menerima darah bersih (kaya O₂) dari paru-paru melalui <em>Vena Pulmonalis</em>.</li>
+            <li><strong>Ventrikel Kanan (Bilik Kanan):</strong> Memompa darah kotor ke paru-paru melalui <em>Arteri Pulmonalis</em> untuk pertukaran gas. Dindingnya lebih tipis dibanding ventrikel kiri.</li>
+            <li><strong>Ventrikel Kiri (Bilik Kiri):</strong> Memompa darah bersih ke <strong>seluruh tubuh</strong> melalui <em>Aorta</em>. <span class="highlight">Dindingnya paling tebal</span> karena harus menghasilkan tekanan yang sangat tinggi untuk mengedarkan darah ke seluruh tubuh.</li>
+        </ul>
+
+        <p>Jantung dilengkapi dengan <strong>katup</strong> yang mencegah darah mengalir balik:</p>
+        <ul>
+            <li><strong>Katup Trikuspid:</strong> Di antara atrium kanan dan ventrikel kanan</li>
+            <li><strong>Katup Bikuspid (Mitral):</strong> Di antara atrium kiri dan ventrikel kiri</li>
+            <li><strong>Katup Semilunar:</strong> Di pangkal arteri pulmonalis dan aorta</li>
+        </ul>
+
+        <!-- ===== 3. PEMBULUH DARAH ===== -->
         <h4>3. Pembuluh Darah</h4>
+        <p>Pembuluh darah adalah saluran tempat mengalirnya darah. Terdapat tiga jenis utama:</p>
+
+        <!-- IMAGE PEMBULUH DARAH -->
+        <div class="image-container">
+            <!--
+                =====================================================
+                CARA MENGGANTI FOTO PEMBULUH DARAH:
+                1. Siapkan gambar perbandingan arteri, vena, dan kapiler.
+                2. Beri nama file: "photo-pembuluh-darah.png"
+                3. Letakkan file gambar di folder yang sama dengan file 3.html ini.
+                4. Format yang didukung: PNG, JPG, JPEG, WEBP
+                5. Ukuran rekomendasi: 700x450 pixel atau rasio mendekati 3:2
+                =====================================================
+            -->
+            <img src="photo-pembuluh-darah.png" alt="Perbandingan Arteri, Vena, dan Kapiler"
+                 onerror="this.style.background='linear-gradient(135deg, #fdedec, #fadbd8)'; this.style.display='flex'; this.alt='[Ganti dengan photo-pembuluh-darah.png — Gambar Pembuluh Darah]'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#c0392b'; this.style.fontSize='1rem'; this.style.padding='2rem'; this.style.textAlign='center'; this.style.height='380px'; this.style.fontWeight='bold';">
+            <p><strong>Gambar 3.2:</strong> Perbandingan struktur penampang Arteri, Vena, dan Kapiler</p>
+        </div>
+
         <table>
             <tr>
                 <th>Ciri</th>
-                <th>Arteri (Nadi)</th>
-                <th>Vena (Balik)</th>
+                <th>Arteri (Pembuluh Nadi)</th>
+                <th>Vena (Pembuluh Balik)</th>
                 <th>Kapiler</th>
             </tr>
             <tr>
-                <td>Arah Aliran</td>
-                <td>Meninggalkan jantung</td>
-                <td>Menuju jantung</td>
-                <td>Menghubungkan arteri dan vena</td>
+                <td><strong>Arah Aliran</strong></td>
+                <td>Meninggalkan jantung → ke tubuh</td>
+                <td>Dari tubuh → menuju jantung</td>
+                <td>Menghubungkan arteriola dengan venula</td>
             </tr>
             <tr>
-                <td>Dinding</td>
-                <td>Tebal, kuat, elastis</td>
+                <td><strong>Dinding</strong></td>
+                <td>Tebal, kuat, sangat elastis</td>
                 <td>Tipis, kurang elastis</td>
-                <td>Sangat tipis (satu lapis sel)</td>
+                <td>Sangat tipis (satu lapis sel endotel)</td>
             </tr>
             <tr>
-                <td>Katup</td>
-                <td>Tidak ada (kecuali di pangkal)</td>
-                <td>Ada (mencegah aliran balik)</td>
+                <td><strong>Katup</strong></td>
+                <td>Tidak ada (kecuali katup semilunar di pangkal)</td>
+                <td>Ada (mencegah aliran balik darah)</td>
                 <td>Tidak ada</td>
             </tr>
             <tr>
-                <td>Tekanan</td>
-                <td>Tinggi (terasa denyutnya)</td>
+                <td><strong>Tekanan</strong></td>
+                <td>Tinggi (denyut terasa)</td>
                 <td>Rendah</td>
                 <td>Sangat rendah</td>
             </tr>
             <tr>
-                <td>Kadar Oksigen</td>
-                <td>Kaya O2 (kecuali arteri pulmonalis)</td>
-                <td>Kaya CO2 (kecuali vena pulmonalis)</td>
-                <td>Tempat pertukaran gas</td>
+                <td><strong>Letak</strong></td>
+                <td>Umumnya di bagian dalam tubuh</td>
+                <td>Umumnya di dekat permukaan kulit</td>
+                <td>Di antara sel-sel jaringan</td>
+            </tr>
+            <tr>
+                <td><strong>Contoh</strong></td>
+                <td>Aorta, Arteri Pulmonalis</td>
+                <td>Vena Kava, Vena Pulmonalis</td>
+                <td>Kapiler di paru-paru, usus, otot</td>
             </tr>
         </table>
 
-        <!-- Image Sistem Peredaran Darah -->
-        <div class="image-container">
-            <img src="sistem-peredaran-darah.png" alt="Sistem Peredaran Darah Manusia">
-            <p><strong>Gambar 3.1:</strong> Struktur jantung dan skema sistem peredaran darah pada manusia</p>
+        <div class="warning-box">
+            <h4>⚠️ Pengecualian Penting!</h4>
+            <ul>
+                <li><strong>Arteri Pulmonalis:</strong> Satu-satunya arteri yang membawa darah <strong>miskin oksigen</strong> (dari jantung ke paru-paru).</li>
+                <li><strong>Vena Pulmonalis:</strong> Satu-satunya vena yang membawa darah <strong>kaya oksigen</strong> (dari paru-paru ke jantung).</li>
+            </ul>
         </div>
 
         <!-- C. Mekanisme -->
         <h3>C. Mekanisme Peredaran Darah</h3>
-        <p>Manusia memiliki sistem peredaran darah <strong>ganda</strong> (terdiri dari peredaran darah kecil dan besar) dan <strong>tertutup</strong> (darah selalu mengalir di dalam pembuluh darah).</p>
+        <p>Manusia memiliki sistem peredaran darah <strong>ganda</strong> dan <strong>tertutup</strong>. Disebut ganda karena darah melewati jantung sebanyak <strong>2 kali</strong> dalam satu kali peredaran lengkap.</p>
 
-        <h4>1. Peredaran Darah Kecil (Pulmonal)</h4>
-        <p>
-            Adalah peredaran darah dari jantung ke paru-paru dan kembali ke jantung. Fungsinya untuk pertukaran gas (melepaskan CO2 dan mengikat O2).
-        </p>
-        <div class="info-box">
-            <p style="text-align: center; font-weight: bold;">
-                Ventrikel Kanan → Arteri Pulmonalis → Paru-paru → Vena Pulmonalis → Atrium Kiri
-            </p>
+        <h4>1. Peredaran Darah Kecil (Peredaran Paru / Pulmonal)</h4>
+        <p>Beredar dari jantung ke paru-paru dan kembali ke jantung. Tujuannya: <strong>pertukaran gas</strong> (melepaskan CO₂ dan mengikat O₂ di alveolus paru-paru).</p>
+        <div class="formula-box">
+            Ventrikel Kanan → Arteri Pulmonalis → Paru-paru (pertukaran gas) → Vena Pulmonalis → Atrium Kiri
         </div>
 
-        <h4>2. Peredaran Darah Besar (Sistemik)</h4>
-        <p>
-            Adalah peredaran darah dari jantung ke seluruh tubuh dan kembali ke jantung. Fungsinya mengedarkan oksigen dan nutrisi ke seluruh sel tubuh.
-        </p>
+        <h4>2. Peredaran Darah Besar (Peredaran Sistemik)</h4>
+        <p>Beredar dari jantung ke seluruh tubuh dan kembali ke jantung. Tujuannya: <strong>mengedarkan O₂ dan nutrisi</strong> ke seluruh sel tubuh serta mengangkut zat sisa.</p>
+        <div class="formula-box">
+            Ventrikel Kiri → Aorta → Arteri → Arteriola → Kapiler (seluruh tubuh) → Venula → Vena → Vena Kava → Atrium Kanan
+        </div>
+
         <div class="info-box">
-            <p style="text-align: center; font-weight: bold;">
-                Ventrikel Kiri → Aorta → Seluruh Tubuh → Vena Kava → Atrium Kanan
-            </p>
+            <h4>🔄 Siklus Lengkap</h4>
+            <p>Darah yang kembali ke <strong>Atrium Kanan</strong> akan mengalir ke <strong>Ventrikel Kanan</strong>, lalu dipompa ke paru-paru (peredaran kecil). Setelah mendapat O₂ di paru-paru, darah kembali ke <strong>Atrium Kiri</strong>, lalu ke <strong>Ventrikel Kiri</strong>, dan dipompa lagi ke seluruh tubuh (peredaran besar). Siklus ini berlangsung terus-menerus sepanjang hidup.</p>
         </div>
 
         <!-- D. Golongan Darah -->
         <h3>D. Golongan Darah</h3>
-        <p>
-            Golongan darah ditentukan oleh ada atau tidaknya <strong>aglutinogen (antigen)</strong> pada sel darah merah dan <strong>aglutinin (antibodi)</strong> dalam plasma darah. Sistem penggolongan yang paling umum adalah sistem <strong>ABO</strong> yang ditemukan oleh Karl Landsteiner.
-        </p>
+        <p>Golongan darah ditentukan oleh ada atau tidaknya <strong>aglutinogen (antigen)</strong> pada permukaan sel darah merah dan <strong>aglutinin (antibodi)</strong> dalam plasma darah. Sistem penggolongan yang paling umum adalah sistem <strong>ABO</strong> yang ditemukan oleh <strong>Karl Landsteiner</strong> (1901).</p>
+
         <table>
             <tr>
                 <th>Golongan Darah</th>
-                <th>Aglutinogen (Antigen)</th>
-                <th>Aglutinin (Antibodi)</th>
-                <th>Donor untuk</th>
-                <th>Penerima dari</th>
+                <th>Aglutinogen (Antigen) pada Eritrosit</th>
+                <th>Aglutinin (Antibodi) pada Plasma</th>
+                <th>Dapat Mendonor ke</th>
+                <th>Dapat Menerima dari</th>
             </tr>
             <tr>
+                <td><strong>A</strong></td>
                 <td>A</td>
-                <td>A</td>
-                <td>b (anti-B)</td>
+                <td>Anti-B (β)</td>
                 <td>A, AB</td>
                 <td>A, O</td>
             </tr>
             <tr>
+                <td><strong>B</strong></td>
                 <td>B</td>
-                <td>B</td>
-                <td>a (anti-A)</td>
+                <td>Anti-A (α)</td>
                 <td>B, AB</td>
                 <td>B, O</td>
             </tr>
             <tr>
-                <td>AB</td>
+                <td><strong>AB</strong></td>
                 <td>A dan B</td>
                 <td>Tidak ada</td>
                 <td>AB saja</td>
-                <td>A, B, AB, O (Resipien Universal)</td>
+                <td>A, B, AB, O <br><em>(Resipien Universal)</em></td>
             </tr>
             <tr>
-                <td>O</td>
+                <td><strong>O</strong></td>
                 <td>Tidak ada</td>
-                <td>a dan b</td>
-                <td>A, B, AB, O (Donor Universal)</td>
+                <td>Anti-A dan Anti-B</td>
+                <td>A, B, AB, O <br><em>(Donor Universal)</em></td>
                 <td>O saja</td>
             </tr>
         </table>
 
         <!-- E. Gangguan -->
         <h3>E. Gangguan dan Penyakit pada Sistem Peredaran Darah</h3>
-        <ul>
-            <li><strong>Anemia:</strong> Kekurangan sel darah merah atau hemoglobin. Gejala: pucat, lelah, pusing.</li>
-            <li><strong>Hipertensi (Darah Tinggi):</strong> Tekanan darah di atas normal (>140/90 mmHg). Bisa menyebabkan stroke dan serangan jantung.</li>
-            <li><strong>Hipotensi (Darah Rendah):</strong> Tekanan darah di bawah normal (<90/60 mmHg).</li>
-            <li><strong>Arteriosklerosis:</strong> Pengerasan pembuluh nadi akibat endapan lemak/kalsium.</li>
-            <li><strong>Aterosklerosis:</strong> Penyempitan pembuluh darah akibat penumpukan plak lemak.</li>
-            <li><strong>Stroke:</strong> Terputusnya aliran darah ke otak (bisa karena pecah atau tersumbatnya pembuluh darah).</li>
-            <li><strong>Serangan Jantung (Infark Miokard):</strong> Tersumbatnya arteri koroner yang menyuplai darah ke otot jantung.</li>
-            <li><strong>Varises:</strong> Pelebaran pembuluh vena, biasanya di kaki.</li>
-            <li><strong>Hemofilia:</strong> Penyakit keturunan di mana darah sulit membeku.</li>
-            <li><strong>Leukemia (Kanker Darah):</strong> Produksi sel darah putih yang tidak terkendali.</li>
-        </ul>
+        <table>
+            <tr>
+                <th>Penyakit</th>
+                <th>Penyebab / Keterangan</th>
+            </tr>
+            <tr>
+                <td><strong>Anemia</strong></td>
+                <td>Kekurangan sel darah merah atau hemoglobin. Gejala: pucat, lelah, pusing, sesak napas. Sering disebabkan oleh kekurangan zat besi (Fe).</td>
+            </tr>
+            <tr>
+                <td><strong>Hipertensi</strong></td>
+                <td>Tekanan darah tinggi (>140/90 mmHg). Meningkatkan risiko stroke, serangan jantung, dan gagal ginjal.</td>
+            </tr>
+            <tr>
+                <td><strong>Hipotensi</strong></td>
+                <td>Tekanan darah rendah (<90/60 mmHg). Gejala: pusing, lemas, pandangan kabur.</td>
+            </tr>
+            <tr>
+                <td><strong>Arteriosklerosis</strong></td>
+                <td>Pengerasan dinding pembuluh arteri akibat endapan kalsium.</td>
+            </tr>
+            <tr>
+                <td><strong>Aterosklerosis</strong></td>
+                <td>Penyempitan pembuluh darah akibat penumpukan plak lemak (kolesterol).</td>
+            </tr>
+            <tr>
+                <td><strong>Stroke</strong></td>
+                <td>Terputusnya aliran darah ke otak akibat pembuluh darah pecah atau tersumbat.</td>
+            </tr>
+            <tr>
+                <td><strong>Serangan Jantung (Infark Miokard)</strong></td>
+                <td>Tersumbatnya arteri koroner yang menyuplai darah ke otot jantung.</td>
+            </tr>
+            <tr>
+                <td><strong>Varises</strong></td>
+                <td>Pelebaran dan pembengkakan pembuluh vena, biasanya di kaki, akibat katup vena yang lemah.</td>
+            </tr>
+            <tr>
+                <td><strong>Hemofilia</strong></td>
+                <td>Penyakit keturunan (genetik) di mana darah sulit membeku karena kekurangan faktor pembekuan.</td>
+            </tr>
+            <tr>
+                <td><strong>Leukemia</strong></td>
+                <td>Kanker darah — produksi sel darah putih yang tidak terkendali sehingga mengganggu fungsi sel darah lain.</td>
+            </tr>
+        </table>
 
-        <!-- F. Cara Menjaga Kesehatan -->
+        <!-- F. Menjaga Kesehatan -->
         <h3>F. Cara Menjaga Kesehatan Sistem Peredaran Darah</h3>
         <div class="warning-box">
-            <h4> Tips Jantung Sehat</h4>
+            <h4>💡 Tips Jantung dan Pembuluh Darah Sehat</h4>
             <ul>
-                <li>Makan makanan bergizi seimbang (rendah lemak jenuh, garam, dan gula)</li>
-                <li>Olahraga teratur minimal 30 menit sehari</li>
-                <li>Menjaga berat badan ideal</li>
-                <li>Tidak merokok dan menghindari asap rokok</li>
-                <li>Mengelola stres dengan baik</li>
-                <li>Tidur yang cukup (7-8 jam per hari)</li>
-                <li>Rutin memeriksakan tekanan darah dan kolesterol</li>
-                <li>Minum air putih yang cukup</li>
+                <li><strong>Makan bergizi seimbang:</strong> Perbanyak sayur, buah, biji-bijian; kurangi lemak jenuh, garam, dan gula berlebih</li>
+                <li><strong>Olahraga teratur:</strong> Minimal 30 menit per hari (jalan kaki, bersepeda, berenang) untuk menguatkan jantung</li>
+                <li><strong>Menjaga berat badan ideal:</strong> Obesitas meningkatkan risiko hipertensi dan penyakit jantung</li>
+                <li><strong>Tidak merokok:</strong> Nikotin dan karbon monoksida dalam rokok merusak dinding pembuluh darah</li>
+                <li><strong>Mengelola stres:</strong> Stres kronis meningkatkan tekanan darah dan detak jantung</li>
+                <li><strong>Tidur cukup:</strong> 7–8 jam per hari untuk pemulihan sistem kardiovaskular</li>
+                <li><strong>Rutin cek kesehatan:</strong> Periksa tekanan darah, kolesterol, dan gula darah secara berkala</li>
+                <li><strong>Minum air putih cukup:</strong> Menjaga volume dan kekentalan darah tetap normal</li>
             </ul>
         </div>
 
@@ -274,46 +396,74 @@
         <h3>G. Rangkuman</h3>
         <div class="info-box">
             <ul>
-                <li>Sistem peredaran darah terdiri dari darah, jantung, dan pembuluh darah.</li>
-                <li>Darah terdiri dari plasma darah, eritrosit (mengangkut O2), leukosit (melawan kuman), dan trombosit (pembekuan darah).</li>
-                <li>Jantung memiliki 4 ruang: Atrium kanan, Atrium kiri, Ventrikel kanan, dan Ventrikel kiri.</li>
-                <li>Peredaran darah kecil: Jantung → Paru-paru → Jantung.</li>
-                <li>Peredaran darah besar: Jantung → Seluruh Tubuh → Jantung.</li>
-                <li>Golongan darah O adalah donor universal, golongan darah AB adalah resipien universal.</li>
+                <li>Sistem peredaran darah terdiri dari <strong>darah</strong>, <strong>jantung</strong>, dan <strong>pembuluh darah</strong>.</li>
+                <li>Darah terdiri dari <strong>plasma darah</strong> (55%) dan <strong>sel-sel darah</strong> (45%): eritrosit (mengangkut O₂), leukosit (melawan kuman), trombosit (pembekuan darah).</li>
+                <li>Jantung memiliki <strong>4 ruang</strong>: Atrium Kanan, Atrium Kiri, Ventrikel Kanan, Ventrikel Kiri. <strong>Ventrikel kiri</strong> berdinding paling tebal.</li>
+                <li><strong>Peredaran darah kecil:</strong> Ventrikel Kanan → Paru-paru → Atrium Kiri.</li>
+                <li><strong>Peredaran darah besar:</strong> Ventrikel Kiri → Seluruh Tubuh → Atrium Kanan.</li>
+                <li>Golongan darah <strong>O</strong> = donor universal, golongan darah <strong>AB</strong> = resipien universal.</li>
+                <li><strong>Arteri</strong> meninggalkan jantung (tebal, tekanan tinggi), <strong>Vena</strong> menuju jantung (tipis, ada katup), <strong>Kapiler</strong> tempat pertukaran zat.</li>
                 <li>Pola hidup sehat sangat penting untuk mencegah penyakit kardiovaskular.</li>
             </ul>
         </div>
 
         <!-- H. Latihan Soal -->
         <h3>H. Latihan Soal</h3>
+
         <h4>A. Pilihan Ganda</h4>
         <ol>
-            <li>Komponen darah yang berfungsi mengangkut oksigen adalah...
-                <ul><li>a. Leukosit</li><li>b. Eritrosit</li><li>c. Trombosit</li><li>d. Plasma darah</li></ul>
+            <li>Komponen darah yang berfungsi mengangkut oksigen ke seluruh tubuh adalah...
+                <ul>
+                    <li>a. Leukosit</li>
+                    <li>b. Eritrosit</li>
+                    <li>c. Trombosit</li>
+                    <li>d. Plasma darah</li>
+                </ul>
             </li>
-            <li>Ruang jantung yang memiliki dinding paling tebal adalah...
-                <ul><li>a. Atrium kanan</li><li>b. Atrium kiri</li><li>c. Ventrikel kanan</li><li>d. Ventrikel kiri</li></ul>
+            <li>Ruang jantung yang memiliki dinding paling tebal karena harus memompa darah ke seluruh tubuh adalah...
+                <ul>
+                    <li>a. Atrium kanan</li>
+                    <li>b. Atrium kiri</li>
+                    <li>c. Ventrikel kanan</li>
+                    <li>d. Ventrikel kiri</li>
+                </ul>
             </li>
             <li>Pembuluh darah yang mengalirkan darah menuju jantung disebut...
-                <ul><li>a. Arteri</li><li>b. Vena</li><li>c. Kapiler</li><li>d. Aorta</li></ul>
+                <ul>
+                    <li>a. Arteri</li>
+                    <li>b. Vena</li>
+                    <li>c. Kapiler</li>
+                    <li>d. Aorta</li>
+                </ul>
             </li>
-            <li>Urutan peredaran darah besar yang benar adalah...
-                <ul><li>a. Ventrikel kanan → Paru-paru → Atrium kiri</li><li>b. Ventrikel kiri → Seluruh tubuh → Atrium kanan</li><li>c. Atrium kanan → Ventrikel kanan → Paru-paru</li><li>d. Atrium kiri → Ventrikel kiri → Seluruh tubuh</li></ul>
+            <li>Urutan peredaran darah kecil yang benar adalah...
+                <ul>
+                    <li>a. Ventrikel kanan → Paru-paru → Atrium kiri</li>
+                    <li>b. Ventrikel kiri → Seluruh tubuh → Atrium kanan</li>
+                    <li>c. Atrium kanan → Ventrikel kanan → Seluruh tubuh</li>
+                    <li>d. Atrium kiri → Ventrikel kiri → Paru-paru</li>
+                </ul>
             </li>
-            <li>Golongan darah yang dapat mendonorkan darahnya ke semua golongan darah disebut...
-                <ul><li>a. Golongan A</li><li>b. Golongan B</li><li>c. Golongan AB</li><li>d. Golongan O</li></ul>
+            <li>Golongan darah yang dapat mendonorkan darahnya ke semua golongan darah lain disebut...
+                <ul>
+                    <li>a. Golongan A</li>
+                    <li>b. Golongan B</li>
+                    <li>c. Golongan AB</li>
+                    <li>d. Golongan O</li>
+                </ul>
             </li>
         </ol>
 
         <h4>B. Essay</h4>
         <ol>
-            <li>Sebutkan 3 komponen utama darah dan jelaskan fungsi masing-masing!</li>
-            <li>Jelaskan perbedaan antara peredaran darah kecil dan peredaran darah besar!</li>
-            <li>Mengapa dinding ventrikel kiri lebih tebal dibandingkan ventrikel kanan?</li>
-            <li>Sebutkan 3 perbedaan antara arteri dan vena!</li>
-            <li>Jelaskan apa yang dimaksud dengan donor universal dan resipien universal!</li>
+            <li>Sebutkan 3 komponen utama sel darah dan jelaskan fungsi masing-masing!</li>
+            <li>Jelaskan perbedaan antara peredaran darah kecil dan peredaran darah besar! Sertakan urutan alirannya!</li>
+            <li>Mengapa dinding ventrikel kiri lebih tebal dibandingkan dinding ventrikel kanan? Jelaskan!</li>
+            <li>Sebutkan minimal 3 perbedaan antara arteri dan vena!</li>
+            <li>Jelaskan apa yang dimaksud dengan donor universal dan resipien universal, serta sebutkan golongan darahnya!</li>
         </ol>
 
+        <!-- Nav Buttons Bottom -->
         <div class="nav-buttons">
             <a href="index.html">🏠 Kembali ke Beranda</a>
             <a href="uji-formatif-3.html">📝 Uji Formatif Bab 3</a>
@@ -322,9 +472,10 @@
 
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> - MTsN 4 Lima Puluh Kota</p>
-        <p><strong>IPA Kelas VIII Semester 1</strong> - Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
+        <p>© 2026 <a href="index.html#penulis">Titin Sepriza, S.Si., Gr</a> — MTsN 4 Lima Puluh Kota</p>
+        <p><strong>IPA Kelas VIII Semester 1</strong> — Ilmu Pengetahuan Alam untuk Madrasah Tsanawiyah</p>
         <p>Email: <a href="mailto:t12nsepriz4@gmail.com">t12nsepriz4@gmail.com</a></p>
     </footer>
 
